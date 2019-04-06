@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddGarment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGarment.Designer.cs">
+      <DependentUpon>AddGarment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -81,6 +87,9 @@
     <Compile Include="stock_admin_home.Designer.cs">
       <DependentUpon>stock_admin_home.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddGarment.resx">
+      <DependentUpon>AddGarment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
