@@ -37,7 +37,8 @@
             this.txt_gname = new MetroFramework.Controls.MetroTextBox();
             this.txt_gqty = new MetroFramework.Controls.MetroTextBox();
             this.txt_gprice = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cmb_type = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -207,22 +208,37 @@
             this.txt_gprice.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_gprice.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroComboBox1
+            // cmb_type
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(186, 160);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(153, 29);
-            this.metroComboBox1.TabIndex = 2;
-            this.metroComboBox1.UseSelectable = true;
+            this.cmb_type.FormattingEnabled = true;
+            this.cmb_type.ItemHeight = 23;
+            this.cmb_type.Items.AddRange(new object[] {
+            "Zaara",
+            "Simrah",
+            "Shabee"});
+            this.cmb_type.Location = new System.Drawing.Point(186, 160);
+            this.cmb_type.Name = "cmb_type";
+            this.cmb_type.Size = new System.Drawing.Size(153, 29);
+            this.cmb_type.TabIndex = 2;
+            this.cmb_type.UseSelectable = true;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(186, 328);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(143, 52);
+            this.metroButton1.TabIndex = 3;
+            this.metroButton1.Text = "Add";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // AddGarment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.cmb_type);
             this.Controls.Add(this.txt_gprice);
             this.Controls.Add(this.txt_gqty);
             this.Controls.Add(this.txt_gname);
@@ -251,6 +267,7 @@
         private MetroFramework.Controls.MetroTextBox txt_gname;
         private MetroFramework.Controls.MetroTextBox txt_gqty;
         private MetroFramework.Controls.MetroTextBox txt_gprice;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cmb_type;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

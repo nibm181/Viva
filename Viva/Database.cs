@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 namespace Viva
 {
@@ -16,7 +17,7 @@ namespace Viva
         public Database()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-3HUH0OS;Initial Catalog=Garment;Integrated Security=True";
+            con.ConnectionString = "Server=tcp:nibmgarments.database.windows.net,1433;Initial Catalog=Garments;Persist Security Info=False;User ID=doof;Password=warrior@00;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         }
         public void openCon()
         {
