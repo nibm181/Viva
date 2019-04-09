@@ -35,7 +35,7 @@ namespace Viva
         private void metroButton1_Click(object sender, EventArgs e)
         {
             Database db = new Database();
-            db.save_delete_update("insert into tbl_garment values('1006', 'skirt','shabee', 1000, 1000)");
+            db.save_delete_update("insert into tbl_garment values('"+txt_gno.Text+"', '"+txt_gname.Text+"','"+cmb_type.Text+"', "+txt_gqty.Text+", "+txt_gprice.Text+")");
         }
     }
 }
