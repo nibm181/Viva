@@ -36,6 +36,8 @@
             this.gar_type = new MetroFramework.Controls.MetroLabel();
             this.garI_name = new MetroFramework.Controls.MetroLabel();
             this.cmb_gar_length = new MetroFramework.Controls.MetroComboBox();
+            this.btn_mat_add = new MetroFramework.Controls.MetroButton();
+            this.btn_mat_reset = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // txt_gar_id
@@ -214,11 +216,38 @@
             this.cmb_gar_length.TabIndex = 8;
             this.cmb_gar_length.UseSelectable = true;
             // 
+            // btn_mat_add
+            // 
+            this.btn_mat_add.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_mat_add.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btn_mat_add.Highlight = true;
+            this.btn_mat_add.Location = new System.Drawing.Point(548, 472);
+            this.btn_mat_add.Name = "btn_mat_add";
+            this.btn_mat_add.Size = new System.Drawing.Size(127, 62);
+            this.btn_mat_add.Style = MetroFramework.MetroColorStyle.Green;
+            this.btn_mat_add.TabIndex = 9;
+            this.btn_mat_add.Text = "Add";
+            this.btn_mat_add.UseSelectable = true;
+            // 
+            // btn_mat_reset
+            // 
+            this.btn_mat_reset.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_mat_reset.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.btn_mat_reset.Highlight = true;
+            this.btn_mat_reset.Location = new System.Drawing.Point(717, 472);
+            this.btn_mat_reset.Name = "btn_mat_reset";
+            this.btn_mat_reset.Size = new System.Drawing.Size(127, 62);
+            this.btn_mat_reset.TabIndex = 9;
+            this.btn_mat_reset.Text = "Reset";
+            this.btn_mat_reset.UseSelectable = true;
+            // 
             // Materials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 664);
+            this.Controls.Add(this.btn_mat_reset);
+            this.Controls.Add(this.btn_mat_add);
             this.Controls.Add(this.cmb_gar_length);
             this.Controls.Add(this.garI_name);
             this.Controls.Add(this.gar_type);
@@ -245,5 +274,7 @@
         private MetroFramework.Controls.MetroLabel gar_type;
         private MetroFramework.Controls.MetroLabel garI_name;
         private MetroFramework.Controls.MetroComboBox cmb_gar_length;
+        private MetroFramework.Controls.MetroButton btn_mat_add;
+        private MetroFramework.Controls.MetroButton btn_mat_reset;
     }
 }
