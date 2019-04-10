@@ -50,9 +50,9 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(37, 94);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(106, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(81, 25);
             this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Garment No";
+            this.metroLabel1.Text = "Model ID";
             this.metroLabel1.Click += new System.EventHandler(this.metroLabel1_Click);
             // 
             // metroLabel2
