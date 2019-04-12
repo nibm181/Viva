@@ -94,6 +94,8 @@
             // 
             // grd_update_mat
             // 
+            this.grd_update_mat.AllowUserToAddRows = false;
+            this.grd_update_mat.AllowUserToDeleteRows = false;
             this.grd_update_mat.AllowUserToResizeRows = false;
             this.grd_update_mat.BackgroundColor = System.Drawing.Color.Silver;
             this.grd_update_mat.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -121,6 +123,7 @@
             this.grd_update_mat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_update_mat.Location = new System.Drawing.Point(35, 197);
             this.grd_update_mat.Name = "grd_update_mat";
+            this.grd_update_mat.ReadOnly = true;
             this.grd_update_mat.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -141,7 +144,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(727, 212);
+            this.metroLabel1.Location = new System.Drawing.Point(696, 215);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(103, 25);
             this.metroLabel1.TabIndex = 3;
@@ -184,7 +187,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(727, 311);
+            this.metroLabel2.Location = new System.Drawing.Point(696, 311);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(113, 25);
             this.metroLabel2.TabIndex = 3;
@@ -238,7 +241,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(727, 260);
+            this.metroLabel3.Location = new System.Drawing.Point(696, 260);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(144, 25);
             this.metroLabel3.TabIndex = 3;
@@ -293,7 +296,7 @@
             this.txt_umat_note.CustomButton.Visible = false;
             this.txt_umat_note.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_umat_note.Lines = new string[0];
-            this.txt_umat_note.Location = new System.Drawing.Point(895, 384);
+            this.txt_umat_note.Location = new System.Drawing.Point(859, 384);
             this.txt_umat_note.MaxLength = 32767;
             this.txt_umat_note.Multiline = true;
             this.txt_umat_note.Name = "txt_umat_note";
@@ -313,7 +316,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(727, 384);
+            this.metroLabel4.Location = new System.Drawing.Point(696, 384);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(52, 25);
             this.metroLabel4.TabIndex = 3;

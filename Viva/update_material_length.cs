@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,15 +30,31 @@ namespace Viva
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            string search = txt_umat_search.Text;
-            Database db = new Database();
-            DataTable d = new DataTable();
-            d = db.GetData("select mat_id, mat_name, mat_type, mat_length from materials where mat_type like '"+search+"' or mat_name like '"+search+"' or mat_id like '"+search+"'");
-            grd_update_mat.DataSource = d;
-            grd_update_mat.Columns[0].Name = "Material ID";
-            grd_update_mat.Columns[1].Name = "Name";
-            grd_update_mat.Columns[2].Name = "Type";
-            grd_update_mat.Columns[3].Name = "Length";
+            if (string.IsNullOrWhiteSpace(txt_umat_search.Text))
+            {
+                MetroMessageBox.Show(this, "Please Enter Material Name or ID or Type!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            else
+            {
+                string search = txt_umat_search.Text;
+                Database db = new Database();
+                DataTable d = new DataTable();
+                d = db.GetData("select mat_id, mat_name, mat_type, mat_length from materials where mat_type like '" + search + "' or mat_name like '" + search + "' or mat_id like '" + search + "'");
+                if (d != null)
+                {
+                    MetroMessageBox.Show(this, "No data found!", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    grd_update_mat.DataSource = d;
+                    grd_update_mat.Columns[0].Name = "Material ID";
+                    grd_update_mat.Columns[1].Name = "Name";
+                    grd_update_mat.Columns[2].Name = "Type";
+                    grd_update_mat.Columns[3].Name = "Length";
+                }
+            }
 
         }
 
@@ -50,15 +67,30 @@ namespace Viva
 
         private void btn_umat_update_Click(object sender, EventArgs e)
         {
-            double alen = Convert.ToDouble(txt_umat_al.Text);
-            double ulen = Convert.ToDouble(txt_umat_ul.Text);
-            double ans = alen - ulen;
-            DateTime now = DateTime.Now;
+            if (string.IsNullOrWhiteSpace(txt_umat_id.Text))
+            {
+                MetroMessageBox.Show(this, "Please Select Material from Table!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(txt_umat_ul.Text))
+            {
+                MetroMessageBox.Show(this, "Please Enter Used Length!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(txt_umat_note.Text))
+            {
+                MetroMessageBox.Show(this, "Please Enter Note!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                double alen = Convert.ToDouble(txt_umat_al.Text);
+                double ulen = Convert.ToDouble(txt_umat_ul.Text);
+                double ans = alen - ulen;
+                DateTime now = DateTime.Now;
 
 
-            Database db = new Database();
-            db.save_delete_update("update materials set mat_length = '"+ans+"' where mat_id ='"+txt_umat_id.Text+"' ");
-            db.save_delete_update("insert into material_used values('" + txt_umat_id.Text + "', '" + now + "', '" + txt_umat_note.Text + "', '" + ulen + "') ");
+                Database db = new Database();
+                db.save_delete_update("update materials set mat_length = '" + ans + "' where mat_id ='" + txt_umat_id.Text + "' ");
+                db.save_delete_update("insert into material_used values('" + txt_umat_id.Text + "', '" + now + "', '" + txt_umat_note.Text + "', '" + ulen + "') ");
+            }
 
         }
     }
