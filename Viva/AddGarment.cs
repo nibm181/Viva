@@ -46,27 +46,27 @@ namespace Viva
                 }
                 else if (cmb_gcat.SelectedIndex == -1)
                 {
-                    MetroMessageBox.Show(this, "Please select Garment Meterial!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please select Garment Category!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrEmpty(txt_gname.Text))
+                else if (string.IsNullOrWhiteSpace(txt_gname.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrEmpty(txt_gqty.Text))
+                else if (string.IsNullOrWhiteSpace(txt_gqty.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Quantity!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_gqty.Text.Any(char.IsLetter))
+                else if (txt_gqty.Text.Any(char.IsLetter) || Int32.Parse(txt_gqty.Text) <= 0)
                 {
-                    MetroMessageBox.Show(this, "Please enter Quantity in numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Quantity in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrEmpty(txt_gprice.Text))
+                else if (string.IsNullOrWhiteSpace(txt_gprice.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_gprice.Text.Any(char.IsLetter))
+                else if (txt_gprice.Text.Any(char.IsLetter) || Int32.Parse(txt_gprice.Text) <= 0)
                 {
-                    MetroMessageBox.Show(this, "Please enter Garment Price in numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {

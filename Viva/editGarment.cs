@@ -41,7 +41,7 @@ namespace Viva
         {
             try
             {
-                if (string.IsNullOrEmpty(txt_search.Text))
+                if (string.IsNullOrWhiteSpace(txt_search.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Model ID to search!", "Empty values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -89,27 +89,27 @@ namespace Viva
                 }
                 else if (cmb_cat.SelectedIndex == -1)
                 {
-                    MetroMessageBox.Show(this, "Please select Garment Meterial!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please select Garment Category!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrEmpty(txt_name.Text))
+                else if (string.IsNullOrWhiteSpace(txt_name.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrEmpty(txt_qty.Text))
+                else if (string.IsNullOrWhiteSpace(txt_qty.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Quantity!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_qty.Text.Any(char.IsLetter))
+                else if (txt_qty.Text.Any(char.IsLetter) || Int32.Parse(txt_qty.Text) <= 0)
                 {
-                    MetroMessageBox.Show(this, "Please enter Quantity in numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Quantity in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrEmpty(txt_price.Text))
+                else if (string.IsNullOrWhiteSpace(txt_price.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_price.Text.Any(char.IsLetter))
+                else if (txt_price.Text.Any(char.IsLetter) || Int32.Parse(txt_price.Text) <= 0)
                 {
-                    MetroMessageBox.Show(this, "Please enter Garment Price in numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -154,7 +154,7 @@ namespace Viva
         {
             try
             {
-                if(string.IsNullOrEmpty(txt_id.Text))
+                if(string.IsNullOrWhiteSpace(txt_id.Text))
                 {
                     MetroMessageBox.Show(this, "Please select Model ID!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
