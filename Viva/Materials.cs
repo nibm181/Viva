@@ -125,7 +125,6 @@ namespace Viva
                     this.txt_mat_name.Clear();
                     this.cmb_mat_type.SelectedItem = null;
                     this.cmb_mat_type.SelectedText = "--select--";
-                    txt_mat_billno.Clear();
                     txt_mat_price.Clear();
 
                     
@@ -172,7 +171,7 @@ namespace Viva
         {
           
             Database db = new Database();
-            for (int i = 0; i < grd_mat.Rows.Count; i++)
+            for (int i = 0; i < (grd_mat.Rows.Count-1); i++)
             {
               db.save_delete_update("insert into materials values('" + grd_mat.Rows[i].Cells["Col_bill"].Value + "', '" + grd_mat.Rows[i].Cells["col_id"].Value + "', '"+ grd_mat.Rows[i].Cells["col_name"].Value +"', '"+ grd_mat.Rows[i].Cells["Col_type"].Value +"', '"+ grd_mat.Rows[i].Cells["Col_len"].Value + "', '"+ grd_mat.Rows[i].Cells["Col_price"].Value + "')");
             }
