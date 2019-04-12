@@ -17,6 +17,7 @@ namespace Viva
         public editGarment()
         {
             InitializeComponent();
+            AutoComplete();
         }
 
         private void autoComplete()
@@ -48,8 +49,10 @@ namespace Viva
                 }
                 else
                 {
+                    string id = txt_search.Text;
+                    id = id.Substring(0, 5);
                     db = new Database();
-                    DataTable dt = db.GetData("select * from tbl_garment where model_id='" + txt_search.Text + "'");
+                    DataTable dt = db.GetData("select * from tbl_garment where model_id='" + id + "'");
                     if (dt.Rows.Count > 0)
                     {
                         cmb_type.Enabled = false;
@@ -214,15 +217,19 @@ namespace Viva
 
         private void AutoComplete()
         {
-            txt_srch_name.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txt_srch_name.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txt_search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txt_search.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
 
             db = new Database();
-            DataTable dt = db.GetData("select model_name from tbl_garment");
-            while(dt.Rows)
+            SqlDataReader dr = db.DataRead("select * from tbl_garment");
+            while(dr.Read())
+            {
+                string name = dr.GetString(0) + " - " + dr.GetString(3) ;
+                coll.Add(name);
+            }
 
-            txt_srch_name.AutoCompleteCustomSource = coll;
+            txt_search.AutoCompleteCustomSource = coll;
 
         }
     }

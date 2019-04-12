@@ -60,5 +60,20 @@ namespace Viva
             closeCon();
             return dt;
         }
+        public SqlDataReader DataRead(string query)
+        {
+            try
+            {
+                openCon();
+            }
+            catch
+            {
+                MessageBox.Show("Check your database connection");
+            }
+            cmd = new SqlCommand(query, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+
+        }
     }
 }

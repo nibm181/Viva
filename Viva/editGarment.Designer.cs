@@ -47,9 +47,6 @@
             this.btn_update = new MetroFramework.Controls.MetroButton();
             this.btn_dlt = new MetroFramework.Controls.MetroButton();
             this.btn_reset = new MetroFramework.Controls.MetroButton();
-            this.txt_srch_name = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.btn_search_name = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +123,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(37, 190);
+            this.metroPanel1.Location = new System.Drawing.Point(37, 153);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(728, 296);
             this.metroPanel1.TabIndex = 3;
@@ -350,7 +347,7 @@
             this.btn_update.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_update.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_update.Highlight = true;
-            this.btn_update.Location = new System.Drawing.Point(392, 511);
+            this.btn_update.Location = new System.Drawing.Point(392, 481);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(95, 50);
             this.btn_update.Style = MetroFramework.MetroColorStyle.Green;
@@ -364,7 +361,7 @@
             this.btn_dlt.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_dlt.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_dlt.Highlight = true;
-            this.btn_dlt.Location = new System.Drawing.Point(521, 511);
+            this.btn_dlt.Location = new System.Drawing.Point(521, 481);
             this.btn_dlt.Name = "btn_dlt";
             this.btn_dlt.Size = new System.Drawing.Size(95, 50);
             this.btn_dlt.Style = MetroFramework.MetroColorStyle.Red;
@@ -378,7 +375,7 @@
             this.btn_reset.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_reset.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_reset.Highlight = true;
-            this.btn_reset.Location = new System.Drawing.Point(648, 511);
+            this.btn_reset.Location = new System.Drawing.Point(648, 481);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(95, 50);
             this.btn_reset.Style = MetroFramework.MetroColorStyle.Blue;
@@ -387,71 +384,17 @@
             this.btn_reset.UseSelectable = true;
             this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
-            // txt_srch_name
-            // 
-            // 
-            // 
-            // 
-            this.txt_srch_name.CustomButton.Image = null;
-            this.txt_srch_name.CustomButton.Location = new System.Drawing.Point(176, 2);
-            this.txt_srch_name.CustomButton.Name = "";
-            this.txt_srch_name.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.txt_srch_name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_srch_name.CustomButton.TabIndex = 1;
-            this.txt_srch_name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_srch_name.CustomButton.UseSelectable = true;
-            this.txt_srch_name.CustomButton.Visible = false;
-            this.txt_srch_name.Lines = new string[0];
-            this.txt_srch_name.Location = new System.Drawing.Point(134, 138);
-            this.txt_srch_name.MaxLength = 32767;
-            this.txt_srch_name.Name = "txt_srch_name";
-            this.txt_srch_name.PasswordChar = '\0';
-            this.txt_srch_name.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_srch_name.SelectedText = "";
-            this.txt_srch_name.SelectionLength = 0;
-            this.txt_srch_name.SelectionStart = 0;
-            this.txt_srch_name.ShortcutsEnabled = true;
-            this.txt_srch_name.Size = new System.Drawing.Size(202, 28);
-            this.txt_srch_name.TabIndex = 5;
-            this.txt_srch_name.UseSelectable = true;
-            this.txt_srch_name.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_srch_name.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(37, 141);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(58, 25);
-            this.metroLabel3.TabIndex = 0;
-            this.metroLabel3.Text = "Name";
-            // 
-            // btn_search_name
-            // 
-            this.btn_search_name.Highlight = true;
-            this.btn_search_name.Location = new System.Drawing.Point(389, 137);
-            this.btn_search_name.Name = "btn_search_name";
-            this.btn_search_name.Size = new System.Drawing.Size(98, 29);
-            this.btn_search_name.Style = MetroFramework.MetroColorStyle.Lime;
-            this.btn_search_name.TabIndex = 6;
-            this.btn_search_name.Text = "Search";
-            this.btn_search_name.UseSelectable = true;
-            // 
             // editGarment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 587);
-            this.Controls.Add(this.btn_search_name);
-            this.Controls.Add(this.txt_srch_name);
+            this.ClientSize = new System.Drawing.Size(800, 548);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.btn_dlt);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
-            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel1);
             this.Name = "editGarment";
             this.Text = "Edit Garment";
@@ -484,8 +427,5 @@
         private MetroFramework.Controls.MetroButton btn_reset;
         private MetroFramework.Controls.MetroComboBox cmb_cat;
         private MetroFramework.Controls.MetroComboBox cmb_type;
-        private MetroFramework.Controls.MetroTextBox txt_srch_name;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroButton btn_search_name;
     }
 }
