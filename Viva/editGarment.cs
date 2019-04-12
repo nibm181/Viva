@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Viva
 {
@@ -209,6 +210,20 @@ namespace Viva
             txt_name.ReadOnly = true;
             txt_qty.ReadOnly = true;
             txt_price.ReadOnly = true;
+        }
+
+        private void AutoComplete()
+        {
+            txt_srch_name.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txt_srch_name.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+
+            db = new Database();
+            DataTable dt = db.GetData("select model_name from tbl_garment");
+            while(dt.Rows)
+
+            txt_srch_name.AutoCompleteCustomSource = coll;
+
         }
     }
 }
