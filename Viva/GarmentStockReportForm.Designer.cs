@@ -29,27 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.tbl_garmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.GarmentStock = new Viva.GarmentStock();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tbl_garmentTableAdapter = new Viva.GarmentStockTableAdapters.tbl_garmentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_garmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GarmentStock)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "GarmentStock";
-            reportDataSource1.Value = this.tbl_garmentBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Viva.GarmentStockReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(20, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(768, 380);
-            this.reportViewer1.TabIndex = 3;
             // 
             // tbl_garmentBindingSource
             // 
@@ -60,6 +47,19 @@
             // 
             this.GarmentStock.DataSetName = "GarmentStock";
             this.GarmentStock.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource3.Name = "GarmentStock";
+            reportDataSource3.Value = this.tbl_garmentBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Viva.GarmentStockReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(20, 60);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(768, 380);
+            this.reportViewer1.TabIndex = 3;
             // 
             // tbl_garmentTableAdapter
             // 
@@ -72,7 +72,9 @@
             this.ClientSize = new System.Drawing.Size(808, 460);
             this.Controls.Add(this.reportViewer1);
             this.Name = "GarmentStockReportForm";
-            this.Text = "Monthly Garment Stock Report";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Text = "Garment Stock Report";
             this.Load += new System.EventHandler(this.GarmentStockReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbl_garmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GarmentStock)).EndInit();
