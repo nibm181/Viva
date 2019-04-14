@@ -32,6 +32,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txt_Uname = new MetroFramework.Controls.MetroTextBox();
             this.txt_Pword = new MetroFramework.Controls.MetroTextBox();
+            this.btn_signin = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -63,20 +64,20 @@
             // 
             // 
             this.txt_Uname.CustomButton.Image = null;
-            this.txt_Uname.CustomButton.Location = new System.Drawing.Point(86, 2);
-            this.txt_Uname.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Uname.CustomButton.Location = new System.Drawing.Point(114, 2);
+            this.txt_Uname.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Uname.CustomButton.Name = "";
-            this.txt_Uname.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txt_Uname.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_Uname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_Uname.CustomButton.TabIndex = 1;
             this.txt_Uname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_Uname.CustomButton.UseSelectable = true;
             this.txt_Uname.CustomButton.Visible = false;
-            this.txt_Uname.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txt_Uname.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_Uname.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txt_Uname.Lines = new string[0];
             this.txt_Uname.Location = new System.Drawing.Point(743, 318);
-            this.txt_Uname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Uname.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Uname.MaxLength = 32767;
             this.txt_Uname.Multiline = true;
             this.txt_Uname.Name = "txt_Uname";
@@ -98,20 +99,20 @@
             // 
             // 
             this.txt_Pword.CustomButton.Image = null;
-            this.txt_Pword.CustomButton.Location = new System.Drawing.Point(86, 2);
-            this.txt_Pword.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Pword.CustomButton.Location = new System.Drawing.Point(114, 2);
+            this.txt_Pword.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Pword.CustomButton.Name = "";
-            this.txt_Pword.CustomButton.Size = new System.Drawing.Size(16, 17);
+            this.txt_Pword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_Pword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_Pword.CustomButton.TabIndex = 1;
             this.txt_Pword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_Pword.CustomButton.UseSelectable = true;
             this.txt_Pword.CustomButton.Visible = false;
-            this.txt_Pword.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txt_Pword.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_Pword.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txt_Pword.Lines = new string[0];
             this.txt_Pword.Location = new System.Drawing.Point(743, 375);
-            this.txt_Pword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Pword.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Pword.MaxLength = 32767;
             this.txt_Pword.Multiline = true;
             this.txt_Pword.Name = "txt_Pword";
@@ -127,6 +128,21 @@
             this.txt_Pword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_Pword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // btn_signin
+            // 
+            this.btn_signin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btn_signin.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btn_signin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_signin.Highlight = true;
+            this.btn_signin.Location = new System.Drawing.Point(759, 419);
+            this.btn_signin.Name = "btn_signin";
+            this.btn_signin.Size = new System.Drawing.Size(107, 36);
+            this.btn_signin.Style = MetroFramework.MetroColorStyle.Green;
+            this.btn_signin.TabIndex = 2;
+            this.btn_signin.Text = "Log In";
+            this.btn_signin.UseSelectable = true;
+            this.btn_signin.Click += new System.EventHandler(this.btn_signin_Click);
+            // 
             // form_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,13 +151,14 @@
             this.BackImage = global::Viva.Properties.Resources.section_3;
             this.BackMaxSize = 1300;
             this.ClientSize = new System.Drawing.Size(926, 474);
+            this.Controls.Add(this.btn_signin);
             this.Controls.Add(this.txt_Pword);
             this.Controls.Add(this.txt_Uname);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "form_login";
-            this.Padding = new System.Windows.Forms.Padding(14, 49, 14, 16);
+            this.Padding = new System.Windows.Forms.Padding(14, 60, 14, 16);
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -155,6 +172,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txt_Uname;
         private MetroFramework.Controls.MetroTextBox txt_Pword;
+        private MetroFramework.Controls.MetroButton btn_signin;
     }
 }
 
