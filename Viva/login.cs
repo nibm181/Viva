@@ -44,18 +44,23 @@ namespace Viva
             else
             {
                 Database db = new Database();
-                SqlDataReader dr = db.DataRead("select * from [user] where user_name='" + txt_Uname.Text + "' and user_pwd COLLATE Latin1_General_CS_AS = '" + txt_Pword.Text + "'");
-                if (dr.Read())
+                DataTable dt = db.GetData("select * from [user] where user_name='" + txt_Uname.Text + "' and user_pwd COLLATE Latin1_General_CS_AS = '" + txt_Pword.Text + "'");
+                if (dt.Rows.Count == 1)
                 {
-                    if(dr.GetString(2) == "Manager")
+                    if (dt.Rows[0][2].ToString() == "Manager")
                     {
+                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
                         this.Hide();
                         manager_home mngrf_form = new manager_home();
-                        mngrf_form.ShowDialog();                        
+                        mngrf_form.ShowDialog();
                         this.Close();
+
                     }
-                    else if(dr.GetString(2) == "Admin")
+                    else if (dt.Rows[0][2].ToString() == "Admin")
                     {
+                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
                         this.Hide();
                         stock_admin_home admin_form = new stock_admin_home();
                         admin_form.ShowDialog();
@@ -64,9 +69,19 @@ namespace Viva
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Please check your Username and Password!", "OOps!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please check your Username and Password!", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void lbl_forgotpwd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+            MetroMessageBox.Show(this, "LogIn as Manager to reset Password!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

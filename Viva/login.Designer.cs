@@ -31,8 +31,9 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txt_Uname = new MetroFramework.Controls.MetroTextBox();
-            this.txt_Pword = new MetroFramework.Controls.MetroTextBox();
             this.btn_signin = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.txt_Pword = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -93,41 +94,6 @@
             this.txt_Uname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_Uname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txt_Pword
-            // 
-            // 
-            // 
-            // 
-            this.txt_Pword.CustomButton.Image = null;
-            this.txt_Pword.CustomButton.Location = new System.Drawing.Point(114, 2);
-            this.txt_Pword.CustomButton.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Pword.CustomButton.Name = "";
-            this.txt_Pword.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_Pword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_Pword.CustomButton.TabIndex = 1;
-            this.txt_Pword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_Pword.CustomButton.UseSelectable = true;
-            this.txt_Pword.CustomButton.Visible = false;
-            this.txt_Pword.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txt_Pword.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.txt_Pword.Lines = new string[0];
-            this.txt_Pword.Location = new System.Drawing.Point(743, 375);
-            this.txt_Pword.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_Pword.MaxLength = 32767;
-            this.txt_Pword.Multiline = true;
-            this.txt_Pword.Name = "txt_Pword";
-            this.txt_Pword.PasswordChar = '\0';
-            this.txt_Pword.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_Pword.SelectedText = "";
-            this.txt_Pword.SelectionLength = 0;
-            this.txt_Pword.SelectionStart = 0;
-            this.txt_Pword.ShortcutsEnabled = true;
-            this.txt_Pword.Size = new System.Drawing.Size(138, 26);
-            this.txt_Pword.TabIndex = 1;
-            this.txt_Pword.UseSelectable = true;
-            this.txt_Pword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_Pword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // btn_signin
             // 
             this.btn_signin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -143,6 +109,52 @@
             this.btn_signin.UseSelectable = true;
             this.btn_signin.Click += new System.EventHandler(this.btn_signin_Click);
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroLabel3.ForeColor = System.Drawing.Color.Purple;
+            this.metroLabel3.Location = new System.Drawing.Point(756, 467);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(113, 19);
+            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel3.TabIndex = 3;
+            this.metroLabel3.Text = "Forgot Password?";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.metroLabel3.UseStyleColors = true;
+            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
+            // 
+            // txt_Pword
+            // 
+            // 
+            // 
+            // 
+            this.txt_Pword.CustomButton.Image = null;
+            this.txt_Pword.CustomButton.Location = new System.Drawing.Point(114, 2);
+            this.txt_Pword.CustomButton.Name = "";
+            this.txt_Pword.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Pword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Pword.CustomButton.TabIndex = 1;
+            this.txt_Pword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Pword.CustomButton.UseSelectable = true;
+            this.txt_Pword.CustomButton.Visible = false;
+            this.txt_Pword.Lines = new string[0];
+            this.txt_Pword.Location = new System.Drawing.Point(743, 374);
+            this.txt_Pword.MaxLength = 32767;
+            this.txt_Pword.Name = "txt_Pword";
+            this.txt_Pword.PasswordChar = '●';
+            this.txt_Pword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Pword.SelectedText = "";
+            this.txt_Pword.SelectionLength = 0;
+            this.txt_Pword.SelectionStart = 0;
+            this.txt_Pword.ShortcutsEnabled = true;
+            this.txt_Pword.Size = new System.Drawing.Size(138, 26);
+            this.txt_Pword.TabIndex = 4;
+            this.txt_Pword.UseSelectable = true;
+            this.txt_Pword.UseSystemPasswordChar = true;
+            this.txt_Pword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Pword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // form_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,9 +162,10 @@
             this.BackgroundImage = global::Viva.Properties.Resources.section_3;
             this.BackImage = global::Viva.Properties.Resources.section_3;
             this.BackMaxSize = 1300;
-            this.ClientSize = new System.Drawing.Size(926, 474);
-            this.Controls.Add(this.btn_signin);
+            this.ClientSize = new System.Drawing.Size(926, 495);
             this.Controls.Add(this.txt_Pword);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.btn_signin);
             this.Controls.Add(this.txt_Uname);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -171,8 +184,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txt_Uname;
-        private MetroFramework.Controls.MetroTextBox txt_Pword;
         private MetroFramework.Controls.MetroButton btn_signin;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox txt_Pword;
     }
 }
 
