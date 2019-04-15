@@ -11,32 +11,30 @@ using System.Windows.Forms;
 
 namespace Viva
 {
-    public partial class AddUser : MetroFramework.Forms.MetroForm
+    public partial class ResetPwd : MetroFramework.Forms.MetroForm
     {
-        public AddUser()
+        public ResetPwd()
         {
             InitializeComponent();
         }
 
+        private void ResetPwd_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         Database db = new Database();
-
-        private void AddUser_Load(object sender, EventArgs e)
-        {
-            IdIncrement();
-        }
-
-        private void IdIncrement()
-        {
-            txt_uname.Focus();
-            DataTable dt = db.GetData("select top 1 user_id from [user] order by user_id desc");
-            int no = Int32.Parse(dt.Rows[0][0].ToString());
-            no++;
-            txt_user_id.Text = no.ToString();
-        }
 
         private void ClearText()
         {
-            txt_uname.Focus();
+            txt_user_id.Clear();
+            txt_search.Focus();
+            txt_search.Clear();
             txt_uname.Clear();
             txt_tele.Clear();
             txt_pwd.Clear();
@@ -47,35 +45,34 @@ namespace Viva
             cmb_type.SelectedIndex = -1;
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void btn_search_Click(object sender, EventArgs e)
         {
-            Database db = new Database();
+            
+            DataTable dt = db.GetData("select * from [user] where user_name='" + txt_search.Text + "' or user_id='" + txt_search.Text + "'");
+
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+            {
+                MetroMessageBox.Show(this, "Please enter User Name or ID!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(dt.Rows.Count < 1)
+            {
+                MetroMessageBox.Show(this, "There is no User accompanied with the given User Name or ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                txt_user_id.Text = dt.Rows[0][0].ToString();
+                txt_uname.Text = dt.Rows[0][1].ToString();
+                cmb_type.SelectedItem = dt.Rows[0][2].ToString();
+                txt_tele.Text = dt.Rows[0][3].ToString();
+                txt_name.Text = dt.Rows[0][5].ToString();
+            }
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
             try
             {
-                DataTable dt1 = db.GetData("select * from [user] where user_name='" + txt_uname.Text + "'");
-
-                if (string.IsNullOrWhiteSpace(txt_name.Text))
-                {
-                    MetroMessageBox.Show(this, "Please enter Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (cmb_type.SelectedIndex == -1)
-                {
-                    MetroMessageBox.Show(this, "Please select User Type!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (string.IsNullOrWhiteSpace(txt_tele.Text))
-                {
-                    MetroMessageBox.Show(this, "Please enter Conatct Number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (txt_tele.Text.Any(char.IsWhiteSpace) || txt_tele.Text.Length != 10 || !txt_tele.Text.Any(char.IsNumber) || txt_tele.Text.Any(char.IsLetter))
-                {
-                    MetroMessageBox.Show(this, "Please Enter Contact Number in Numeric!\nContact Number should contain 10 Numbers!!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_tele.Focus();
-                }
-                else if (string.IsNullOrWhiteSpace(txt_uname.Text))
-                {
-                    MetroMessageBox.Show(this, "Please enter User Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (string.IsNullOrWhiteSpace(txt_pwd.Text))
+                if (string.IsNullOrWhiteSpace(txt_pwd.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Password!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -99,21 +96,15 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Manager Password!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(dt1.Rows.Count > 0)
-                {
-                    MetroMessageBox.Show(this, "Entered User Name has already Taken!", "Taken Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
                 else
                 {
                     DataTable dt = db.GetData("select * from [user] where user_name='" + txt_mngr_uname.Text + "' and user_pwd COLLATE Latin1_General_CS_AS = '" + txt_mngr_pwd.Text + "' and user_type='Manager'");
                     if (dt.Rows.Count == 1)
                     {
-                        int ret = db.save_delete_update("insert into [user] values('" + txt_user_id.Text + "', '" + txt_uname.Text + "', '" + cmb_type.Text + "', '" + txt_tele.Text + "', '" + txt_cpwd.Text + "', '" + txt_name.Text + "')");
+                        int ret = db.save_delete_update("update [user] set user_pwd='"+txt_cpwd.Text+"' where user_id='"+txt_user_id.Text+"'");
                         if (ret == 1)
                         {
-                            MetroMessageBox.Show(this, "Successfully New User Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            IdIncrement();
+                            MetroMessageBox.Show(this, "Successfully Password Resetted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             ClearText();
                         }
@@ -128,15 +119,11 @@ namespace Viva
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MetroMessageBox.Show(this, "'" + ex.GetBaseException() + "'", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
 
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            ClearText();
         }
     }
 }
