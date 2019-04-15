@@ -48,23 +48,27 @@ namespace Viva
         private void btn_search_Click(object sender, EventArgs e)
         {
             
-            DataTable dt = db.GetData("select * from [user] where user_name='" + txt_search.Text + "' or user_id='" + txt_search.Text + "'");
+            
 
             if (string.IsNullOrWhiteSpace(txt_search.Text))
             {
                 MetroMessageBox.Show(this, "Please enter User Name or ID!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if(dt.Rows.Count < 1)
-            {
-                MetroMessageBox.Show(this, "There is no User accompanied with the given User Name or ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else
             {
-                txt_user_id.Text = dt.Rows[0][0].ToString();
-                txt_uname.Text = dt.Rows[0][1].ToString();
-                cmb_type.SelectedItem = dt.Rows[0][2].ToString();
-                txt_tele.Text = dt.Rows[0][3].ToString();
-                txt_name.Text = dt.Rows[0][5].ToString();
+                DataTable dt = db.GetData("select * from [user] where user_name='" + txt_search.Text + "' or user_id='" + txt_search.Text + "'");
+                if (dt.Rows.Count < 1)
+                {
+                    MetroMessageBox.Show(this, "There is no User accompanied with the given User Name or ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    txt_user_id.Text = dt.Rows[0][0].ToString();
+                    txt_uname.Text = dt.Rows[0][1].ToString();
+                    cmb_type.SelectedItem = dt.Rows[0][2].ToString();
+                    txt_tele.Text = dt.Rows[0][3].ToString();
+                    txt_name.Text = dt.Rows[0][5].ToString();
+                }
             }
         }
 
