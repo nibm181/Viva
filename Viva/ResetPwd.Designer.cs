@@ -422,6 +422,7 @@
             this.btn_cls.TabIndex = 26;
             this.btn_cls.Text = "Clear";
             this.btn_cls.UseSelectable = true;
+            this.btn_cls.Click += new System.EventHandler(this.btn_cls_Click);
             // 
             // btn_reset
             // 

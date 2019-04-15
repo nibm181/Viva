@@ -125,5 +125,10 @@ namespace Viva
             }
 
         }
+
+        private void btn_cls_Click(object sender, EventArgs e)
+        {
+            ClearText();
+        }
     }
 }
