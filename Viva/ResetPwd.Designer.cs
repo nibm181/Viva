@@ -566,7 +566,9 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txt_search);
             this.Name = "ResetPwd";
+            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Reset Password";
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.ResetPwd_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
