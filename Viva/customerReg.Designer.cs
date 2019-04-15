@@ -246,6 +246,7 @@
             this.btn_clear.TabIndex = 2;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseSelectable = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_add
             // 
@@ -255,6 +256,7 @@
             this.btn_add.TabIndex = 2;
             this.btn_add.Text = "Add";
             this.btn_add.UseSelectable = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // customerReg
             // 
