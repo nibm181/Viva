@@ -34,13 +34,16 @@ namespace Viva
                 string search = txt_ms__search.Text;
                 Database db = new Database();
                 DataTable d = new DataTable();
-                d = db.GetData("select mat_id, mat_name, mat_type, mat_length, mat_price from materials where mat_type like '" + search + "' or mat_name like '" + search + "' or mat_id like '" + search + "'");
+                d = db.GetData("select mat_id, mat_name, mat_type, mat_length, mat_price from materials where mat_type like '%" + search + "%' or mat_name like '%" + search + "%' or mat_id like '%" + search + "%'");
                 grd_mat_search.DataSource = d;
-                grd_mat_search.Columns[0].Name = "Material ID";
-                grd_mat_search.Columns[1].Name = "Name";
-                grd_mat_search.Columns[2].Name = "Type";
-                grd_mat_search.Columns[3].Name = "Length";
-                grd_mat_search.Columns[4].Name = "Price per Unit";
+                grd_mat_search.Columns[0].HeaderText = "Material ID";
+                grd_mat_search.Columns[1].HeaderText = "Name";
+                grd_mat_search.Columns[2].HeaderText = "Type";
+                grd_mat_search.Columns[3].HeaderText = "Length";
+                grd_mat_search.Columns[4].HeaderText = "Price per Unit";
+                grd_mat_search.AutoResizeColumns();
+                
+                
             }
         }
     }

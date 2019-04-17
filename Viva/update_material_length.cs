@@ -39,12 +39,17 @@ namespace Viva
                 string search = txt_umat_search.Text;
                 Database db = new Database();
                 DataTable d = new DataTable();
-                d = db.GetData("select mat_id, mat_name, mat_type, mat_length from materials where mat_type like '" + search + "' or mat_name like '" + search + "' or mat_id like '" + search + "'");
+                d = db.GetData("select mat_id, mat_name, mat_type, mat_length from materials where mat_type like '%" + search + "%' or mat_name like '%" + search + "%' or mat_id like '%" + search + "%'");
                 grd_update_mat.DataSource = d;
                 grd_update_mat.Columns[0].Name = "Material ID";
-                grd_update_mat.Columns[1].Name = "Name";
-                grd_update_mat.Columns[2].Name = "Type";
+                grd_update_mat.Columns[0].HeaderText = "Material ID";
+                grd_update_mat.Columns[1].HeaderText = "Name";
+                grd_update_mat.Columns[2].HeaderText = "Type";
                 grd_update_mat.Columns[3].Name = "Length";
+                grd_update_mat.Columns[3].HeaderText = "Length";
+                
+                
+                
             }
             
 
