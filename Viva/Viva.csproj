@@ -95,6 +95,12 @@
       <DependentUpon>customerReg.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="editCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editCustomer.Designer.cs">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="editGarment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customerReg.resx">
       <DependentUpon>customerReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editCustomer.resx">
+      <DependentUpon>editCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editGarment.resx">
       <DependentUpon>editGarment.cs</DependentUpon>
