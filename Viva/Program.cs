@@ -16,7 +16,7 @@ namespace Viva
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new order_1());
+            Application.Run(new Order2());
         }
     }
 }
