@@ -74,6 +74,7 @@ namespace Viva
             txt_cus_add2.Clear();
             txt_cus_no.Clear();
             txt_search_id.Clear();
+            txt_cus_add1.Clear();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
