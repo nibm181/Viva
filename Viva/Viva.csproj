@@ -136,6 +136,12 @@
     <Compile Include="material_search.designer.cs">
       <DependentUpon>material_search.cs</DependentUpon>
     </Compile>
+    <Compile Include="order_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_1.Designer.cs">
+      <DependentUpon>order_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResetPwd.cs">
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="material_search.resx">
       <DependentUpon>material_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_1.resx">
+      <DependentUpon>order_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
