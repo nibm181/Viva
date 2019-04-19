@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_delete = new MetroFramework.Controls.MetroButton();
             this.btn_clear = new MetroFramework.Controls.MetroButton();
             this.btn_Search = new MetroFramework.Controls.MetroButton();
             this.btn_exit = new MetroFramework.Controls.MetroButton();
@@ -46,19 +45,9 @@
             this.txt_cus_Id = new MetroFramework.Controls.MetroTextBox();
             this.txt_search_iD = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.btn_next = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Location = new System.Drawing.Point(836, 487);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(100, 28);
-            this.btn_delete.TabIndex = 7;
-            this.btn_delete.Text = "Next";
-            this.btn_delete.UseSelectable = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_clear
             // 
@@ -379,12 +368,22 @@
             this.metroLabel6.TabIndex = 6;
             this.metroLabel6.Text = "Customer ID";
             // 
+            // btn_next
+            // 
+            this.btn_next.Location = new System.Drawing.Point(850, 487);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Size = new System.Drawing.Size(100, 28);
+            this.btn_next.TabIndex = 11;
+            this.btn_next.Text = "Next";
+            this.btn_next.UseSelectable = true;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
+            // 
             // Order1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 575);
-            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_exit);
@@ -401,8 +400,6 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton btn_delete;
         private MetroFramework.Controls.MetroButton btn_clear;
         private MetroFramework.Controls.MetroButton btn_Search;
         private MetroFramework.Controls.MetroButton btn_exit;
@@ -420,5 +417,6 @@
         private MetroFramework.Controls.MetroTextBox txt_cus_Id;
         private MetroFramework.Controls.MetroTextBox txt_search_iD;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroButton btn_next;
     }
 }

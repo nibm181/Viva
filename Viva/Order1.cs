@@ -86,9 +86,17 @@ namespace Viva
         {
             this.Close();        }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void btn_next_Click(object sender, EventArgs e)
         {
-
+            /*if (string.IsNullOrEmpty(txt_cus_Id.Text))
+            {
+                MetroFramework.MetroMessageBox.Show(this, " Please select customer ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
+            
+                Order2 fbook2 = new Order2(txt_cus_Id.Text);
+                fbook2.Show();
+                this.Hide();
+            
         }
     }
 }
