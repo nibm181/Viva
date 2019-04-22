@@ -95,12 +95,6 @@
       <DependentUpon>customerReg.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
-    <Compile Include="editCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="editCustomer.Designer.cs">
-      <DependentUpon>editCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="editGarment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,17 +136,16 @@
     <Compile Include="material_search.designer.cs">
       <DependentUpon>material_search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order1.cs">
+    <Compile Include="OrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order1.Designer.cs">
-      <DependentUpon>Order1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Order2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Order2.Designer.cs">
-      <DependentUpon>Order2.cs</DependentUpon>
+    <Compile Include="OrderReportForm.Designer.cs">
+      <DependentUpon>OrderReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -190,9 +183,6 @@
     <EmbeddedResource Include="customerReg.resx">
       <DependentUpon>customerReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editCustomer.resx">
-      <DependentUpon>editCustomer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="editGarment.resx">
       <DependentUpon>editGarment.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,11 +202,9 @@
     <EmbeddedResource Include="material_search.resx">
       <DependentUpon>material_search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order1.resx">
-      <DependentUpon>Order1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Order2.resx">
-      <DependentUpon>Order2.cs</DependentUpon>
+    <EmbeddedResource Include="OrderReport.rdlc" />
+    <EmbeddedResource Include="OrderReportForm.resx">
+      <DependentUpon>OrderReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -250,6 +238,17 @@
     </None>
     <None Include="GarmentStock.xss">
       <DependentUpon>GarmentStock.xsd</DependentUpon>
+    </None>
+    <None Include="OrderDataSet.xsc">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OrderDataSet.xss">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
