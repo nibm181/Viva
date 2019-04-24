@@ -248,6 +248,7 @@
     <EmbeddedResource Include="obj\Debug\Viva.sales_clerk_home.resources" />
     <EmbeddedResource Include="obj\Debug\Viva.stock_admin_home.resources" />
     <EmbeddedResource Include="obj\Debug\Viva.update_material_length.resources" />
+    <EmbeddedResource Include="Order.resx" />
     <EmbeddedResource Include="Order1.resx">
       <DependentUpon>Order1.cs</DependentUpon>
     </EmbeddedResource>
