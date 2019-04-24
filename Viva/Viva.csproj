@@ -142,6 +142,21 @@
     <Compile Include="material_search.designer.cs">
       <DependentUpon>material_search.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Order1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order1.Designer.cs">
+      <DependentUpon>Order1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order2.Designer.cs">
+      <DependentUpon>Order2.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +181,12 @@
     </Compile>
     <Compile Include="sales clerk home.Designer.cs">
       <DependentUpon>sales clerk home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search Material.Designer.cs">
+      <DependentUpon>Search Material.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="stock_admin_home.cs">
@@ -211,6 +232,28 @@
     <EmbeddedResource Include="material_search.resx">
       <DependentUpon>material_search.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Viva.AddGarment.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.AddUser.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.customerReg.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.editCustomer.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.editGarment.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.form_login.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.GarmentStockReportForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.manager_home.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.Materials.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.material_search.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.OrderReportForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.ResetPwd.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.sales_clerk_home.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.stock_admin_home.resources" />
+    <EmbeddedResource Include="obj\Debug\Viva.update_material_length.resources" />
+    <EmbeddedResource Include="Order1.resx">
+      <DependentUpon>Order1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order2.resx">
+      <DependentUpon>Order2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderReport.rdlc" />
     <EmbeddedResource Include="OrderReportForm.resx">
       <DependentUpon>OrderReportForm.cs</DependentUpon>
@@ -231,12 +274,16 @@
     <EmbeddedResource Include="sales clerk home.resx">
       <DependentUpon>sales clerk home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Search Material.resx">
+      <DependentUpon>Search Material.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="stock_admin_home.resx">
       <DependentUpon>stock_admin_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="update_material_length.resx">
       <DependentUpon>update_material_length.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Viva.exe.config" />
     <None Include="GarmentStock.xsc">
       <DependentUpon>GarmentStock.xsd</DependentUpon>
     </None>
@@ -248,6 +295,15 @@
     <None Include="GarmentStock.xss">
       <DependentUpon>GarmentStock.xsd</DependentUpon>
     </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\RdlCompile.cache" />
+    <None Include="obj\Debug\RdlCompile.compiled" />
+    <None Include="obj\Debug\Viva.csproj.CopyComplete" />
+    <None Include="obj\Debug\Viva.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Viva.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Viva.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\Viva.csproj.CoreCompileInputs.cache" />
     <None Include="OrderDataSet.xsc">
       <DependentUpon>OrderDataSet.xsd</DependentUpon>
     </None>
@@ -280,6 +336,76 @@
     <None Include="Resources\garment-worker.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\EnvDTE.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\MetroFramework.Design.dll" />
+    <Content Include="bin\Debug\MetroFramework.dll" />
+    <Content Include="bin\Debug\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Debug\Microsoft.MSXML.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.DataVisualization.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.Design.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.WebForms.DLL" />
+    <Content Include="bin\Debug\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\Debug\Microsoft.SqlServer.Types.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <Content Include="bin\Debug\stdole.dll" />
+    <Content Include="bin\Debug\Viva.exe" />
+    <Content Include="bin\Debug\Viva.pdb" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="obj\Debug\TempPE\GarmentStock.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\OrderDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\Viva.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Viva.exe" />
+    <Content Include="obj\Debug\Viva.pdb" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -293,6 +419,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
