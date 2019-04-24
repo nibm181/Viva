@@ -65,7 +65,7 @@ namespace Viva
                         int ret = db.save_delete_update("insert into [customer] values('" + txt_cus_id.Text + "', '" + txt_cus_name.Text + "', '" + txt_add1.Text + "', '" + txt_add2.Text + "', '" + txt_cno.Text + "')");
                         if (ret == 1)
                         {
-                            MetroMessageBox.Show(this, "Successfully New User Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             IdIncrement();
 

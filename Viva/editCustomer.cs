@@ -37,25 +37,31 @@ namespace Viva
 
                 if (string.IsNullOrWhiteSpace(txt_cusName.Text))
                 {
-                    MetroMessageBox.Show(this, "Please enter Garment Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Customer Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (string.IsNullOrWhiteSpace(txt_add1.Text))
                 {
-                    MetroMessageBox.Show(this, "Please enter Garment Quantity!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter first Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (string.IsNullOrWhiteSpace(txt_add2.Text))
                 {
-                    MetroMessageBox.Show(this, "Please enter Garment Quantity!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Second Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (string.IsNullOrWhiteSpace(txt_cus_no.Text))
+                {
+                    MetroMessageBox.Show(this, "Please enter Contact Number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                else if (txt_cus_no.Text.Any(char.IsLetter) || Int32.Parse(txt_cus_no.Text) <= 0)
+
+                else if (txt_cus_no.Text.Any(char.IsLetter)  )
                 {
-                    MetroMessageBox.Show(this, "Please enter Quantity in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Contact Number Should Be Numeric", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (Int32.Parse(txt_cus_no.Text) < 10)
+                else if(txt_cus_no.Text.Length != 10)
                 {
-                    MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Contact Number Should Contain 10 numbers", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                
 
                 else
                 {
@@ -70,7 +76,7 @@ namespace Viva
 
                             txt_searchCus.Clear();
                             txt_cus_Id.Clear();
-
+                            txt_cusName.Clear();
                             txt_add1.Clear();
                             txt_add2.Clear();
                             txt_cus_no.Clear();
@@ -130,13 +136,13 @@ namespace Viva
                     }
                     else
                     {
-                        MetroMessageBox.Show(this, "There is no Garment accompanied with the given Model ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroMessageBox.Show(this, "There is no Customer accompanied with the given Customer ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch
             {
-                MetroMessageBox.Show(this, "There is no Garment accompanied with the given Model ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroMessageBox.Show(this, "There is no Customer accompanied with the given Customer ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -186,7 +192,19 @@ namespace Viva
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
+            txt_searchCus.Clear();
+            txt_cus_Id.Clear();
+            txt_cusName.Clear();
+            txt_add1.Clear();
+            txt_add2.Clear();
+            txt_cus_no.Clear();
 
+            txt_cus_Id.ReadOnly = true;
+            
+            txt_cusName.ReadOnly = true;
+            txt_add1.ReadOnly = true;
+            txt_add2.ReadOnly = true;
+            txt_cus_no.ReadOnly = true;
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
