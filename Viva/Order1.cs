@@ -92,7 +92,7 @@ namespace Viva
             {
                 MetroFramework.MetroMessageBox.Show(this, " Please select customer ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }*/
-            
+            txt_cus_Id.Text = "0099";
                 Order2 fbook2 = new Order2(txt_cus_Id.Text);
                 fbook2.Show();
                 this.Hide();
