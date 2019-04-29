@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using MetroFramework;
 
 namespace Viva
 {
@@ -87,6 +87,55 @@ namespace Viva
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_qty.Text))
+            {
+                MetroMessageBox.Show(this, "Please Enter QTY!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txt_qty.Text.Any(c => char.IsLetter(c)))
+            {
+                MetroMessageBox.Show(this, "QTY can not contain Letters!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (grid_search_model.SelectedRows.Count < 0)
+            {
+                MetroMessageBox.Show(this, "Please select Material model!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string mod_id = grid_search_model.SelectedRows[0].Cells[0].Value + string.Empty;
+                string mod_price = grid_search_model.SelectedRows[0].Cells[5].Value + string.Empty;
+                string mod_name = grid_search_model.SelectedRows[0].Cells[3].Value + string.Empty;
+
+                double mat_price_d = Convert.ToDouble(mod_price);
+                double qty = Convert.ToDouble(txt_qty.Text);
+                double tot_price = mat_price_d * qty;
+
+                grid_orders.Rows.Add(mod_id, mod_name, qty, tot_price);
+            }
+        }
+
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+            if (grid_orders.SelectedRows.Count < 0)
+            {
+                MetroMessageBox.Show(this, "Please select to reomve!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Int32 selectedRowCount = grid_orders.Rows.GetRowCount(DataGridViewElementStates.Selected);
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    grid_orders.Rows.RemoveAt(grid_orders.SelectedRows[0].Index);
+                }
+            }
+        }
+
+        private void btn_place_order_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
