@@ -14,12 +14,13 @@ namespace Viva
 {
     public partial class Order2 : MetroFramework.Forms.MetroForm
     {
+
         public Order2(String cusno)
         {
             InitializeComponent();
             txt_cus_id.Text = cusno;
         }
-
+        
         private void Order2_Load(object sender, EventArgs e)
         {
             //txt_sys_date.Text = DateTime.Now.ToString("dd-MM-yyyy");
@@ -130,6 +131,30 @@ namespace Viva
         private void btn_place_order_Click(object sender, EventArgs e)
         {
 
+            string delivery_date = date_delivery.Value.ToString("yyyy-mm-dd");
+            string order_date = DateTime.Now.ToString("yyyy-mm-dd");
+            string st = "done";
+            txt_qty.Text = order_date;
+            int ret = db.save_delete_update("insert into [order] values('" + txt_order_id.Text + "', '" + order_date + "', '" + txt_cus_id.Text + "', '" + order_date + "', '" + st + "')");
+
+            if (ret == 1)
+            {
+
+                MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                /*IdIncrement();
+
+                txt_cus_name.Clear();
+                txt_add1.Clear();
+                txt_add2.Clear();
+                txt_cno.Clear();*/
+
+
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
