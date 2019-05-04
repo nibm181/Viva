@@ -134,26 +134,36 @@ namespace Viva
             string delivery_date = date_delivery.Value.ToString("yyyy-mm-dd");
             string order_date = DateTime.Now.ToString("yyyy-mm-dd");
             string st = "done";
-            txt_qty.Text = order_date;
-            int ret = db.save_delete_update("insert into [order] values('" + txt_order_id.Text + "', '" + order_date + "', '" + txt_cus_id.Text + "', '" + order_date + "', '" + st + "')");
-
+            int ret = db.save_delete_update("insert into [order] values('" + txt_order_id.Text + "', '" + delivery_date + "', '" + txt_cus_id.Text + "', '" + order_date + "', '" + st + "')");
+            
             if (ret == 1)
             {
 
                 MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                /*IdIncrement();
+                IdIncrement();
 
                 txt_cus_name.Clear();
                 txt_add1.Clear();
                 txt_add2.Clear();
-                txt_cno.Clear();*/
+                txt_cno.Clear();
 
 
             }
             else
             {
                 MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            string order_id = txt_order_id.Text;
+            string a = "A";
+            for (int i = 0; (i+1) < grid_orders.Rows.Count; i++)
+            {
+
+                string mod_id = grid_orders.Rows[i].Cells[0].Value + string.Empty;
+                string qty = grid_orders.Rows[i].Cells[2].Value + string.Empty;
+                string amount = grid_orders.Rows[i].Cells[3].Value + string.Empty;
+                
+                int ret = db.save_delete_update("insert into [order_detail] values('" + txt_order_id.Text + "', '" + mod_id + "', '" + qty + "', '" + amount + "', '" + a + "')");
             }
         }
     }
