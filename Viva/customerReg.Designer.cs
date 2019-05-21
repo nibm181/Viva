@@ -103,7 +103,7 @@
             this.txt_cus_id.CustomButton.Visible = false;
             this.txt_cus_id.Enabled = false;
             this.txt_cus_id.Lines = new string[0];
-            this.txt_cus_id.Location = new System.Drawing.Point(348, 88);
+            this.txt_cus_id.Location = new System.Drawing.Point(348, 89);
             this.txt_cus_id.MaxLength = 32767;
             this.txt_cus_id.Name = "txt_cus_id";
             this.txt_cus_id.PasswordChar = '\0';
