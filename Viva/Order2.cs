@@ -141,12 +141,12 @@ namespace Viva
 
                 MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                IdIncrement();
+                //IdIncrement();
 
-                txt_cus_name.Clear();
-                txt_add1.Clear();
-                txt_add2.Clear();
-                txt_cno.Clear();
+                //txt_cus_name.Clear();
+               // txt_add1.Clear();
+               // txt_add2.Clear();
+               // txt_cno.Clear();
 
 
             }
@@ -163,7 +163,7 @@ namespace Viva
                 string qty = grid_orders.Rows[i].Cells[2].Value + string.Empty;
                 string amount = grid_orders.Rows[i].Cells[3].Value + string.Empty;
                 
-                int ret = db.save_delete_update("insert into [order_detail] values('" + txt_order_id.Text + "', '" + mod_id + "', '" + qty + "', '" + amount + "', '" + a + "')");
+                //int ret = db.save_delete_update("insert into [order_detail] values('" + txt_order_id.Text + "', '" + mod_id + "', '" + qty + "', '" + amount + "', '" + a + "')");
             }
         }
     }
