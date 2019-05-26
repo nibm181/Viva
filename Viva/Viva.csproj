@@ -218,7 +218,7 @@
     <EmbeddedResource Include="AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillReport.rdlc" />
+    <EmbeddedResource Include="BillReport1.rdlc" />
     <EmbeddedResource Include="BillReportForm.resx">
       <DependentUpon>BillReportForm.cs</DependentUpon>
     </EmbeddedResource>

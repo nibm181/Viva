@@ -20,7 +20,7 @@ namespace Viva
         private void BillReportForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'Bill.DataTable1' table. You can move, or remove it, as needed.
-            this.DataTable1TableAdapter.Fill(this.Bill.DataTable1, "O0001");
+            this.DataTable1TableAdapter.Fill(this.Bill.DataTable1, "O0002" );
 
             this.reportViewer1.RefreshReport();
         }
