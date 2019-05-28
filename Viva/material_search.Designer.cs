@@ -43,9 +43,10 @@
             // 
             // 
             this.txt_ms__search.CustomButton.Image = null;
-            this.txt_ms__search.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.txt_ms__search.CustomButton.Location = new System.Drawing.Point(100, 2);
+            this.txt_ms__search.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ms__search.CustomButton.Name = "";
-            this.txt_ms__search.CustomButton.Size = new System.Drawing.Size(33, 33);
+            this.txt_ms__search.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.txt_ms__search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_ms__search.CustomButton.TabIndex = 1;
             this.txt_ms__search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -53,7 +54,8 @@
             this.txt_ms__search.CustomButton.Visible = false;
             this.txt_ms__search.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txt_ms__search.Lines = new string[0];
-            this.txt_ms__search.Location = new System.Drawing.Point(89, 115);
+            this.txt_ms__search.Location = new System.Drawing.Point(67, 93);
+            this.txt_ms__search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ms__search.MaxLength = 32767;
             this.txt_ms__search.Multiline = true;
             this.txt_ms__search.Name = "txt_ms__search";
@@ -64,7 +66,7 @@
             this.txt_ms__search.SelectionLength = 0;
             this.txt_ms__search.SelectionStart = 0;
             this.txt_ms__search.ShortcutsEnabled = true;
-            this.txt_ms__search.Size = new System.Drawing.Size(212, 35);
+            this.txt_ms__search.Size = new System.Drawing.Size(159, 28);
             this.txt_ms__search.TabIndex = 0;
             this.txt_ms__search.UseSelectable = true;
             this.txt_ms__search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -72,11 +74,14 @@
             // 
             // btn_ms__search
             // 
-            this.btn_ms__search.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_ms__search.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btn_ms__search.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.btn_ms__search.Location = new System.Drawing.Point(346, 115);
+            this.btn_ms__search.Highlight = true;
+            this.btn_ms__search.Location = new System.Drawing.Point(260, 93);
+            this.btn_ms__search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_ms__search.Name = "btn_ms__search";
-            this.btn_ms__search.Size = new System.Drawing.Size(130, 35);
+            this.btn_ms__search.Size = new System.Drawing.Size(98, 28);
+            this.btn_ms__search.Style = MetroFramework.MetroColorStyle.Lime;
             this.btn_ms__search.TabIndex = 1;
             this.btn_ms__search.Text = "Search";
             this.btn_ms__search.UseSelectable = true;
@@ -94,7 +99,7 @@
             this.grd_mat_search.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Quicksand", 13.8F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -104,7 +109,7 @@
             this.grd_mat_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Quicksand", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -113,7 +118,8 @@
             this.grd_mat_search.EnableHeadersVisualStyles = false;
             this.grd_mat_search.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_mat_search.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grd_mat_search.Location = new System.Drawing.Point(74, 198);
+            this.grd_mat_search.Location = new System.Drawing.Point(56, 161);
+            this.grd_mat_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grd_mat_search.Name = "grd_mat_search";
             this.grd_mat_search.ReadOnly = true;
             this.grd_mat_search.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -128,18 +134,20 @@
             this.grd_mat_search.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grd_mat_search.RowTemplate.Height = 24;
             this.grd_mat_search.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_mat_search.Size = new System.Drawing.Size(971, 448);
+            this.grd_mat_search.Size = new System.Drawing.Size(728, 364);
             this.grd_mat_search.TabIndex = 2;
             // 
             // material_search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 698);
+            this.ClientSize = new System.Drawing.Size(854, 567);
             this.Controls.Add(this.grd_mat_search);
             this.Controls.Add(this.btn_ms__search);
             this.Controls.Add(this.txt_ms__search);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "material_search";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.Text = "Material Search";
             this.Load += new System.EventHandler(this.material_search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd_mat_search)).EndInit();

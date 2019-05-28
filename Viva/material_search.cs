@@ -18,9 +18,25 @@ namespace Viva
             InitializeComponent();
         }
 
+        Database db;
+        DataTable d;
+
         private void material_search_Load(object sender, EventArgs e)
         {
-
+            string search = txt_ms__search.Text;
+            db = new Database();
+            d = new DataTable();
+            d = db.GetData("select mat_id, mat_name, mat_type, mat_length, mat_price from materials");
+            if (d.Rows.Count > 0)
+            {
+                grd_mat_search.DataSource = d;
+                grd_mat_search.Columns[0].HeaderText = "Material ID";
+                grd_mat_search.Columns[1].HeaderText = "Name";
+                grd_mat_search.Columns[2].HeaderText = "Type";
+                grd_mat_search.Columns[3].HeaderText = "Length";
+                grd_mat_search.Columns[4].HeaderText = "Price per Unit";
+                grd_mat_search.AutoResizeColumns();
+            }
         }
 
         private void btn_ms__search_Click(object sender, EventArgs e)
@@ -32,17 +48,23 @@ namespace Viva
             else
             {
                 string search = txt_ms__search.Text;
-                Database db = new Database();
-                DataTable d = new DataTable();
+                db = new Database();
+                d = new DataTable();
                 d = db.GetData("select mat_id, mat_name, mat_type, mat_length, mat_price from materials where mat_type like '%" + search + "%' or mat_name like '%" + search + "%' or mat_id like '%" + search + "%'");
-                grd_mat_search.DataSource = d;
-                grd_mat_search.Columns[0].HeaderText = "Material ID";
-                grd_mat_search.Columns[1].HeaderText = "Name";
-                grd_mat_search.Columns[2].HeaderText = "Type";
-                grd_mat_search.Columns[3].HeaderText = "Length";
-                grd_mat_search.Columns[4].HeaderText = "Price per Unit";
-                grd_mat_search.AutoResizeColumns();
-                
+                if (d.Rows.Count > 0)
+                {
+                    grd_mat_search.DataSource = d;
+                    grd_mat_search.Columns[0].HeaderText = "Material ID";
+                    grd_mat_search.Columns[1].HeaderText = "Name";
+                    grd_mat_search.Columns[2].HeaderText = "Type";
+                    grd_mat_search.Columns[3].HeaderText = "Length";
+                    grd_mat_search.Columns[4].HeaderText = "Price per Unit";
+                    grd_mat_search.AutoResizeColumns();
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "There is no Material(s) accompanied with the given Search Term", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 
             }
         }
