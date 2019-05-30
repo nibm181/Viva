@@ -141,11 +141,25 @@
     <Compile Include="manager_home.Designer.cs">
       <DependentUpon>manager_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaterialDataSet.cs">
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Materials.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Materials.designer.cs">
       <DependentUpon>Materials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialStockReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialStockReportForm.Designer.cs">
+      <DependentUpon>MaterialStockReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="material_search.cs">
       <SubType>Form</SubType>
@@ -262,6 +276,10 @@
     <EmbeddedResource Include="Materials.resx">
       <DependentUpon>Materials.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MaterialStockReport.rdlc" />
+    <EmbeddedResource Include="MaterialStockReportForm.resx">
+      <DependentUpon>MaterialStockReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="material_search.resx">
       <DependentUpon>material_search.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +366,17 @@
     </None>
     <None Include="GarmentStock.xss">
       <DependentUpon>GarmentStock.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialDataSet.xsc">
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterialDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MaterialDataSet.xss">
+      <DependentUpon>MaterialDataSet.xsd</DependentUpon>
     </None>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

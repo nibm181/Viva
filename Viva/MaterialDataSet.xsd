@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MaterialDataSet" targetNamespace="http://tempuri.org/MaterialDataSet.xsd" xmlns:mstns="http://tempuri.org/MaterialDataSet.xsd" xmlns="http://tempuri.org/MaterialDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GarmentsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GarmentsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Viva.Properties.Settings.GlobalReference.Default.GarmentsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="materialsTableAdapter" GeneratorDataComponentClassName="materialsTableAdapter" Name="materials" UserDataComponentName="materialsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GarmentsConnectionString (Settings)" DbObjectName="Garments.dbo.materials" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        mat_id, mat_name, mat_type, mat_length
+FROM            materials
+WHERE   mat_length &gt; 0</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="mat_id" DataSetColumn="mat_id" />
+              <Mapping SourceColumn="mat_name" DataSetColumn="mat_name" />
+              <Mapping SourceColumn="mat_type" DataSetColumn="mat_type" />
+              <Mapping SourceColumn="mat_length" DataSetColumn="mat_length" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MaterialDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MaterialDataSet" msprop:Generator_UserDSName="MaterialDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="materials" msprop:Generator_TableClassName="materialsDataTable" msprop:Generator_TableVarName="tablematerials" msprop:Generator_TablePropName="materials" msprop:Generator_RowDeletingName="materialsRowDeleting" msprop:Generator_RowChangingName="materialsRowChanging" msprop:Generator_RowEvHandlerName="materialsRowChangeEventHandler" msprop:Generator_RowDeletedName="materialsRowDeleted" msprop:Generator_UserTableName="materials" msprop:Generator_RowChangedName="materialsRowChanged" msprop:Generator_RowEvArgName="materialsRowChangeEvent" msprop:Generator_RowClassName="materialsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mat_id" msprop:Generator_ColumnVarNameInTable="columnmat_id" msprop:Generator_ColumnPropNameInRow="mat_id" msprop:Generator_ColumnPropNameInTable="mat_idColumn" msprop:Generator_UserColumnName="mat_id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat_name" msprop:Generator_ColumnVarNameInTable="columnmat_name" msprop:Generator_ColumnPropNameInRow="mat_name" msprop:Generator_ColumnPropNameInTable="mat_nameColumn" msprop:Generator_UserColumnName="mat_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat_type" msprop:Generator_ColumnVarNameInTable="columnmat_type" msprop:Generator_ColumnPropNameInRow="mat_type" msprop:Generator_ColumnPropNameInTable="mat_typeColumn" msprop:Generator_UserColumnName="mat_type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mat_length" msprop:Generator_ColumnVarNameInTable="columnmat_length" msprop:Generator_ColumnPropNameInRow="mat_length" msprop:Generator_ColumnPropNameInTable="mat_lengthColumn" msprop:Generator_UserColumnName="mat_length">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

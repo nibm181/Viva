@@ -6,24 +6,21 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.25322in</Width>
+              <Width>1.26042in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.25322in</Width>
+              <Width>1.26042in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.25322in</Width>
+              <Width>1.26042in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.25322in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.25322in</Width>
+              <Width>1.26042in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.34722in</Height>
+              <Height>0.39062in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -34,11 +31,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Model ID</Value>
+                              <Value>Material ID</Value>
                               <Style>
-                                <FontFamily>Berlin Sans FB Demi</FontFamily>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Medium</FontWeight>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -51,7 +47,6 @@
                       <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
@@ -59,7 +54,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>Purple</BackgroundColor>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -78,11 +73,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Type</Value>
+                              <Value>Name</Value>
                               <Style>
-                                <FontFamily>Berlin Sans FB Demi</FontFamily>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Medium</FontWeight>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -95,7 +89,6 @@
                       <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
@@ -103,7 +96,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>Purple</BackgroundColor>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -122,11 +115,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Category</Value>
+                              <Value>Type</Value>
                               <Style>
-                                <FontFamily>Berlin Sans FB Demi</FontFamily>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Medium</FontWeight>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -139,7 +131,6 @@
                       <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
@@ -147,7 +138,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>Purple</BackgroundColor>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -166,11 +157,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Name</Value>
+                              <Value>Length</Value>
                               <Style>
-                                <FontFamily>Berlin Sans FB Demi</FontFamily>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Medium</FontWeight>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -183,7 +173,6 @@
                       <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
                         <BottomBorder>
@@ -191,51 +180,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>Purple</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox9">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Quantity</Value>
-                              <Style>
-                                <FontFamily>Berlin Sans FB Demi</FontFamily>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Medium</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#350035</Color>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                          <Width>1pt</Width>
-                        </BottomBorder>
-                        <BackgroundColor>Purple</BackgroundColor>
+                        <BackgroundColor>CornflowerBlue</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -248,18 +193,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.34722in</Height>
+              <Height>0.39062in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="model_id">
+                    <Textbox Name="mat_id">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!model_id.Value</Value>
+                              <Value>=Fields!mat_id.Value</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -272,13 +217,13 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>model_id</rd:DefaultName>
+                      <rd:DefaultName>mat_id</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
+                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -290,14 +235,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="model_type">
+                    <Textbox Name="mat_name">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!model_type.Value</Value>
+                              <Value>=Fields!mat_name.Value</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -310,13 +255,13 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>model_type</rd:DefaultName>
+                      <rd:DefaultName>mat_name</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
+                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -328,14 +273,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="model_cat">
+                    <Textbox Name="mat_type">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!model_cat.Value</Value>
+                              <Value>=Fields!mat_type.Value</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -348,13 +293,13 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>model_cat</rd:DefaultName>
+                      <rd:DefaultName>mat_type</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
+                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -366,14 +311,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="model_name">
+                    <Textbox Name="mat_length">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!model_name.Value</Value>
+                              <Value>=Fields!mat_length.Value</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -386,142 +331,13 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>model_name</rd:DefaultName>
+                      <rd:DefaultName>mat_length</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#350035</Color>
+                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="model_qty">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!model_qty.Value</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>model_qty</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#350035</Color>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.34722in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox13">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Total Quantity</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox13</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#350035</Color>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>#350035</Color>
-                        </BottomBorder>
-                        <BackgroundColor>LightSteelBlue</BackgroundColor>
-                        <VerticalAlign>Middle</VerticalAlign>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                    <ColSpan>4</ColSpan>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell />
-                <TablixCell />
-                <TablixCell />
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox18">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!model_qty.Value)</Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox18</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#350035</Color>
-                          <Style>None</Style>
-                        </Border>
-                        <BottomBorder>
-                          <Color>#350035</Color>
-                        </BottomBorder>
-                        <BackgroundColor>LightSteelBlue</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -541,21 +357,20 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember />
             <TablixMember>
-              <Group Name="model_qty">
+              <Group Name="mat_length">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!model_qty.Value</GroupExpression>
+                  <GroupExpression>=Fields!mat_length.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!model_qty.Value</Value>
+                  <Value>=Fields!mat_length.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
@@ -564,16 +379,13 @@
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
-            <TablixMember>
-              <KeepWithGroup>Before</KeepWithGroup>
-            </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>GarmentStock</DataSetName>
-        <Top>2.07167in</Top>
-        <Left>0.57689in</Left>
-        <Height>1.04166in</Height>
-        <Width>6.2661in</Width>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.64459in</Top>
+        <Left>0.735in</Left>
+        <Height>0.78124in</Height>
+        <Width>5.04168in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -590,7 +402,7 @@
                 <Value>SG Fashion</Value>
                 <Style>
                   <FontFamily>Copperplate Gothic Bold</FontFamily>
-                  <FontSize>40pt</FontSize>
+                  <FontSize>35pt</FontSize>
                   <Color>Red</Color>
                 </Style>
               </TextRun>
@@ -599,10 +411,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>0.08208in</Top>
-        <Left>1.76042in</Left>
+        <Top>0.12089in</Top>
+        <Left>1.68166in</Left>
         <Height>0.66667in</Height>
-        <Width>3.6575in</Width>
+        <Width>3.20832in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -647,8 +459,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox26</rd:DefaultName>
-        <Top>0.74875in</Top>
-        <Left>2.17708in</Left>
+        <Top>0.54104in</Top>
+        <Left>1.83791in</Left>
         <Height>0.4375in</Height>
         <Width>2.78125in</Width>
         <ZIndex>2</ZIndex>
@@ -669,10 +481,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Garment Stock Report</Value>
+                <Value>Material Stock Report</Value>
                 <Style>
                   <FontFamily>Elephant</FontFamily>
-                  <FontSize>20pt</FontSize>
+                  <FontSize>17pt</FontSize>
                   <Color>Indigo</Color>
                 </Style>
               </TextRun>
@@ -681,10 +493,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>1.21403in</Top>
-        <Left>1.89583in</Left>
+        <Top>0.98201in</Top>
+        <Left>1.8275in</Left>
         <Height>0.375in</Height>
-        <Width>3.36458in</Width>
+        <Width>2.79166in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -713,8 +525,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.6307in</Top>
-        <Left>1.15215in</Left>
+        <Top>1.31125in</Top>
+        <Left>0.82402in</Left>
         <Height>0.25in</Height>
         <Width>1.6957in</Width>
         <ZIndex>4</ZIndex>
@@ -745,8 +557,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.6307in</Top>
-        <Left>0.71465in</Left>
+        <Top>1.32514in</Top>
+        <Left>0.38652in</Left>
         <Height>0.25in</Height>
         <Width>0.4375in</Width>
         <ZIndex>5</ZIndex>
@@ -761,9 +573,10 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>1.86333in</Top>
+        <Top>1.57514in</Top>
+        <Left>0.10417in</Left>
         <Height>0in</Height>
-        <Width>7.29167in</Width>
+        <Width>6.29167in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -772,13 +585,13 @@
         </Style>
       </Line>
     </ReportItems>
-    <Height>4.16667in</Height>
+    <Height>6.14584in</Height>
     <Style />
   </Body>
-  <Width>7.29167in</Width>
+  <Width>6.51041in</Width>
   <Page>
     <PageFooter>
-      <Height>1in</Height>
+      <Height>1.82244cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -797,8 +610,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.55083in</Top>
-          <Left>3.05209in</Left>
+          <Top>0.30083in</Top>
+          <Left>2.66541in</Left>
           <Height>0.25in</Height>
           <Width>1in</Width>
           <Style>
@@ -820,64 +633,56 @@
     </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
-    <LeftMargin>0.5in</LeftMargin>
-    <RightMargin>0.5in</RightMargin>
-    <TopMargin>0.5in</TopMargin>
-    <BottomMargin>0.5in</BottomMargin>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="GarmentStock">
+    <DataSource Name="MaterialDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>71bfe4dd-eed1-46f4-b895-da9c1b69b416</rd:DataSourceID>
+      <rd:DataSourceID>020b2062-a5e2-4187-bc82-2e9646cb4434</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="GarmentStock">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>GarmentStock</DataSourceName>
+        <DataSourceName>MaterialDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="model_id">
-          <DataField>model_id</DataField>
+        <Field Name="mat_id">
+          <DataField>mat_id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="model_type">
-          <DataField>model_type</DataField>
+        <Field Name="mat_name">
+          <DataField>mat_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="model_cat">
-          <DataField>model_cat</DataField>
+        <Field Name="mat_type">
+          <DataField>mat_type</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="model_name">
-          <DataField>model_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="model_qty">
-          <DataField>model_qty</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="model_price">
-          <DataField>model_price</DataField>
+        <Field Name="mat_length">
+          <DataField>mat_length</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>GarmentStock</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Mhd Fazil\source\repos\nibm181\Viva\Viva\GarmentStock.xsd</rd:SchemaPath>
-        <rd:TableName>tbl_garment</rd:TableName>
+        <rd:DataSetName>MaterialDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Mhd Fazil\Source\Repos\nibm181\Viva\Viva\MaterialDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>materials</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>tbl_garmentTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>materialsTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>5f8caa77-87ad-48d7-965d-8eee6ab9cacf</rd:ReportID>
+  <rd:ReportID>17f1da7f-ed9c-40b5-b5b0-7037882e3cd0</rd:ReportID>
 </Report>
