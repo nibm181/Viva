@@ -38,6 +38,7 @@ namespace Viva
                     grd_mat_search.Columns[4].HeaderText = "Price per Unit";
                     grd_mat_search.AutoResizeColumns();
                 }
+                grd_mat_search.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -73,6 +74,7 @@ namespace Viva
                     {
                         MetroMessageBox.Show(this, "There is no Material(s) accompanied with the given Search Term", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    grd_mat_search.ClearSelection();
                 }
                 catch (Exception ex)
                 {

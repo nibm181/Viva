@@ -67,7 +67,10 @@ namespace Viva
                             cmb_type.SelectedItem= dr["model_type"].ToString();
                             cmb_cat.SelectedItem= dr["model_cat"].ToString();
                             txt_name.Text = dr["model_name"].ToString();
-                            txt_qty.Text = dr["model_qty"].ToString();
+                            if (int.Parse(dr["model_qty"].ToString()) < 0)
+                                txt_qty.Text = "0";
+                            else
+                                txt_qty.Text = dr["model_qty"].ToString();
                             txt_price.Text = dr["model_price"].ToString();
                         }                     
                     }
@@ -140,6 +143,8 @@ namespace Viva
                             txt_name.ReadOnly = true;
                             txt_qty.ReadOnly = true;
                             txt_price.ReadOnly = true;
+
+                            
                         }
                         else
                         {
@@ -151,6 +156,16 @@ namespace Viva
             catch
             {
                 MetroMessageBox.Show(this, "Connection Error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void update_order()
+        {
+            DataTable dt = db.GetData("select * from order_detail where model_id='" + txt_id.Text + "' and availability='P'");
+            int qty = int.Parse(txt_qty.Text);
+            foreach (DataRow dr in dt.Rows)
+            {
+
             }
         }
 

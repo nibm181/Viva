@@ -39,6 +39,7 @@ namespace Viva
                     metroGrid1.Columns[5].HeaderText = "Price per Unit";
                     metroGrid1.AutoResizeColumns();
                 }
+                metroGrid1.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -75,6 +76,7 @@ namespace Viva
                     {
                         MetroMessageBox.Show(this, "There is no Garment(s) accompanied with the given Search Term", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    metroGrid1.ClearSelection();
                 }
                 catch (Exception ex)
                 {

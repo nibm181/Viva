@@ -181,6 +181,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recut.Designer.cs">
+      <DependentUpon>Recut.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResetPwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +302,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recut.resx">
+      <DependentUpon>Recut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResetPwd.resx">
       <DependentUpon>ResetPwd.cs</DependentUpon>
     </EmbeddedResource>
