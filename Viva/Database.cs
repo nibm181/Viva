@@ -36,7 +36,7 @@ namespace Viva
             }
             catch
             {
-                MessageBox.Show("Check your database connection");
+                MessageBox.Show("Please check your database connection");
             }
             cmd = new SqlCommand(query, con);
             row = cmd.ExecuteNonQuery();
