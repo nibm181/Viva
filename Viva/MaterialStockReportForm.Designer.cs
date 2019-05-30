@@ -29,26 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.materialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MaterialDataSet = new Viva.MaterialDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.materialsTableAdapter = new Viva.MaterialDataSetTableAdapters.materialsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.materialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaterialDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.materialsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Viva.MaterialStockReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(77, 83);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(649, 630);
-            this.reportViewer1.TabIndex = 0;
             // 
             // materialsBindingSource
             // 
@@ -60,6 +48,18 @@
             this.MaterialDataSet.DataSetName = "MaterialDataSet";
             this.MaterialDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // reportViewer1
+            // 
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.materialsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Viva.MaterialStockReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(47, 83);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(730, 630);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // materialsTableAdapter
             // 
             this.materialsTableAdapter.ClearBeforeFill = true;
@@ -68,8 +68,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 736);
+            this.ClientSize = new System.Drawing.Size(826, 736);
             this.Controls.Add(this.reportViewer1);
+            this.MaximumSize = new System.Drawing.Size(826, 736);
+            this.MinimumSize = new System.Drawing.Size(826, 736);
             this.Name = "MaterialStockReportForm";
             this.Text = "Material Stock Report";
             this.Load += new System.EventHandler(this.MaterialStockReportForm_Load);
