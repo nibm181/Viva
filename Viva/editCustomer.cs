@@ -136,13 +136,13 @@ namespace Viva
                     }
                     else
                     {
-                        MetroMessageBox.Show(this, "There is no Customer accompanied with the given Customer ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroMessageBox.Show(this, "There is no Customer accompanied with the given Customer ID", "Invalid Customer ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch
             {
-                MetroMessageBox.Show(this, "There is no Customer accompanied with the given Customer ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroMessageBox.Show(this, "There is no Customer accompanied with the given Customer ID", "Invalid Customer ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -192,19 +192,26 @@ namespace Viva
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            txt_searchCus.Clear();
-            txt_cus_Id.Clear();
-            txt_cusName.Clear();
-            txt_add1.Clear();
-            txt_add2.Clear();
-            txt_cus_no.Clear();
+            if (string.IsNullOrWhiteSpace(txt_cus_Id.Text))
+            {
+                MetroMessageBox.Show(this, "Already Cleared", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                txt_searchCus.Clear();
+                txt_cus_Id.Clear();
+                txt_cusName.Clear();
+                txt_add1.Clear();
+                txt_add2.Clear();
+                txt_cus_no.Clear();
 
-            txt_cus_Id.ReadOnly = true;
-            
-            txt_cusName.ReadOnly = true;
-            txt_add1.ReadOnly = true;
-            txt_add2.ReadOnly = true;
-            txt_cus_no.ReadOnly = true;
+                txt_cus_Id.ReadOnly = true;
+
+                txt_cusName.ReadOnly = true;
+                txt_add1.ReadOnly = true;
+                txt_add2.ReadOnly = true;
+                txt_cus_no.ReadOnly = true;
+            }
         }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
@@ -218,6 +225,31 @@ namespace Viva
         }
 
         private void metroLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_cusName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel5_Click(object sender, EventArgs e)
         {
 
         }
