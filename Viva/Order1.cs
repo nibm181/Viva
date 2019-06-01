@@ -88,14 +88,16 @@ namespace Viva
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            /*if (string.IsNullOrEmpty(txt_cus_Id.Text))
+            if (string.IsNullOrEmpty(txt_cus_Id.Text))
             {
                 MetroFramework.MetroMessageBox.Show(this, " Please select customer ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            txt_cus_Id.Text = "0099";
+            }
+            else
+            {
                 Order2 fbook2 = new Order2(txt_cus_Id.Text);
                 fbook2.Show();
                 this.Hide();
+            }
             
         }
     }

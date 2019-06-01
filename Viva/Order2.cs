@@ -23,7 +23,7 @@ namespace Viva
         
         private void Order2_Load(object sender, EventArgs e)
         {
-            //txt_sys_date.Text = DateTime.Now.ToString("dd-MM-yyyy");
+            
             lord_order_id();
             datagridload();
             date_delivery.MinDate = DateTime.Now;
@@ -114,7 +114,11 @@ namespace Viva
 
         private void btn_remove_Click(object sender, EventArgs e)
         {
-            if (grid_orders.SelectedRows.Count < 0)
+            if (grid_orders.Rows.Count < 2)
+            {
+                MetroMessageBox.Show(this, "no records to reomve!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (grid_orders.SelectedRows.Count < 0)
             {
                 MetroMessageBox.Show(this, "Please select to reomve!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -130,41 +134,67 @@ namespace Viva
 
         private void btn_place_order_Click(object sender, EventArgs e)
         {
-
-            string delivery_date = date_delivery.Value.ToString("yyyy-mm-dd");
-            string order_date = DateTime.Now.ToString("yyyy-mm-dd");
+            if (grid_orders.Rows.Count == 1)
+            {
+                MetroMessageBox.Show(this, "no selected orders!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            { 
+            string delivery_date = date_delivery.Value.ToShortDateString();
+            string order_date = DateTime.Now.ToShortDateString();
             string st = "done";
             int ret = db.save_delete_update("insert into [order] values('" + txt_order_id.Text + "', '" + delivery_date + "', '" + txt_cus_id.Text + "', '" + order_date + "', '" + st + "')");
-            
+
             if (ret == 1)
             {
+                string order_id = txt_order_id.Text;
+                for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                {
+                    string mod_id = grid_orders.Rows[i].Cells[0].Value + string.Empty;
+                    string qty = grid_orders.Rows[i].Cells[2].Value + string.Empty;
+                    string amount = grid_orders.Rows[i].Cells[3].Value + string.Empty;
+                    string store_qty = "0";
+                    string pending_qty = "0";
+                    int x = 0;
+                    DataTable dt = db.GetData("select * from tbl_garment where model_id='" + mod_id + "'");
+                    if (dt.Rows.Count > 0)
+                    {
 
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            store_qty = dr["model_qty"].ToString();
+                        }
+                    }
+
+                    int new_store_qty = Int32.Parse(store_qty) - Int32.Parse(qty);
+                    if (Int32.Parse(store_qty) <= 0)
+                    {
+                        pending_qty = qty;
+                    }
+                    else
+                    {
+                        x = Int32.Parse(qty) - Int32.Parse(store_qty);
+                        if (x > 0)
+                        {
+                            pending_qty = "0";
+                        }
+                        else
+                        {
+                            pending_qty = (-1 * x).ToString();
+                        }
+                    }
+                    db.save_delete_update("insert into [order_detail] values('" + txt_order_id.Text + "', '" + mod_id + "', '" + qty + "', '" + amount + "', '" + pending_qty + "')");
+                    db.save_delete_update("UPDATE tbl_garment SET model_qty = '" + new_store_qty + "' WHERE model_id = '" + mod_id + "' ");
+
+                }
                 MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //IdIncrement();
-
-                //txt_cus_name.Clear();
-               // txt_add1.Clear();
-               // txt_add2.Clear();
-               // txt_cno.Clear();
-
-
             }
             else
             {
                 MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            string order_id = txt_order_id.Text;
-            string a = "A";
-            for (int i = 0; (i+1) < grid_orders.Rows.Count; i++)
-            {
-
-                string mod_id = grid_orders.Rows[i].Cells[0].Value + string.Empty;
-                string qty = grid_orders.Rows[i].Cells[2].Value + string.Empty;
-                string amount = grid_orders.Rows[i].Cells[3].Value + string.Empty;
-                
-                //int ret = db.save_delete_update("insert into [order_detail] values('" + txt_order_id.Text + "', '" + mod_id + "', '" + qty + "', '" + amount + "', '" + a + "')");
             }
+            
         }
     }
 }
