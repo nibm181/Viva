@@ -30,7 +30,7 @@ namespace Viva
         }
         Database db = new Database();
 
-        private void lord_order_id()
+        private void OrderId_auto()
         {
             DataTable dt = db.GetData("select top 1 order_id from [order] order by order_id desc");
             string no = dt.Rows[0]["order_id"].ToString();
@@ -41,6 +41,10 @@ namespace Viva
             num++; //increasing splited string by 1
             no = no.Substring(0, 1) + num.ToString("0000");
             txt_order_id.Text = no.ToString();
+        }
+        private void lord_order_id()
+        {
+            OrderId_auto();
         }
 
 
@@ -60,13 +64,21 @@ namespace Viva
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            search_add_grid();
+            if(string.IsNullOrWhiteSpace(txt_search_id.Text))
+            {
+                datagridload();
+            }
+            else
+            {
+                search_add_grid();
+            }
+            
         }
         private void search_add_grid()
         {
             SqlConnection con;
             con = new SqlConnection("Server=tcp:nibmgarments.database.windows.net,1433;Initial Catalog=Garments;Persist Security Info=False;User ID=doof;Password=warrior@00;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from tbl_garment", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from tbl_garment where model_id='" + txt_search_id.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             grid_search_model.DataSource = dt;
@@ -101,14 +113,32 @@ namespace Viva
             else
             {
                 string mod_id = grid_search_model.SelectedRows[0].Cells[0].Value + string.Empty;
-                string mod_price = grid_search_model.SelectedRows[0].Cells[5].Value + string.Empty;
-                string mod_name = grid_search_model.SelectedRows[0].Cells[3].Value + string.Empty;
+                int y = 0;
+                for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                {
+                    string mod_id_order = grid_orders.Rows[i].Cells[0].Value + string.Empty;
+                    if (mod_id == mod_id_order)
+                    {
+                        y = 1;
+                    }
+                }
+                if(y==1)
+                {
+                    MetroMessageBox.Show(this, "This model already enterd!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string mod_price = grid_search_model.SelectedRows[0].Cells[5].Value + string.Empty;
+                    string mod_name = grid_search_model.SelectedRows[0].Cells[3].Value + string.Empty;
 
-                double mat_price_d = Convert.ToDouble(mod_price);
-                double qty = Convert.ToDouble(txt_qty.Text);
-                double tot_price = mat_price_d * qty;
+                    double mat_price_d = Convert.ToDouble(mod_price);
+                    double qty = Convert.ToDouble(txt_qty.Text);
+                    double tot_price = mat_price_d * qty;
 
-                grid_orders.Rows.Add(mod_id, mod_name, qty, tot_price);
+                    grid_orders.Rows.Add(mod_id, mod_name, qty, tot_price);
+                    txt_qty.Clear();
+                }
+                
             }
         }
 
@@ -187,14 +217,21 @@ namespace Viva
                     db.save_delete_update("UPDATE tbl_garment SET model_qty = '" + new_store_qty + "' WHERE model_id = '" + mod_id + "' ");
 
                 }
-                MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                    MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    OrderId_auto();
+                }
             else
             {
                 MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             }
             
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            grid_orders.Rows.Clear();
+            grid_search_model.DataSource = null;
         }
     }
 }
