@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.btn_generate = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             this.metroGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.White;
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
@@ -81,14 +83,27 @@
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(512, 295);
+            this.metroGrid1.Size = new System.Drawing.Size(548, 345);
             this.metroGrid1.TabIndex = 0;
+            // 
+            // btn_generate
+            // 
+            this.btn_generate.Highlight = true;
+            this.btn_generate.Location = new System.Drawing.Point(515, 447);
+            this.btn_generate.Name = "btn_generate";
+            this.btn_generate.Size = new System.Drawing.Size(95, 50);
+            this.btn_generate.Style = MetroFramework.MetroColorStyle.Green;
+            this.btn_generate.TabIndex = 1;
+            this.btn_generate.Text = "Generate \r\nReport";
+            this.btn_generate.UseSelectable = true;
+            this.btn_generate.Click += new System.EventHandler(this.btn_generate_Click);
             // 
             // Recut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 440);
+            this.ClientSize = new System.Drawing.Size(672, 520);
+            this.Controls.Add(this.btn_generate);
             this.Controls.Add(this.metroGrid1);
             this.Name = "Recut";
             this.Style = MetroFramework.MetroColorStyle.Purple;
@@ -102,5 +117,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid metroGrid1;
+        private MetroFramework.Controls.MetroButton btn_generate;
     }
 }

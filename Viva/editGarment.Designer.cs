@@ -54,7 +54,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(37, 98);
+            this.metroLabel1.Location = new System.Drawing.Point(107, 98);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(81, 25);
             this.metroLabel1.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.txt_search.CustomButton.Visible = false;
             this.txt_search.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_search.Lines = new string[0];
-            this.txt_search.Location = new System.Drawing.Point(134, 94);
+            this.txt_search.Location = new System.Drawing.Point(204, 94);
             this.txt_search.MaxLength = 32767;
             this.txt_search.Name = "txt_search";
             this.txt_search.PasswordChar = '\0';
@@ -95,7 +95,7 @@
             // 
             this.btn_search.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_search.Highlight = true;
-            this.btn_search.Location = new System.Drawing.Point(389, 94);
+            this.btn_search.Location = new System.Drawing.Point(459, 94);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(98, 29);
             this.btn_search.Style = MetroFramework.MetroColorStyle.Lime;

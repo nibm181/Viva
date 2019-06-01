@@ -6,21 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.26042in</Width>
+              <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.26042in</Width>
+              <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.26042in</Width>
+              <Width>1in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.26042in</Width>
+              <Width>1in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.39062in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -31,12 +34,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Material ID</Value>
+                              <Value>Model ID</Value>
                               <Style>
-                                <FontFamily>Bahnschrift Light</FontFamily>
+                                <FontFamily>Bahnschrift SemiLight</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -55,7 +58,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <BackgroundColor>Gold</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -74,12 +77,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Name</Value>
+                              <Value>Type</Value>
                               <Style>
-                                <FontFamily>Bahnschrift Light</FontFamily>
+                                <FontFamily>Bahnschrift SemiLight</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -98,7 +101,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <BackgroundColor>Gold</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -117,12 +120,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Type</Value>
+                              <Value>Category</Value>
                               <Style>
-                                <FontFamily>Bahnschrift Light</FontFamily>
+                                <FontFamily>Bahnschrift SemiLight</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -141,7 +144,7 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <BackgroundColor>Gold</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -160,12 +163,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Length</Value>
+                              <Value>Name</Value>
                               <Style>
-                                <FontFamily>Bahnschrift Light</FontFamily>
+                                <FontFamily>Bahnschrift SemiLight</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
+                                <Color>#666666</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -184,7 +187,50 @@
                           <Style>Solid</Style>
                           <Width>1pt</Width>
                         </BottomBorder>
-                        <BackgroundColor>CornflowerBlue</BackgroundColor>
+                        <BackgroundColor>Gold</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Qty Needs</Value>
+                              <Style>
+                                <FontFamily>Bahnschrift SemiLight</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#666666</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gold</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -197,18 +243,18 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.39062in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="mat_id">
+                    <Textbox Name="model_id">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!mat_id.Value</Value>
+                              <Value>=Fields!model_id.Value</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -222,10 +268,9 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>mat_id</rd:DefaultName>
+                      <rd:DefaultName>model_id</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -240,14 +285,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="mat_name">
+                    <Textbox Name="model_type">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!mat_name.Value</Value>
+                              <Value>=Fields!model_type.Value</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -261,10 +306,9 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>mat_name</rd:DefaultName>
+                      <rd:DefaultName>model_type</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -279,14 +323,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="mat_type">
+                    <Textbox Name="model_cat">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!mat_type.Value</Value>
+                              <Value>=Fields!model_cat.Value</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -300,10 +344,9 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>mat_type</rd:DefaultName>
+                      <rd:DefaultName>model_cat</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>None</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -318,14 +361,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="mat_length">
+                    <Textbox Name="model_name">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!mat_length.Value</Value>
+                              <Value>=Fields!model_name.Value</Value>
                               <Style>
                                 <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -339,10 +382,48 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>mat_length</rd:DefaultName>
+                      <rd:DefaultName>model_name</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="model_qty">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Abs(Fields!model_qty.Value)</Value>
+                              <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Format>0;(0)</Format>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>model_qty</rd:DefaultName>
+                      <Style>
+                        <Border>
                           <Style>None</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -365,35 +446,24 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
           <TablixMembers>
-            <TablixMember />
             <TablixMember>
-              <Group Name="mat_length">
-                <GroupExpressions>
-                  <GroupExpression>=Fields!mat_length.Value</GroupExpression>
-                </GroupExpressions>
-              </Group>
-              <SortExpressions>
-                <SortExpression>
-                  <Value>=Fields!mat_length.Value</Value>
-                </SortExpression>
-              </SortExpressions>
-              <TablixMembers>
-                <TablixMember>
-                  <Group Name="Details" />
-                </TablixMember>
-              </TablixMembers>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="Details" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.64459in</Top>
-        <Left>1.11in</Left>
-        <Height>0.78124in</Height>
-        <Width>5.04168in</Width>
+        <Top>1.64583in</Top>
+        <Left>0.88542in</Left>
+        <Height>0.5in</Height>
+        <Width>5in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -419,8 +489,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>0.12089in</Top>
-        <Left>2.05666in</Left>
+        <Left>1.73375in</Left>
         <Height>0.66667in</Height>
         <Width>3.20832in</Width>
         <ZIndex>1</ZIndex>
@@ -467,8 +536,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox26</rd:DefaultName>
-        <Top>0.54104in</Top>
-        <Left>2.21291in</Left>
+        <Top>0.42015in</Top>
+        <Left>1.89in</Left>
         <Height>0.4375in</Height>
         <Width>2.78125in</Width>
         <ZIndex>2</ZIndex>
@@ -489,7 +558,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Material Stock Report</Value>
+                <Value>Recut Report</Value>
                 <Style>
                   <FontFamily>Elephant</FontFamily>
                   <FontSize>17pt</FontSize>
@@ -501,10 +570,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>0.98201in</Top>
-        <Left>2.2025in</Left>
+        <Top>0.80147in</Top>
+        <Left>2.40042in</Left>
         <Height>0.375in</Height>
-        <Width>2.79166in</Width>
+        <Width>1.70375in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -533,8 +602,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.31125in</Top>
-        <Left>1.19902in</Left>
+        <Top>1.19036in</Top>
+        <Left>1.00111in</Left>
         <Height>0.25in</Height>
         <Width>1.6957in</Width>
         <ZIndex>4</ZIndex>
@@ -565,8 +634,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.32514in</Top>
-        <Left>0.76152in</Left>
+        <Top>1.20425in</Top>
+        <Left>0.56361in</Left>
         <Height>0.25in</Height>
         <Width>0.4375in</Width>
         <ZIndex>5</ZIndex>
@@ -581,10 +650,10 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>1.57514in</Top>
-        <Left>0.47917in</Left>
+        <Top>1.45425in</Top>
+        <Left>0.41667in</Left>
         <Height>0in</Height>
-        <Width>6.29167in</Width>
+        <Width>5.92709in</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -593,35 +662,35 @@
         </Style>
       </Line>
     </ReportItems>
-    <Height>6.14584in</Height>
+    <Height>9.61458in</Height>
     <Style />
   </Body>
-  <Width>7.35417in</Width>
+  <Width>6.78125in</Width>
   <Page>
     <PageFooter>
-      <Height>1.82244cm</Height>
+      <Height>1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="PageNumber">
+        <Textbox Name="OverallPageNumber">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Globals!PageNumber</Value>
+                  <Value>=Globals!OverallPageNumber</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.30083in</Top>
-          <Left>2.66541in</Left>
+          <rd:DefaultName>OverallPageNumber</rd:DefaultName>
+          <Top>0.4675in</Top>
+          <Left>3.19209in</Left>
           <Height>0.25in</Height>
-          <Width>1in</Width>
+          <Width>0.36in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -641,57 +710,61 @@
     </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
-    <LeftMargin>0.5in</LeftMargin>
-    <RightMargin>0.5in</RightMargin>
-    <TopMargin>0.5in</TopMargin>
-    <BottomMargin>0.5in</BottomMargin>
+    <LeftMargin>0.7in</LeftMargin>
+    <RightMargin>0.7in</RightMargin>
+    <TopMargin>0.7in</TopMargin>
+    <BottomMargin>0.7in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="MaterialDataSet">
+    <DataSource Name="ReCutDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>020b2062-a5e2-4187-bc82-2e9646cb4434</rd:DataSourceID>
+      <rd:DataSourceID>f51c01f0-a406-49eb-8b17-8ed44c8bbb6e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>MaterialDataSet</DataSourceName>
+        <DataSourceName>ReCutDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="mat_id">
-          <DataField>mat_id</DataField>
+        <Field Name="model_id">
+          <DataField>model_id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="mat_name">
-          <DataField>mat_name</DataField>
+        <Field Name="model_type">
+          <DataField>model_type</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="mat_type">
-          <DataField>mat_type</DataField>
+        <Field Name="model_cat">
+          <DataField>model_cat</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="mat_length">
-          <DataField>mat_length</DataField>
+        <Field Name="model_name">
+          <DataField>model_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="model_qty">
+          <DataField>model_qty</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>MaterialDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Mhd Fazil\Source\Repos\nibm181\Viva\Viva\MaterialDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>materials</rd:TableName>
+        <rd:DataSetName>ReCutDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Mhd Fazil\Source\Repos\nibm181\Viva\Viva\ReCutDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>tbl_garment</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>materialsTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>tbl_garmentTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>17f1da7f-ed9c-40b5-b5b0-7037882e3cd0</rd:ReportID>
+  <rd:ReportID>0bdca75d-4d32-45a2-8459-3f754df71895</rd:ReportID>
 </Report>

@@ -48,10 +48,17 @@ namespace Viva
                 }
                 metroGrid1.ClearSelection();
             }
-            catch (Exception ex)
+            catch
             {
-                MetroMessageBox.Show(this, "'"+ex.GetBaseException()+"'", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Please check your internet connection", "Reconnect", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_generate_Click(object sender, EventArgs e)
+        {
+            RecutReportForm rrf = new RecutReportForm();
+            rrf.ShowDialog();
+            //Application.Run(rrf);
         }
     }
 }

@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace Viva
 {
-    public partial class MaterialStockReportForm : MetroFramework.Forms.MetroForm
+    public partial class RecutReportForm : MetroFramework.Forms.MetroForm
     {
-        public MaterialStockReportForm()
+        public RecutReportForm()
         {
             InitializeComponent();
         }
 
-        private void MaterialStockReportForm_Load(object sender, EventArgs e)
+        private void RecutReportForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ReCutDataSet.tbl_garment' table. You can move, or remove it, as needed.
             try
             {
-                // TODO: This line of code loads data into the 'MaterialDataSet.materials' table. You can move, or remove it, as needed.
-                this.materialsTableAdapter.Fill(this.MaterialDataSet.materials);
+                this.tbl_garmentTableAdapter.Fill(this.ReCutDataSet.tbl_garment);
 
                 this.reportViewer1.RefreshReport();
             }
@@ -32,5 +32,7 @@ namespace Viva
                 MetroMessageBox.Show(this, "Please check your internet connection", "Reconnect", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

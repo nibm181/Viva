@@ -261,6 +261,7 @@
                             <TextRun>
                               <Value>=Fields!model_id.Value</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -299,6 +300,7 @@
                             <TextRun>
                               <Value>=Fields!model_type.Value</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -337,6 +339,7 @@
                             <TextRun>
                               <Value>=Fields!model_cat.Value</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -375,6 +378,7 @@
                             <TextRun>
                               <Value>=Fields!model_name.Value</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -413,6 +417,7 @@
                             <TextRun>
                               <Value>=Fields!model_qty.Value</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -456,6 +461,7 @@
                             <TextRun>
                               <Value>Total Quantity</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#333333</Color>
@@ -501,6 +507,7 @@
                             <TextRun>
                               <Value>=Sum(Fields!model_qty.Value)</Value>
                               <Style>
+                                <FontFamily>Bahnschrift Light</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>#333333</Color>
@@ -705,6 +712,7 @@
               <TextRun>
                 <Value>=Globals!ExecutionTime</Value>
                 <Style>
+                  <FontFamily>Bahnschrift Light</FontFamily>
                   <Format>dddd, MMMM d, yyyy</Format>
                 </Style>
               </TextRun>

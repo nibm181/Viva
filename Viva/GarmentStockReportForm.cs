@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,18 @@ namespace Viva
 
         private void GarmentStockReportForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'GarmentStock.tbl_garment' table. You can move, or remove it, as needed.
-            this.tbl_garmentTableAdapter.Fill(this.GarmentStock.tbl_garment);
+            try
+            {
+                // TODO: This line of code loads data into the 'GarmentStock.tbl_garment' table. You can move, or remove it, as needed.
+                this.tbl_garmentTableAdapter.Fill(this.GarmentStock.tbl_garment);
 
-            this.reportViewer1.RefreshReport();
+                this.reportViewer1.RefreshReport();
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Please check your internet connection", "Reconnect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

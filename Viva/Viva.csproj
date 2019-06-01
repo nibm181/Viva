@@ -201,6 +201,17 @@
     <Compile Include="Recut.Designer.cs">
       <DependentUpon>Recut.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReCutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReCutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RecutReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecutReportForm.Designer.cs">
+      <DependentUpon>RecutReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResetPwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +334,10 @@
     <EmbeddedResource Include="Recut.resx">
       <DependentUpon>Recut.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReCutReport.rdlc" />
+    <EmbeddedResource Include="RecutReportForm.resx">
+      <DependentUpon>RecutReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResetPwd.resx">
       <DependentUpon>ResetPwd.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,6 +428,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ReCutDataSet.xsc">
+      <DependentUpon>ReCutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReCutDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReCutDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReCutDataSet.xss">
+      <DependentUpon>ReCutDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\section-3.jpg" />
   </ItemGroup>
   <ItemGroup>
