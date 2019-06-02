@@ -174,9 +174,9 @@ namespace Viva
             }
             else
             { 
-            string delivery_date = date_delivery.Value.ToShortDateString();
-            string order_date = DateTime.Now.ToShortDateString();
-            string st = "done";
+                string delivery_date = DateTime.Now.ToShortDateString();
+                string order_date = date_delivery.Value.ToShortDateString();
+                string st = "done";
             int ret = db.save_delete_update("insert into [order] values('" + txt_order_id.Text + "', '" + delivery_date + "', '" + txt_cus_id.Text + "', '" + order_date + "', '" + st + "')");
 
             if (ret == 1)
@@ -207,7 +207,7 @@ namespace Viva
                     }
                     else
                     {
-                        x = Int32.Parse(qty) - Int32.Parse(store_qty);
+                        x = Int32.Parse(store_qty) - Int32.Parse(qty);
                         if (x > 0)
                         {
                             pending_qty = "0";
