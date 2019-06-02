@@ -42,6 +42,12 @@
             this.btn_mat_reset = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.grd_mat = new MetroFramework.Controls.MetroGrid();
+            this.col_bill = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_len = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_mat_rem = new MetroFramework.Controls.MetroButton();
             this.btn_mat_clear = new MetroFramework.Controls.MetroButton();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -49,12 +55,6 @@
             this.btn_mat_con = new MetroFramework.Controls.MetroButton();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.txt_mat_billno = new MetroFramework.Controls.MetroTextBox();
-            this.col_bill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_len = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd_mat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,10 +65,10 @@
             // 
             // 
             this.txt_mat_id.CustomButton.Image = null;
-            this.txt_mat_id.CustomButton.Location = new System.Drawing.Point(316, 2);
+            this.txt_mat_id.CustomButton.Location = new System.Drawing.Point(237, 2);
             this.txt_mat_id.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_mat_id.CustomButton.Name = "";
-            this.txt_mat_id.CustomButton.Size = new System.Drawing.Size(39, 36);
+            this.txt_mat_id.CustomButton.Size = new System.Drawing.Size(29, 29);
             this.txt_mat_id.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_id.CustomButton.TabIndex = 1;
             this.txt_mat_id.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -115,10 +115,10 @@
             // 
             // 
             this.txt_mat_length.CustomButton.Image = null;
-            this.txt_mat_length.CustomButton.Location = new System.Drawing.Point(316, 2);
+            this.txt_mat_length.CustomButton.Location = new System.Drawing.Point(237, 2);
             this.txt_mat_length.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_mat_length.CustomButton.Name = "";
-            this.txt_mat_length.CustomButton.Size = new System.Drawing.Size(39, 36);
+            this.txt_mat_length.CustomButton.Size = new System.Drawing.Size(29, 29);
             this.txt_mat_length.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_length.CustomButton.TabIndex = 1;
             this.txt_mat_length.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -151,10 +151,10 @@
             // 
             // 
             this.txt_mat_name.CustomButton.Image = null;
-            this.txt_mat_name.CustomButton.Location = new System.Drawing.Point(316, 2);
+            this.txt_mat_name.CustomButton.Location = new System.Drawing.Point(237, 2);
             this.txt_mat_name.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_mat_name.CustomButton.Name = "";
-            this.txt_mat_name.CustomButton.Size = new System.Drawing.Size(39, 36);
+            this.txt_mat_name.CustomButton.Size = new System.Drawing.Size(29, 29);
             this.txt_mat_name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_name.CustomButton.TabIndex = 1;
             this.txt_mat_name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -317,6 +317,38 @@
             this.grd_mat.TabIndex = 10;
             this.grd_mat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
+            // col_bill
+            // 
+            this.col_bill.HeaderText = "Bill No";
+            this.col_bill.Name = "col_bill";
+            // 
+            // col_id
+            // 
+            this.col_id.HeaderText = "Material ID";
+            this.col_id.Name = "col_id";
+            this.col_id.Width = 150;
+            // 
+            // col_name
+            // 
+            this.col_name.HeaderText = "Name";
+            this.col_name.Name = "col_name";
+            this.col_name.Width = 150;
+            // 
+            // col_type
+            // 
+            this.col_type.HeaderText = "Type";
+            this.col_type.Name = "col_type";
+            // 
+            // col_len
+            // 
+            this.col_len.HeaderText = "Length";
+            this.col_len.Name = "col_len";
+            // 
+            // col_price
+            // 
+            this.col_price.HeaderText = "Price";
+            this.col_price.Name = "col_price";
+            // 
             // btn_mat_rem
             // 
             this.btn_mat_rem.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -451,38 +483,7 @@
             this.txt_mat_billno.UseSelectable = true;
             this.txt_mat_billno.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_mat_billno.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // col_bill
-            // 
-            this.col_bill.HeaderText = "Bill No";
-            this.col_bill.Name = "col_bill";
-            // 
-            // col_id
-            // 
-            this.col_id.HeaderText = "Material ID";
-            this.col_id.Name = "col_id";
-            this.col_id.Width = 150;
-            // 
-            // col_name
-            // 
-            this.col_name.HeaderText = "Name";
-            this.col_name.Name = "col_name";
-            this.col_name.Width = 150;
-            // 
-            // col_type
-            // 
-            this.col_type.HeaderText = "Type";
-            this.col_type.Name = "col_type";
-            // 
-            // col_len
-            // 
-            this.col_len.HeaderText = "Length";
-            this.col_len.Name = "col_len";
-            // 
-            // col_price
-            // 
-            this.col_price.HeaderText = "Price";
-            this.col_price.Name = "col_price";
+            this.txt_mat_billno.Click += new System.EventHandler(this.Txt_mat_billno_Click);
             // 
             // Materials
             // 

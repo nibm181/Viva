@@ -198,5 +198,10 @@ namespace Viva
                 txt_mat_id.Text = no.ToString();
             
         }
+
+        private void Txt_mat_billno_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

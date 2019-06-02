@@ -82,5 +82,10 @@ namespace Viva
                 }
             }
         }
+
+        private void grd_mat_search_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

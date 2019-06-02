@@ -106,6 +106,12 @@
       <DependentUpon>customerReg.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="deliver_alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deliver_alert.Designer.cs">
+      <DependentUpon>deliver_alert.cs</DependentUpon>
+    </Compile>
     <Compile Include="editCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customerReg.resx">
       <DependentUpon>customerReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deliver_alert.resx">
+      <DependentUpon>deliver_alert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editCustomer.resx">
       <DependentUpon>editCustomer.cs</DependentUpon>
