@@ -23,7 +23,7 @@ namespace Viva
         
         private void Order2_Load(object sender, EventArgs e)
         {
-            
+            lbl_date.Text = DateTime.Now.ToLongDateString();
             lord_order_id();
             datagridload();
             date_delivery.MinDate = DateTime.Now;
@@ -50,11 +50,7 @@ namespace Viva
 
         private void datagridload()
         {
-            SqlConnection con;
-            con = new SqlConnection("Server=tcp:nibmgarments.database.windows.net,1433;Initial Catalog=Garments;Persist Security Info=False;User ID=doof;Password=warrior@00;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from tbl_garment", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            DataTable dt = db.GetData("select * from tbl_garment");
             grid_search_model.DataSource = dt;
         }
         private void metroLabel9_Click(object sender, EventArgs e)
@@ -76,11 +72,7 @@ namespace Viva
         }
         private void search_add_grid()
         {
-            SqlConnection con;
-            con = new SqlConnection("Server=tcp:nibmgarments.database.windows.net,1433;Initial Catalog=Garments;Persist Security Info=False;User ID=doof;Password=warrior@00;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from tbl_garment where model_id='" + txt_search_id.Text + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            DataTable dt = db.GetData("select * from tbl_garment where model_id like '%" + txt_search_id.Text + "%'");
             grid_search_model.DataSource = dt;
         }
 
@@ -100,11 +92,11 @@ namespace Viva
         {
             if (string.IsNullOrWhiteSpace(txt_qty.Text))
             {
-                MetroMessageBox.Show(this, "Please Enter QTY!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Please Enter Qty!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txt_qty.Text.Any(c => char.IsLetter(c)))
             {
-                MetroMessageBox.Show(this, "QTY can not contain Letters!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Qty can not contain Letters!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (grid_search_model.SelectedRows.Count < 0)
             {
@@ -138,7 +130,13 @@ namespace Viva
                     grid_orders.Rows.Add(mod_id, mod_name, qty, tot_price);
                     txt_qty.Clear();
                 }
-                
+                net_tot = 0;
+                for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                {
+                    net_tot = net_tot + int.Parse(grid_orders.Rows[i].Cells[3].Value.ToString());
+                }
+                txt_net_tot.Text = "Rs."+net_tot.ToString();
+
             }
         }
 
@@ -159,6 +157,12 @@ namespace Viva
                 {
                     grid_orders.Rows.RemoveAt(grid_orders.SelectedRows[0].Index);
                 }
+                net_tot = 0;
+                for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                {
+                    net_tot = net_tot + int.Parse(grid_orders.Rows[i].Cells[3].Value.ToString());
+                }
+                txt_net_tot.Text = "Rs."+net_tot.ToString();
             }
         }
 
@@ -219,6 +223,8 @@ namespace Viva
                 }
                     MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     OrderId_auto();
+                    grid_orders.Rows.Clear();
+                    txt_net_tot.Clear();
                 }
             else
             {
@@ -231,7 +237,28 @@ namespace Viva
         private void btn_clear_Click(object sender, EventArgs e)
         {
             grid_orders.Rows.Clear();
-            grid_search_model.DataSource = null;
+            txt_net_tot.Clear();
+            //grid_search_model.DataSource = null;
+        }
+
+        private void txt_cus_id_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grid_orders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        float net_tot=0;
+        private void grid_orders_RowsAdded(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
