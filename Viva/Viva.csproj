@@ -249,6 +249,12 @@
     <Compile Include="update_material_length.Designer.cs">
       <DependentUpon>update_material_length.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogForm.Designer.cs">
+      <DependentUpon>UserLogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="update_material_length.resx">
       <DependentUpon>update_material_length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogForm.resx">
+      <DependentUpon>UserLogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewCustomer.resx">
       <DependentUpon>ViewCustomer.cs</DependentUpon>

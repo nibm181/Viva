@@ -18,8 +18,11 @@ namespace Viva
             InitializeComponent();
         }
 
-        private void manager_home_Load(object sender, EventArgs e)
+        
+
+        protected override void OnShown(EventArgs e)
         {
+            // Do your work here...
             Database db = new Database();
             DateTime today = DateTime.Today;
             DateTime ddate = today.AddDays(30);
@@ -28,16 +31,23 @@ namespace Viva
 
             if (dt.Rows.Count > 0)
             {
-               DialogResult result = MetroMessageBox.Show(this, "You have '"+c+"' orders to Delivery in less than 30 days. Do you want to display it? ", "Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                DialogResult result = MetroMessageBox.Show(this, "You have '" + c + "' orders to Delivery in less than 30 days. Do you want to display it? ", "Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.OK)
                 {
 
                     deliver_alert d1 = new deliver_alert();
                     d1.Show();
-                    
-                    
+
+
                 }
             }
+
+            base.OnShown(e);
+        }
+
+        private void manager_home_Load(object sender, EventArgs e)
+        {
+            
 
         }
 

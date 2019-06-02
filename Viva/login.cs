@@ -57,13 +57,31 @@ namespace Viva
                         this.Close();
 
                     }
-                    else if (dt.Rows[0][2].ToString() == "Admin")
+                    else if (dt.Rows[0][2].ToString() == "Stock Admin")
                     {
                         db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
 
                         this.Hide();
                         stock_admin_home admin_form = new stock_admin_home();
                         admin_form.ShowDialog();
+                        this.Close();
+                    }
+                    else if (dt.Rows[0][2].ToString() == "Sales Clerk")
+                    {
+                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
+                        this.Hide();
+                        sales_clerk_home clerk_form = new sales_clerk_home();
+                        clerk_form.ShowDialog();
+                        this.Close();
+                    }
+                    else if (dt.Rows[0][2].ToString() == "Cutter")
+                    {
+                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
+                        this.Hide();
+                        stock_admin_home cut_form = new stock_admin_home();
+                        cut_form.ShowDialog();
                         this.Close();
                     }
                 }

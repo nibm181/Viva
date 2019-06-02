@@ -374,7 +374,9 @@
             this.cmb_type.ItemHeight = 23;
             this.cmb_type.Items.AddRange(new object[] {
             "Manager",
-            "Admin"});
+            "Stock Admin",
+            "Sales Clerk",
+            "Cutter"});
             this.cmb_type.Location = new System.Drawing.Point(254, 174);
             this.cmb_type.Name = "cmb_type";
             this.cmb_type.Size = new System.Drawing.Size(202, 29);
