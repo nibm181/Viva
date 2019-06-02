@@ -94,9 +94,10 @@ namespace Viva
             }
             else
             {
-                Order2 fbook2 = new Order2(txt_cus_Id.Text);
-                fbook2.Show();
                 this.Hide();
+                Order2 fbook2 = new Order2(txt_cus_Id.Text);
+                fbook2.ShowDialog();              
+                this.Close();
             }
             
         }

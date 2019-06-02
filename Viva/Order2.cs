@@ -72,15 +72,16 @@ namespace Viva
         }
         private void search_add_grid()
         {
-            DataTable dt = db.GetData("select * from tbl_garment where model_id like '%" + txt_search_id.Text + "%'");
+            DataTable dt = db.GetData("select * from tbl_garment where model_id like '%" + txt_search_id.Text + "%' or model_name like '%" + txt_search_id.Text + "%' ");
             grid_search_model.DataSource = dt;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Order1 or1 = new Order1();
-            or1.Show();
             this.Hide();
+            Order1 or1 = new Order1();
+            or1.ShowDialog();
+            this.Close();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -221,7 +222,9 @@ namespace Viva
                     db.save_delete_update("UPDATE tbl_garment SET model_qty = '" + new_store_qty + "' WHERE model_id = '" + mod_id + "' ");
 
                 }
-                    MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BillReportForm br = new BillReportForm(txt_order_id.Text);
+                    br.ShowDialog();
                     OrderId_auto();
                     grid_orders.Rows.Clear();
                     txt_net_tot.Clear();

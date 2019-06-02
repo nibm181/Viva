@@ -353,7 +353,7 @@
             this.btn_next.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_next.Highlight = true;
             this.btn_next.Location = new System.Drawing.Point(561, 407);
-            this.btn_next.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_next.Margin = new System.Windows.Forms.Padding(2);
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(95, 50);
             this.btn_next.Style = MetroFramework.MetroColorStyle.Green;
@@ -373,9 +373,10 @@
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.txt_search_iD);
             this.Controls.Add(this.metroLabel6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Order1";
-            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Order1";
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
