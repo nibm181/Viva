@@ -47,5 +47,21 @@ namespace Viva
         {
 
         }
+
+        private void tile_place_order_Click(object sender, EventArgs e)
+        {
+            Order1 o1 = new Order1();
+            o1.Show();
+        }
+
+        private void tile_generate_Rinvo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tile_place_Rorder_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
