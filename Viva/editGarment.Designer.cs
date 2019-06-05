@@ -136,8 +136,10 @@
             this.cmb_cat.FormattingEnabled = true;
             this.cmb_cat.ItemHeight = 23;
             this.cmb_cat.Items.AddRange(new object[] {
-            "Zaara",
-            "Shabee"});
+            "ZARA Basic",
+            "Women\'s Sty.",
+            "S n G Fashion",
+            "S n G Secret"});
             this.cmb_cat.Location = new System.Drawing.Point(165, 116);
             this.cmb_cat.Name = "cmb_cat";
             this.cmb_cat.Size = new System.Drawing.Size(202, 29);

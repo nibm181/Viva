@@ -263,11 +263,12 @@
             // 
             // cmb_gcat
             // 
-            this.cmb_gcat.FormattingEnabled = true;
             this.cmb_gcat.ItemHeight = 23;
             this.cmb_gcat.Items.AddRange(new object[] {
-            "Zaara",
-            "Shabee"});
+            "ZARA Basic",
+            "Women\'s Sty.",
+            "S n G Fashion",
+            "S n G Secret"});
             this.cmb_gcat.Location = new System.Drawing.Point(186, 180);
             this.cmb_gcat.Name = "cmb_gcat";
             this.cmb_gcat.Size = new System.Drawing.Size(202, 29);
