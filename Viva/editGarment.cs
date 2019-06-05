@@ -28,6 +28,7 @@ namespace Viva
         }
 
         Database db;
+        int mdl_qty;
 
         private void editGarment_Load(object sender, EventArgs e)
         {
@@ -88,6 +89,7 @@ namespace Viva
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            mdl_qty = int.Parse(txt_qty.Text);
             try
             {
                 if (cmb_type.SelectedIndex == -1)
@@ -123,8 +125,9 @@ namespace Viva
                     DialogResult dr = MetroFramework.MetroMessageBox.Show(this, "Are You Sure You Want to Update?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dr == DialogResult.Yes)
                     {
+                        update_order();
                         Database db = new Database();
-                        int row = db.save_delete_update("update tbl_garment set model_type = '" + cmb_type.Text + "', model_cat = '" + cmb_cat.Text + "', model_name = '" + txt_name.Text + "', model_qty = '" + txt_qty.Text + "', model_price = '" + txt_price.Text + "' where model_id = '" + txt_id.Text + "'");
+                        int row = db.save_delete_update("update tbl_garment set model_type = '" + cmb_type.Text + "', model_cat = '" + cmb_cat.Text + "', model_name = '" + txt_name.Text + "', model_qty = '" + mdl_qty + "', model_price = '" + txt_price.Text + "' where model_id = '" + txt_id.Text + "'");
                         if (row == 1)
                         {
                             MetroFramework.MetroMessageBox.Show(this, "Successfully updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -161,11 +164,22 @@ namespace Viva
 
         private void update_order()
         {
-            DataTable dt = db.GetData("select * from order_detail where model_id='" + txt_id.Text + "' and availability='P'");
-            int qty = int.Parse(txt_qty.Text);
-            foreach (DataRow dr in dt.Rows)
+            try
             {
-
+                DataTable dt = db.GetData("select * from order_detail where model_id='" + txt_id.Text + "' and qty_pending > 0");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    int qty_p = int.Parse(dr[4].ToString());
+                    if (qty_p <= mdl_qty)
+                    {
+                        db.save_delete_update("update order_detail set qty_pending = 0 where order_id = '" + dr[0].ToString() + "' and model_id = '" + dr[1].ToString() + "'");
+                        mdl_qty = mdl_qty - qty_p;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroMessageBox.Show(this, "'"+ex.GetBaseException()+"'", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
