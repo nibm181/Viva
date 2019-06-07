@@ -58,8 +58,8 @@ namespace Viva
 
         private void tile_edit_user_Click(object sender, EventArgs e)
         {
-            editCustomer e1 = new editCustomer();
-            e1.Show();
+            ResetPwd r1 = new ResetPwd();
+            r1.Show();
         }
 
         private void tile_reg_user_Click(object sender, EventArgs e)
@@ -72,6 +72,12 @@ namespace Viva
         {
             Recut r1 = new Recut();
             r1.Show();
+        }
+
+        private void tile_gen_report_Click(object sender, EventArgs e)
+        {
+            man_report_home m1 = new man_report_home();
+            m1.Show();
         }
     }
 }

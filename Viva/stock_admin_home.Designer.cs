@@ -136,6 +136,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Home";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.stock_admin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

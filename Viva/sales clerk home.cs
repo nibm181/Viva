@@ -63,5 +63,17 @@ namespace Viva
         {
             
         }
+
+        private void tile_reg_customer_Click(object sender, EventArgs e)
+        {
+            customerReg c1 = new customerReg();
+            c1.Show();
+        }
+
+        private void tile_edit_cus_Click(object sender, EventArgs e)
+        {
+            editCustomer e1 = new editCustomer();
+            e1.Show();
+        }
     }
 }

@@ -55,9 +55,9 @@
             this.tile_reg_user.ActiveControl = null;
             this.tile_reg_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_reg_user.AutoSize = true;
-            this.tile_reg_user.Location = new System.Drawing.Point(334, 152);
+            this.tile_reg_user.Location = new System.Drawing.Point(295, 152);
             this.tile_reg_user.Name = "tile_reg_user";
-            this.tile_reg_user.Size = new System.Drawing.Size(228, 281);
+            this.tile_reg_user.Size = new System.Drawing.Size(267, 281);
             this.tile_reg_user.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_reg_user.TabIndex = 1;
             this.tile_reg_user.Text = "Register User";
@@ -80,18 +80,20 @@
             this.tile_gen_report.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.tile_gen_report.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.tile_gen_report.UseSelectable = true;
+            this.tile_gen_report.Click += new System.EventHandler(this.tile_gen_report_Click);
             // 
             // tile_edit_user
             // 
             this.tile_edit_user.ActiveControl = null;
             this.tile_edit_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_user.AutoSize = true;
-            this.tile_edit_user.Location = new System.Drawing.Point(334, 439);
+            this.tile_edit_user.Location = new System.Drawing.Point(295, 439);
             this.tile_edit_user.Name = "tile_edit_user";
-            this.tile_edit_user.Size = new System.Drawing.Size(228, 219);
+            this.tile_edit_user.Size = new System.Drawing.Size(267, 219);
             this.tile_edit_user.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_edit_user.TabIndex = 3;
-            this.tile_edit_user.Text = "Edit User Details";
+            this.tile_edit_user.Text = "Reset User Password";
+            this.tile_edit_user.TileImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.tile_edit_user.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.tile_edit_user.UseSelectable = true;
             this.tile_edit_user.Click += new System.EventHandler(this.tile_edit_user_Click);
@@ -110,6 +112,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Home";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.manager_home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

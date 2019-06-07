@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.tile_place_order = new MetroFramework.Controls.MetroTile();
-            this.tile_generate_invo = new MetroFramework.Controls.MetroTile();
-            this.tile_generate_Rinvo = new MetroFramework.Controls.MetroTile();
-            this.tile_place_Rorder = new MetroFramework.Controls.MetroTile();
+            this.tile_edit_cus = new MetroFramework.Controls.MetroTile();
+            this.tile_reg_customer = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,23 +46,23 @@
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle8;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -71,14 +70,14 @@
             this.metroGrid1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.RowTemplate.Height = 24;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -90,77 +89,52 @@
             this.tile_place_order.ActiveControl = null;
             this.tile_place_order.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_place_order.AutoSize = true;
-            this.tile_place_order.Location = new System.Drawing.Point(370, 136);
+            this.tile_place_order.Location = new System.Drawing.Point(813, 102);
             this.tile_place_order.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tile_place_order.Name = "tile_place_order";
-            this.tile_place_order.Size = new System.Drawing.Size(199, 156);
+            this.tile_place_order.Size = new System.Drawing.Size(242, 378);
             this.tile_place_order.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_place_order.TabIndex = 1;
             this.tile_place_order.Text = "Place an Order";
+            this.tile_place_order.TileImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.tile_place_order.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.tile_place_order.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.tile_place_order.UseSelectable = true;
             this.tile_place_order.Click += new System.EventHandler(this.tile_place_order_Click);
             // 
-            // tile_generate_invo
+            // tile_edit_cus
             // 
-            this.tile_generate_invo.ActiveControl = null;
-            this.tile_generate_invo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_generate_invo.AutoSize = true;
-            this.tile_generate_invo.Location = new System.Drawing.Point(574, 136);
-            this.tile_generate_invo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tile_generate_invo.Name = "tile_generate_invo";
-            this.tile_generate_invo.Size = new System.Drawing.Size(199, 382);
-            this.tile_generate_invo.Style = MetroFramework.MetroColorStyle.Silver;
-            this.tile_generate_invo.TabIndex = 1;
-            this.tile_generate_invo.Text = "Generate \r\nInvoice";
-            this.tile_generate_invo.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.tile_generate_invo.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tile_generate_invo.UseSelectable = true;
+            this.tile_edit_cus.ActiveControl = null;
+            this.tile_edit_cus.Location = new System.Drawing.Point(587, 283);
+            this.tile_edit_cus.Name = "tile_edit_cus";
+            this.tile_edit_cus.Size = new System.Drawing.Size(220, 197);
+            this.tile_edit_cus.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_edit_cus.TabIndex = 2;
+            this.tile_edit_cus.Text = "Edit Customer";
+            this.tile_edit_cus.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_edit_cus.UseSelectable = true;
+            this.tile_edit_cus.Click += new System.EventHandler(this.tile_edit_cus_Click);
             // 
-            // tile_generate_Rinvo
+            // tile_reg_customer
             // 
-            this.tile_generate_Rinvo.ActiveControl = null;
-            this.tile_generate_Rinvo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_generate_Rinvo.AutoSize = true;
-            this.tile_generate_Rinvo.Location = new System.Drawing.Point(260, 296);
-            this.tile_generate_Rinvo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tile_generate_Rinvo.Name = "tile_generate_Rinvo";
-            this.tile_generate_Rinvo.Size = new System.Drawing.Size(309, 156);
-            this.tile_generate_Rinvo.Style = MetroFramework.MetroColorStyle.Red;
-            this.tile_generate_Rinvo.TabIndex = 1;
-            this.tile_generate_Rinvo.Text = "Generate Return Invoice";
-            this.tile_generate_Rinvo.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.tile_generate_Rinvo.TileImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.tile_generate_Rinvo.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tile_generate_Rinvo.UseSelectable = true;
-            this.tile_generate_Rinvo.Click += new System.EventHandler(this.tile_generate_Rinvo_Click);
-            // 
-            // tile_place_Rorder
-            // 
-            this.tile_place_Rorder.ActiveControl = null;
-            this.tile_place_Rorder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_place_Rorder.AutoSize = true;
-            this.tile_place_Rorder.Location = new System.Drawing.Point(780, 136);
-            this.tile_place_Rorder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tile_place_Rorder.Name = "tile_place_Rorder";
-            this.tile_place_Rorder.Size = new System.Drawing.Size(274, 527);
-            this.tile_place_Rorder.Style = MetroFramework.MetroColorStyle.Red;
-            this.tile_place_Rorder.TabIndex = 1;
-            this.tile_place_Rorder.Text = "Place an \r\nReturn Order";
-            this.tile_place_Rorder.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tile_place_Rorder.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.tile_place_Rorder.UseSelectable = true;
-            this.tile_place_Rorder.Click += new System.EventHandler(this.tile_place_Rorder_Click);
+            this.tile_reg_customer.ActiveControl = null;
+            this.tile_reg_customer.Location = new System.Drawing.Point(587, 102);
+            this.tile_reg_customer.Name = "tile_reg_customer";
+            this.tile_reg_customer.Size = new System.Drawing.Size(220, 175);
+            this.tile_reg_customer.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_reg_customer.TabIndex = 3;
+            this.tile_reg_customer.Text = "Register Customer";
+            this.tile_reg_customer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_reg_customer.UseSelectable = true;
+            this.tile_reg_customer.Click += new System.EventHandler(this.tile_reg_customer_Click);
             // 
             // sales_clerk_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 729);
-            this.Controls.Add(this.tile_place_Rorder);
-            this.Controls.Add(this.tile_generate_Rinvo);
-            this.Controls.Add(this.tile_generate_invo);
+            this.Controls.Add(this.tile_reg_customer);
+            this.Controls.Add(this.tile_edit_cus);
             this.Controls.Add(this.tile_place_order);
             this.Controls.Add(this.metroGrid1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -168,6 +142,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Home";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.sales_clerk_home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
@@ -179,8 +154,7 @@
 
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroTile tile_place_order;
-        private MetroFramework.Controls.MetroTile tile_generate_invo;
-        private MetroFramework.Controls.MetroTile tile_generate_Rinvo;
-        private MetroFramework.Controls.MetroTile tile_place_Rorder;
+        private MetroFramework.Controls.MetroTile tile_edit_cus;
+        private MetroFramework.Controls.MetroTile tile_reg_customer;
     }
 }

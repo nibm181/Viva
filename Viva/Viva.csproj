@@ -147,6 +147,12 @@
     <Compile Include="manager_home.Designer.cs">
       <DependentUpon>manager_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="man_report_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="man_report_home.Designer.cs">
+      <DependentUpon>man_report_home.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaterialDataSet.cs">
       <DependentUpon>MaterialDataSet.xsd</DependentUpon>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="manager_home.resx">
       <DependentUpon>manager_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="man_report_home.resx">
+      <DependentUpon>man_report_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materials.resx">
       <DependentUpon>Materials.cs</DependentUpon>
