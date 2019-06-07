@@ -40,9 +40,9 @@
             this.tile_add_mtrl.ActiveControl = null;
             this.tile_add_mtrl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_add_mtrl.AutoSize = true;
-            this.tile_add_mtrl.Location = new System.Drawing.Point(328, 163);
+            this.tile_add_mtrl.Location = new System.Drawing.Point(190, 82);
             this.tile_add_mtrl.Name = "tile_add_mtrl";
-            this.tile_add_mtrl.Size = new System.Drawing.Size(265, 493);
+            this.tile_add_mtrl.Size = new System.Drawing.Size(220, 220);
             this.tile_add_mtrl.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_add_mtrl.TabIndex = 0;
             this.tile_add_mtrl.Text = "Add Material Stock";
@@ -58,9 +58,9 @@
             this.tile_update_mtrl_length.ActiveControl = null;
             this.tile_update_mtrl_length.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_update_mtrl_length.AutoSize = true;
-            this.tile_update_mtrl_length.Location = new System.Drawing.Point(838, 286);
+            this.tile_update_mtrl_length.Location = new System.Drawing.Point(416, 229);
             this.tile_update_mtrl_length.Name = "tile_update_mtrl_length";
-            this.tile_update_mtrl_length.Size = new System.Drawing.Size(479, 149);
+            this.tile_update_mtrl_length.Size = new System.Drawing.Size(372, 155);
             this.tile_update_mtrl_length.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_update_mtrl_length.TabIndex = 0;
             this.tile_update_mtrl_length.Text = "Update Material";
@@ -75,9 +75,9 @@
             this.tile_chk_mat.ActiveControl = null;
             this.tile_chk_mat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_chk_mat.AutoSize = true;
-            this.tile_chk_mat.Location = new System.Drawing.Point(838, 163);
+            this.tile_chk_mat.Location = new System.Drawing.Point(416, 82);
             this.tile_chk_mat.Name = "tile_chk_mat";
-            this.tile_chk_mat.Size = new System.Drawing.Size(372, 117);
+            this.tile_chk_mat.Size = new System.Drawing.Size(372, 141);
             this.tile_chk_mat.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_chk_mat.TabIndex = 0;
             this.tile_chk_mat.Text = "Check/Search Material";
@@ -92,9 +92,9 @@
             this.tile_add_gar.ActiveControl = null;
             this.tile_add_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_add_gar.AutoSize = true;
-            this.tile_add_gar.Location = new System.Drawing.Point(599, 163);
+            this.tile_add_gar.Location = new System.Drawing.Point(190, 308);
             this.tile_add_gar.Name = "tile_add_gar";
-            this.tile_add_gar.Size = new System.Drawing.Size(233, 493);
+            this.tile_add_gar.Size = new System.Drawing.Size(220, 220);
             this.tile_add_gar.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_add_gar.TabIndex = 0;
             this.tile_add_gar.Text = "Add Garment Stock";
@@ -110,10 +110,10 @@
             this.tile_edit_gar.ActiveControl = null;
             this.tile_edit_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_gar.AutoSize = true;
-            this.tile_edit_gar.Location = new System.Drawing.Point(838, 441);
+            this.tile_edit_gar.Location = new System.Drawing.Point(416, 390);
             this.tile_edit_gar.Name = "tile_edit_gar";
-            this.tile_edit_gar.Size = new System.Drawing.Size(429, 138);
-            this.tile_edit_gar.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_edit_gar.Size = new System.Drawing.Size(372, 138);
+            this.tile_edit_gar.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_edit_gar.TabIndex = 1;
             this.tile_edit_gar.Text = "Edit Garment";
             this.tile_edit_gar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,15 +123,15 @@
             // 
             // stock_admin_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1564, 729);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.tile_edit_gar);
             this.Controls.Add(this.tile_add_gar);
             this.Controls.Add(this.tile_chk_mat);
             this.Controls.Add(this.tile_update_mtrl_length);
             this.Controls.Add(this.tile_add_mtrl);
-            this.Font = new System.Drawing.Font("Quicksand", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "stock_admin_home";
             this.Padding = new System.Windows.Forms.Padding(20, 60, 20, 19);
             this.Style = MetroFramework.MetroColorStyle.Red;

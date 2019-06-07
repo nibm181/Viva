@@ -39,9 +39,10 @@
             this.tile_recut.ActiveControl = null;
             this.tile_recut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_recut.AutoSize = true;
-            this.tile_recut.Location = new System.Drawing.Point(568, 152);
+            this.tile_recut.Location = new System.Drawing.Point(416, 106);
+            this.tile_recut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tile_recut.Name = "tile_recut";
-            this.tile_recut.Size = new System.Drawing.Size(219, 506);
+            this.tile_recut.Size = new System.Drawing.Size(170, 404);
             this.tile_recut.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_recut.TabIndex = 0;
             this.tile_recut.Text = "Re-cut";
@@ -55,9 +56,10 @@
             this.tile_reg_user.ActiveControl = null;
             this.tile_reg_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_reg_user.AutoSize = true;
-            this.tile_reg_user.Location = new System.Drawing.Point(295, 152);
+            this.tile_reg_user.Location = new System.Drawing.Point(212, 106);
+            this.tile_reg_user.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tile_reg_user.Name = "tile_reg_user";
-            this.tile_reg_user.Size = new System.Drawing.Size(267, 281);
+            this.tile_reg_user.Size = new System.Drawing.Size(200, 200);
             this.tile_reg_user.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_reg_user.TabIndex = 1;
             this.tile_reg_user.Text = "Register User";
@@ -71,9 +73,10 @@
             this.tile_gen_report.ActiveControl = null;
             this.tile_gen_report.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_gen_report.AutoSize = true;
-            this.tile_gen_report.Location = new System.Drawing.Point(793, 152);
+            this.tile_gen_report.Location = new System.Drawing.Point(590, 106);
+            this.tile_gen_report.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tile_gen_report.Name = "tile_gen_report";
-            this.tile_gen_report.Size = new System.Drawing.Size(378, 253);
+            this.tile_gen_report.Size = new System.Drawing.Size(200, 200);
             this.tile_gen_report.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_gen_report.TabIndex = 2;
             this.tile_gen_report.Text = "Generate Report";
@@ -87,9 +90,10 @@
             this.tile_edit_user.ActiveControl = null;
             this.tile_edit_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_user.AutoSize = true;
-            this.tile_edit_user.Location = new System.Drawing.Point(295, 439);
+            this.tile_edit_user.Location = new System.Drawing.Point(212, 310);
+            this.tile_edit_user.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tile_edit_user.Name = "tile_edit_user";
-            this.tile_edit_user.Size = new System.Drawing.Size(267, 219);
+            this.tile_edit_user.Size = new System.Drawing.Size(200, 200);
             this.tile_edit_user.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_edit_user.TabIndex = 3;
             this.tile_edit_user.Text = "Reset User Password";
@@ -100,16 +104,16 @@
             // 
             // manager_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1437, 729);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.tile_edit_user);
             this.Controls.Add(this.tile_gen_report);
             this.Controls.Add(this.tile_reg_user);
             this.Controls.Add(this.tile_recut);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "manager_home";
-            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -46,6 +46,7 @@
             // 
             // metroLabel1
             // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(37, 94);
@@ -57,6 +58,7 @@
             // 
             // metroLabel2
             // 
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.Location = new System.Drawing.Point(37, 227);
@@ -68,6 +70,7 @@
             // 
             // metroLabel3
             // 
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.Location = new System.Drawing.Point(37, 137);
@@ -78,6 +81,7 @@
             // 
             // metroLabel4
             // 
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.Location = new System.Drawing.Point(37, 270);
@@ -88,6 +92,7 @@
             // 
             // metroLabel5
             // 
+            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel5.Location = new System.Drawing.Point(37, 315);
@@ -98,6 +103,7 @@
             // 
             // txt_gno
             // 
+            this.txt_gno.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -130,6 +136,7 @@
             // 
             // txt_gname
             // 
+            this.txt_gname.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -161,6 +168,7 @@
             // 
             // txt_gqty
             // 
+            this.txt_gqty.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -193,6 +201,7 @@
             // 
             // txt_gprice
             // 
+            this.txt_gprice.Anchor = System.Windows.Forms.AnchorStyles.None;
             // 
             // 
             // 
@@ -224,6 +233,7 @@
             // 
             // cmb_gtype
             // 
+            this.cmb_gtype.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmb_gtype.FormattingEnabled = true;
             this.cmb_gtype.ItemHeight = 23;
             this.cmb_gtype.Items.AddRange(new object[] {
@@ -239,6 +249,7 @@
             // 
             // btn_add
             // 
+            this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_add.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_add.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_add.Highlight = true;
@@ -253,6 +264,7 @@
             // 
             // metroLabel6
             // 
+            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.Location = new System.Drawing.Point(37, 184);
@@ -263,6 +275,7 @@
             // 
             // cmb_gcat
             // 
+            this.cmb_gcat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmb_gcat.ItemHeight = 23;
             this.cmb_gcat.Items.AddRange(new object[] {
             "ZARA Basic",
@@ -277,6 +290,7 @@
             // 
             // btn_reset
             // 
+            this.btn_reset.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_reset.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_reset.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_reset.Highlight = true;
