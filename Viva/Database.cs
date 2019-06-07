@@ -14,6 +14,7 @@ namespace Viva
     {
         private SqlConnection con;
         private SqlCommand cmd;
+        SqlDataReader dr;
         public Database()
         {
             con = new SqlConnection();
@@ -62,16 +63,18 @@ namespace Viva
         }
         public SqlDataReader DataRead(string query)
         {
+            
             try
             {
                 openCon();
+                cmd = new SqlCommand(query, con);
+                dr = cmd.ExecuteReader();
             }
             catch
             {
                 MessageBox.Show("Check your database connection");
             }
-            cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
+            
             return dr;
 
         }

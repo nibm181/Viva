@@ -24,6 +24,12 @@ namespace Viva
         private void Recut_Load(object sender, EventArgs e)
         {
            
+            
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            // Do your work here...
             try
             {
                 db = new Database();
@@ -31,7 +37,7 @@ namespace Viva
                 d = db.GetData("select model_id, model_type, model_cat, model_name, model_qty from tbl_garment where model_qty<0");
                 if (d.Rows.Count > 0)
                 {
-                    
+
                     foreach (DataRow row in d.Rows)
                     {
                         int y = Math.Abs(int.Parse(row[4].ToString()));
@@ -52,6 +58,8 @@ namespace Viva
             {
                 MetroMessageBox.Show(this, "Please check your internet connection", "Reconnect", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            base.OnShown(e);
         }
 
         private void btn_generate_Click(object sender, EventArgs e)

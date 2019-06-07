@@ -137,7 +137,7 @@
             this.cmb_cat.ItemHeight = 23;
             this.cmb_cat.Items.AddRange(new object[] {
             "ZARA Basic",
-            "Women\'s Sty.",
+            "Womens Sty.",
             "S n G Fashion",
             "S n G Secret"});
             this.cmb_cat.Location = new System.Drawing.Point(165, 116);

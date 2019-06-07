@@ -40,10 +40,9 @@
             // btn_search
             // 
             this.btn_search.Highlight = true;
-            this.btn_search.Location = new System.Drawing.Point(512, 124);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_search.Location = new System.Drawing.Point(384, 101);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(131, 36);
+            this.btn_search.Size = new System.Drawing.Size(98, 29);
             this.btn_search.Style = MetroFramework.MetroColorStyle.Lime;
             this.btn_search.TabIndex = 0;
             this.btn_search.Text = "Search";
@@ -56,10 +55,9 @@
             // 
             // 
             this.txt_search.CustomButton.Image = null;
-            this.txt_search.CustomButton.Location = new System.Drawing.Point(316, 2);
-            this.txt_search.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.CustomButton.Location = new System.Drawing.Point(132, 2);
             this.txt_search.CustomButton.Name = "";
-            this.txt_search.CustomButton.Size = new System.Drawing.Size(39, 36);
+            this.txt_search.CustomButton.Size = new System.Drawing.Size(17, 19);
             this.txt_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_search.CustomButton.TabIndex = 1;
             this.txt_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -67,8 +65,7 @@
             this.txt_search.CustomButton.Visible = false;
             this.txt_search.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_search.Lines = new string[0];
-            this.txt_search.Location = new System.Drawing.Point(171, 126);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Location = new System.Drawing.Point(128, 102);
             this.txt_search.MaxLength = 32767;
             this.txt_search.Name = "txt_search";
             this.txt_search.PasswordChar = '\0';
@@ -77,7 +74,7 @@
             this.txt_search.SelectionLength = 0;
             this.txt_search.SelectionStart = 0;
             this.txt_search.ShortcutsEnabled = true;
-            this.txt_search.Size = new System.Drawing.Size(269, 34);
+            this.txt_search.Size = new System.Drawing.Size(202, 28);
             this.txt_search.TabIndex = 1;
             this.txt_search.UseSelectable = true;
             this.txt_search.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -112,8 +109,7 @@
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(75, 192);
-            this.metroGrid1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroGrid1.Location = new System.Drawing.Point(56, 156);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -127,20 +123,18 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(776, 316);
+            this.metroGrid1.Size = new System.Drawing.Size(570, 257);
             this.metroGrid1.TabIndex = 2;
             // 
             // ViewCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 574);
+            this.ClientSize = new System.Drawing.Size(684, 466);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.btn_search);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewCustomer";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "View Customers";
             this.Load += new System.EventHandler(this.ViewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();

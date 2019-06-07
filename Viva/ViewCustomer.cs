@@ -25,6 +25,49 @@ namespace Viva
 
         private void ViewCustomer_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            // Do your work here...
+            loadGrid();
+
+            base.OnShown(e);
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+            {
+                MetroMessageBox.Show(this, "Please Enter Customer Name or ID or Address 2 or Contact number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);               
+            }            
+            else
+            {
+                if (metroGrid1.Rows.Count == 0)
+                {
+                    loadGrid();
+                }
+                if(metroGrid1.Rows.Count > 0)
+                {
+                    try
+                    {
+                        string search = txt_search.Text;
+                        DataView dv = new DataView(d);
+                        dv.RowFilter = "cus_id like '%" + search + "%' or cus_name like '%" + search + "%' or cus_add2 like '%" + search + "%' or contact_no like '" + search + "'";
+                        metroGrid1.DataSource = dv;
+                        metroGrid1.ClearSelection();
+                    }
+                    catch (Exception)
+                    {
+                        MetroMessageBox.Show(this, "Please check your internet connection", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        public void loadGrid()
+        {
             try
             {
                 db = new Database();
@@ -42,46 +85,9 @@ namespace Viva
                 }
                 metroGrid1.ClearSelection();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MetroMessageBox.Show(this, "Please check your internet connection", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn_search_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txt_search.Text))
-            {
-                MetroMessageBox.Show(this, "Please Enter Customer Name or ID or Address 2 or Contact number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                try
-                {
-                    string search = txt_search.Text;
-                    db = new Database();
-                    d = new DataTable();
-                    d = db.GetData("select * from customer where cus_id like '%" + search + "%' or cus_name like '%" + search + "%' or cus_add2 like '%" + search + "%' or contact_no like '" + search + "'");
-                    if (d.Rows.Count > 0)
-                    {
-                        metroGrid1.DataSource = d;
-                        metroGrid1.Columns[0].HeaderText = "ID";
-                        metroGrid1.Columns[1].HeaderText = "Name";
-                        metroGrid1.Columns[2].HeaderText = "Address 1";
-                        metroGrid1.Columns[3].HeaderText = "Address 2";
-                        metroGrid1.Columns[4].HeaderText = "Contact Number";
-                        metroGrid1.AutoResizeColumns();
-                    }
-                    else
-                    {
-                        MetroMessageBox.Show(this, "There is no Customer(s) accompanied with the given Search Term", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    metroGrid1.ClearSelection();
-                }
-                catch (Exception ex)
-                {
-                    MetroMessageBox.Show(this, "Please check your internet connection", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
         }
     }

@@ -20,13 +20,6 @@ namespace Viva
             AutoComplete();
         }
 
-        private void autoComplete()
-        {
-            txt_search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txt_search.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-        }
-
         Database db;
         int mdl_qty;
 
@@ -246,19 +239,26 @@ namespace Viva
 
         private void AutoComplete()
         {
-            txt_search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txt_search.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
-
-            db = new Database();
-            SqlDataReader dr = db.DataRead("select * from tbl_garment");
-            while(dr.Read())
+            try
             {
-                string name = dr.GetString(0) + " - " + dr.GetString(3) ;
-                coll.Add(name);
-            }
+                txt_search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txt_search.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
 
-            txt_search.AutoCompleteCustomSource = coll;
+                db = new Database();
+                SqlDataReader dr = db.DataRead("select * from tbl_garment");
+                while (dr.Read())
+                {
+                    string name = dr.GetString(0) + " - " + dr.GetString(3);
+                    coll.Add(name);
+                }
+
+                txt_search.AutoCompleteCustomSource = coll;
+            }
+            catch
+            {
+
+            }
 
         }
     }
