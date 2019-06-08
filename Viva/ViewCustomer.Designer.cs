@@ -55,9 +55,9 @@
             // 
             // 
             this.txt_search.CustomButton.Image = null;
-            this.txt_search.CustomButton.Location = new System.Drawing.Point(132, 2);
+            this.txt_search.CustomButton.Location = new System.Drawing.Point(176, 2);
             this.txt_search.CustomButton.Name = "";
-            this.txt_search.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_search.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_search.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_search.CustomButton.TabIndex = 1;
             this.txt_search.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -83,6 +83,7 @@
             // metroGrid1
             // 
             this.metroGrid1.AllowUserToAddRows = false;
+            this.metroGrid1.AllowUserToResizeColumns = false;
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.Silver;
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -123,7 +124,7 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(570, 257);
+            this.metroGrid1.Size = new System.Drawing.Size(552, 257);
             this.metroGrid1.TabIndex = 2;
             // 
             // ViewCustomer
