@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +51,24 @@ namespace Viva
         {
             editGarment e1 = new editGarment();
             e1.Show();
+        }
+
+        private void tile_view_gar_Click(object sender, EventArgs e)
+        {
+            ViewGarments vg = new ViewGarments();
+            vg.Show();
+        }
+
+        private void tile_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MetroMessageBox.Show(this, "Are you sure you want to logout? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                form_login lg = new form_login();
+                lg.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

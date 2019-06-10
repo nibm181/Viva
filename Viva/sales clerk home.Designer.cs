@@ -31,14 +31,17 @@
             this.tile_place_order = new MetroFramework.Controls.MetroTile();
             this.tile_edit_cus = new MetroFramework.Controls.MetroTile();
             this.tile_reg_customer = new MetroFramework.Controls.MetroTile();
+            this.tile_view_cus = new MetroFramework.Controls.MetroTile();
+            this.tile_view_garm = new MetroFramework.Controls.MetroTile();
+            this.tile_logout = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // tile_place_order
             // 
             this.tile_place_order.ActiveControl = null;
             this.tile_place_order.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_place_order.Location = new System.Drawing.Point(420, 128);
-            this.tile_place_order.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tile_place_order.Location = new System.Drawing.Point(325, 125);
+            this.tile_place_order.Margin = new System.Windows.Forms.Padding(2);
             this.tile_place_order.Name = "tile_place_order";
             this.tile_place_order.Size = new System.Drawing.Size(344, 344);
             this.tile_place_order.Style = MetroFramework.MetroColorStyle.Silver;
@@ -55,10 +58,10 @@
             this.tile_edit_cus.ActiveControl = null;
             this.tile_edit_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_cus.AutoSize = true;
-            this.tile_edit_cus.Location = new System.Drawing.Point(246, 302);
-            this.tile_edit_cus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tile_edit_cus.Location = new System.Drawing.Point(109, 299);
+            this.tile_edit_cus.Margin = new System.Windows.Forms.Padding(2);
             this.tile_edit_cus.Name = "tile_edit_cus";
-            this.tile_edit_cus.Size = new System.Drawing.Size(170, 170);
+            this.tile_edit_cus.Size = new System.Drawing.Size(212, 170);
             this.tile_edit_cus.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_edit_cus.TabIndex = 2;
             this.tile_edit_cus.Text = "Edit Customer";
@@ -70,27 +73,74 @@
             // 
             this.tile_reg_customer.ActiveControl = null;
             this.tile_reg_customer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_reg_customer.Location = new System.Drawing.Point(246, 128);
-            this.tile_reg_customer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tile_reg_customer.Location = new System.Drawing.Point(109, 125);
+            this.tile_reg_customer.Margin = new System.Windows.Forms.Padding(2);
             this.tile_reg_customer.Name = "tile_reg_customer";
-            this.tile_reg_customer.Size = new System.Drawing.Size(170, 170);
-            this.tile_reg_customer.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_reg_customer.Size = new System.Drawing.Size(212, 170);
+            this.tile_reg_customer.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_reg_customer.TabIndex = 3;
             this.tile_reg_customer.Text = "Register Customer";
             this.tile_reg_customer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.tile_reg_customer.UseSelectable = true;
             this.tile_reg_customer.Click += new System.EventHandler(this.tile_reg_customer_Click);
             // 
+            // tile_view_cus
+            // 
+            this.tile_view_cus.ActiveControl = null;
+            this.tile_view_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_view_cus.Location = new System.Drawing.Point(674, 125);
+            this.tile_view_cus.Name = "tile_view_cus";
+            this.tile_view_cus.Size = new System.Drawing.Size(252, 182);
+            this.tile_view_cus.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_view_cus.TabIndex = 4;
+            this.tile_view_cus.Text = "View Customer";
+            this.tile_view_cus.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.tile_view_cus.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_view_cus.UseSelectable = true;
+            this.tile_view_cus.Click += new System.EventHandler(this.tile_view_cus_Click);
+            // 
+            // tile_view_garm
+            // 
+            this.tile_view_garm.ActiveControl = null;
+            this.tile_view_garm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_view_garm.Location = new System.Drawing.Point(674, 313);
+            this.tile_view_garm.Name = "tile_view_garm";
+            this.tile_view_garm.Size = new System.Drawing.Size(252, 90);
+            this.tile_view_garm.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_view_garm.TabIndex = 5;
+            this.tile_view_garm.Text = "View Garment";
+            this.tile_view_garm.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_view_garm.UseSelectable = true;
+            this.tile_view_garm.Click += new System.EventHandler(this.tile_view_garm_Click);
+            // 
+            // tile_logout
+            // 
+            this.tile_logout.ActiveControl = null;
+            this.tile_logout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_logout.Location = new System.Drawing.Point(674, 409);
+            this.tile_logout.Name = "tile_logout";
+            this.tile_logout.Size = new System.Drawing.Size(252, 60);
+            this.tile_logout.Style = MetroFramework.MetroColorStyle.Orange;
+            this.tile_logout.TabIndex = 6;
+            this.tile_logout.Text = "Logout";
+            this.tile_logout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tile_logout.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_logout.UseSelectable = true;
+            this.tile_logout.Click += new System.EventHandler(this.tile_logout_Click);
+            // 
             // sales_clerk_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1068, 600);
+            this.Controls.Add(this.tile_logout);
+            this.Controls.Add(this.tile_view_garm);
+            this.Controls.Add(this.tile_view_cus);
             this.Controls.Add(this.tile_reg_customer);
             this.Controls.Add(this.tile_edit_cus);
             this.Controls.Add(this.tile_place_order);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "sales_clerk_home";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Red;
@@ -106,5 +156,8 @@
         private MetroFramework.Controls.MetroTile tile_place_order;
         private MetroFramework.Controls.MetroTile tile_edit_cus;
         private MetroFramework.Controls.MetroTile tile_reg_customer;
+        private MetroFramework.Controls.MetroTile tile_view_cus;
+        private MetroFramework.Controls.MetroTile tile_view_garm;
+        private MetroFramework.Controls.MetroTile tile_logout;
     }
 }

@@ -90,5 +90,10 @@ namespace Viva
                 MetroMessageBox.Show(this, "Please check your internet connection", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -33,5 +33,11 @@ namespace Viva
             MaterialStockReportForm m1 = new MaterialStockReportForm();
             m1.Show();
         }
+
+        private void tile_saleso_rep_Click(object sender, EventArgs e)
+        {
+            OrderReportForm orf = new OrderReportForm();
+            orf.Show();
+        }
     }
 }

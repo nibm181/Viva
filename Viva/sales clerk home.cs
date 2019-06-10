@@ -75,5 +75,29 @@ namespace Viva
             editCustomer e1 = new editCustomer();
             e1.Show();
         }
+
+        private void tile_view_cus_Click(object sender, EventArgs e)
+        {
+            ViewCustomer vc = new ViewCustomer();
+            vc.Show();
+        }
+
+        private void tile_view_garm_Click(object sender, EventArgs e)
+        {
+            ViewGarments vg = new ViewGarments();
+            vg.Show();
+        }
+
+        private void tile_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MetroMessageBox.Show(this, "Are you sure you want to logout? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                form_login lg = new form_login();
+                lg.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }
