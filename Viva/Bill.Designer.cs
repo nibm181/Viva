@@ -1014,7 +1014,7 @@ namespace Viva.BillTableAdapters {
             this._commandCollection[0].CommandText = @"SELECT        o.order_id, o.cus_id, o.deliver_date, od.model_id, g.model_name, od.qty, g.model_price, od.amount
 FROM            [order] AS o INNER JOIN
                          order_detail AS od ON od.order_id = o.order_id LEFT OUTER JOIN
-                         tbl_garment AS g ON od.model_id = g.model_id
+                         garment AS g ON od.model_id = g.model_id
 WHERE o.order_id = @order_id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@order_id", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "order_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

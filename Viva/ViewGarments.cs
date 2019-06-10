@@ -71,7 +71,7 @@ namespace Viva
             {
                 db = new Database();
                 d = new DataTable();
-                d = db.GetData("select * from tbl_garment");
+                d = db.GetData("select * from garment");
                 if (d.Rows.Count > 0)
                 {
                     metroGrid1.DataSource = d;

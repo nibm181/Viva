@@ -71,7 +71,7 @@ namespace Viva
                 else
                 {
                     Database db = new Database();
-                    int row = db.save_delete_update("insert into tbl_garment values('" + txt_gno.Text + "', '" + cmb_gtype.Text + "','" + cmb_gcat.Text + "', '" + txt_gname.Text + "', " + txt_gqty.Text + ", '" + txt_gprice.Text + "')");
+                    int row = db.save_delete_update("insert into garment values('" + txt_gno.Text + "', '" + cmb_gtype.Text + "','" + cmb_gcat.Text + "', '" + txt_gname.Text + "', " + txt_gqty.Text + ", '" + txt_gprice.Text + "')");
                     if (row == 1)
                     {
                         MetroFramework.MetroMessageBox.Show(this, "Added Successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,7 +101,7 @@ namespace Viva
         {
             if(cmb_gtype.SelectedIndex != -1)
             {
-                DataTable dt = db.GetData("select top 1 model_id from tbl_garment where model_type = '" + cmb_gtype.Text + "' order by model_id desc");
+                DataTable dt = db.GetData("select top 1 model_id from garment where model_type = '" + cmb_gtype.Text + "' order by model_id desc");
                 string no = dt.Rows[0]["model_id"].ToString();
                 //retriving empid column last cell data.
                 int len = no.Length;

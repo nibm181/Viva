@@ -46,7 +46,7 @@ namespace Viva
                     string id = txt_search.Text;
                     id = id.Substring(0, 5);
                     db = new Database();
-                    DataTable dt = db.GetData("select * from tbl_garment where model_id='" + id + "'");
+                    DataTable dt = db.GetData("select * from garment where model_id='" + id + "'");
                     if (dt.Rows.Count > 0)
                     {
                         cmb_type.Enabled = false;
@@ -120,7 +120,7 @@ namespace Viva
                     {
                         update_order();
                         Database db = new Database();
-                        int row = db.save_delete_update("update tbl_garment set model_type = '" + cmb_type.Text + "', model_cat = '" + cmb_cat.Text + "', model_name = '" + txt_name.Text + "', model_qty = '" + mdl_qty + "', model_price = '" + txt_price.Text + "' where model_id = '" + txt_id.Text + "'");
+                        int row = db.save_delete_update("update garment set model_type = '" + cmb_type.Text + "', model_cat = '" + cmb_cat.Text + "', model_name = '" + txt_name.Text + "', model_qty = '" + mdl_qty + "', model_price = '" + txt_price.Text + "' where model_id = '" + txt_id.Text + "'");
                         if (row == 1)
                         {
                             MetroFramework.MetroMessageBox.Show(this, "Successfully updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -190,7 +190,7 @@ namespace Viva
                     if (dr == DialogResult.Yes)
                     {
                         db = new Database();
-                        int i = db.save_delete_update("delete from tbl_garment where model_id='" + txt_id.Text + "'");
+                        int i = db.save_delete_update("delete from garment where model_id='" + txt_id.Text + "'");
                         if (i == 1)
                         {
                             txt_search.Clear();
@@ -209,6 +209,8 @@ namespace Viva
                             txt_name.ReadOnly = true;
                             txt_qty.ReadOnly = true;
                             txt_price.ReadOnly = true;
+
+                            AutoComplete();
                         }
                     }
                 }
@@ -246,7 +248,7 @@ namespace Viva
                 AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
 
                 db = new Database();
-                SqlDataReader dr = db.DataRead("select * from tbl_garment");
+                SqlDataReader dr = db.DataRead("select * from garment");
                 while (dr.Read())
                 {
                     string name = dr.GetString(0) + " - " + dr.GetString(3);

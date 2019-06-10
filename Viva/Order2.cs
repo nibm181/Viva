@@ -50,7 +50,7 @@ namespace Viva
 
         private void datagridload()
         {
-            DataTable dt = db.GetData("select * from tbl_garment");
+            DataTable dt = db.GetData("select * from garment");
             grid_search_model.DataSource = dt;
         }
         private void metroLabel9_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace Viva
         }
         private void search_add_grid()
         {
-            DataTable dt = db.GetData("select * from tbl_garment where model_id like '%" + txt_search_id.Text + "%' or model_name like '%" + txt_search_id.Text + "%' ");
+            DataTable dt = db.GetData("select * from garment where model_id like '%" + txt_search_id.Text + "%' or model_name like '%" + txt_search_id.Text + "%' ");
             grid_search_model.DataSource = dt;
         }
 
@@ -191,7 +191,7 @@ namespace Viva
                     string store_qty = "0";
                     string pending_qty = "0";
                     int x = 0;
-                    DataTable dt = db.GetData("select * from tbl_garment where model_id='" + mod_id + "'");
+                    DataTable dt = db.GetData("select * from garment where model_id='" + mod_id + "'");
                     if (dt.Rows.Count > 0)
                     {
 
@@ -219,7 +219,7 @@ namespace Viva
                         }
                     }
                     db.save_delete_update("insert into [order_detail] values('" + txt_order_id.Text + "', '" + mod_id + "', '" + qty + "', '" + amount + "', '" + pending_qty + "')");
-                    db.save_delete_update("UPDATE tbl_garment SET model_qty = '" + new_store_qty + "' WHERE model_id = '" + mod_id + "' ");
+                    db.save_delete_update("UPDATE garment SET model_qty = '" + new_store_qty + "' WHERE model_id = '" + mod_id + "' ");
 
                 }
                     //MetroMessageBox.Show(this, "Successfully New Customer Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -1011,10 +1011,10 @@ namespace Viva.OrderDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        [order].order_id, [order].order_date, [order].cus_id, order_detail.model_id, order_detail.qty, order_detail.amount, [order].status, tbl_garment.model_price
+            this._commandCollection[0].CommandText = @"SELECT        [order].order_id, [order].order_date, [order].cus_id, order_detail.model_id, order_detail.qty, order_detail.amount, [order].status, garment.model_price
 FROM            [order] INNER JOIN
                          order_detail ON [order].order_id = order_detail.order_id LEFT OUTER JOIN
-                         tbl_garment ON order_detail.model_id = tbl_garment.model_id
+                         garment ON order_detail.model_id = garment.model_id
 WHERE        ([order].order_date BETWEEN @fromdate AND @todate)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fromdate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "order_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

@@ -34,7 +34,7 @@ namespace Viva
             {
                 db = new Database();
                 d = new DataTable();
-                d = db.GetData("select model_id, model_type, model_cat, model_name, model_qty from tbl_garment where model_qty<0");
+                d = db.GetData("select model_id, model_type, model_cat, model_name, model_qty from garment where model_qty<0");
                 if (d.Rows.Count > 0)
                 {
 
