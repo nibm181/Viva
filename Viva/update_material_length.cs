@@ -51,6 +51,11 @@ namespace Viva
                 
                 
             }
+            int rows = grd_update_mat.Rows.Count;
+            if (rows <1)
+            {
+                MetroMessageBox.Show(this, "No such material available", "No Data Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
 
         }
@@ -64,7 +69,11 @@ namespace Viva
 
         private void btn_umat_update_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_umat_id.Text))
+            if (Double.Parse(txt_umat_ul.Text) <= 0)
+            {
+                MetroMessageBox.Show(this, "Material used length can't be negative or 0!", "Invalid Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(txt_umat_id.Text))
             {
                 MetroMessageBox.Show(this, "Please select material from the table!", "Material not selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

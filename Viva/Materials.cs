@@ -70,7 +70,16 @@ namespace Viva
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txt_mat_name.Text))
+                if (Double.Parse(txt_mat_price.Text) <= 0)
+                {
+                    MetroMessageBox.Show(this, "Material price can't be negative or 0!", "Invalid Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else if (Double.Parse(txt_mat_length.Text) <= 0)
+                {
+                    MetroMessageBox.Show(this, "Material length can't be negative or 0!", "Invalid Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (string.IsNullOrWhiteSpace(txt_mat_name.Text))
                 {
                     MetroMessageBox.Show(this, "Please Enter Material Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
