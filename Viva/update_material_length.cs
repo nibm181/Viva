@@ -100,6 +100,13 @@ namespace Viva
                 Database db = new Database();
                 db.save_delete_update("update materials set mat_length = '" + ans + "' where mat_id ='" + txt_umat_id.Text + "' ");
                 db.save_delete_update("insert into material_used values('" + txt_umat_id.Text + "', '" + now + "', '" + txt_umat_note.Text + "', '" + ulen + "') ");
+
+                MetroMessageBox.Show(this, "Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_umat_ul.Clear();
+                txt_umat_search.Clear();
+                txt_umat_note.Clear();
+                txt_umat_id.Clear();
+                txt_umat_al.Clear();
             }
             
 

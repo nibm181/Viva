@@ -54,6 +54,10 @@ namespace Viva
                     MetroMessageBox.Show(this, "Please Enter Contact Number in Numeric!\nContact Number should contain 10 Numbers!!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_cno.Focus();
                 }
+                else if(Double.Parse(txt_cno.Text)<0)
+                {
+                    MetroMessageBox.Show(this, "Invalid contact number", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else if (string.IsNullOrWhiteSpace(txt_add2.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Second Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
