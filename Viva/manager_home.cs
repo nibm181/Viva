@@ -133,5 +133,10 @@ namespace Viva
             Materials am=new Materials();
             am.Show();
         }
+
+        private void metroTile1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

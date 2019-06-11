@@ -40,7 +40,7 @@
             // 
             this.tile_place_order.ActiveControl = null;
             this.tile_place_order.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_place_order.Location = new System.Drawing.Point(325, 125);
+            this.tile_place_order.Location = new System.Drawing.Point(324, 91);
             this.tile_place_order.Margin = new System.Windows.Forms.Padding(2);
             this.tile_place_order.Name = "tile_place_order";
             this.tile_place_order.Size = new System.Drawing.Size(344, 344);
@@ -58,10 +58,10 @@
             this.tile_edit_cus.ActiveControl = null;
             this.tile_edit_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_cus.AutoSize = true;
-            this.tile_edit_cus.Location = new System.Drawing.Point(109, 299);
+            this.tile_edit_cus.Location = new System.Drawing.Point(108, 311);
             this.tile_edit_cus.Margin = new System.Windows.Forms.Padding(2);
             this.tile_edit_cus.Name = "tile_edit_cus";
-            this.tile_edit_cus.Size = new System.Drawing.Size(212, 170);
+            this.tile_edit_cus.Size = new System.Drawing.Size(212, 244);
             this.tile_edit_cus.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_edit_cus.TabIndex = 2;
             this.tile_edit_cus.Text = "Edit Customer";
@@ -73,10 +73,10 @@
             // 
             this.tile_reg_customer.ActiveControl = null;
             this.tile_reg_customer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_reg_customer.Location = new System.Drawing.Point(109, 125);
+            this.tile_reg_customer.Location = new System.Drawing.Point(108, 91);
             this.tile_reg_customer.Margin = new System.Windows.Forms.Padding(2);
             this.tile_reg_customer.Name = "tile_reg_customer";
-            this.tile_reg_customer.Size = new System.Drawing.Size(212, 170);
+            this.tile_reg_customer.Size = new System.Drawing.Size(212, 216);
             this.tile_reg_customer.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_reg_customer.TabIndex = 3;
             this.tile_reg_customer.Text = "Register Customer";
@@ -88,9 +88,9 @@
             // 
             this.tile_view_cus.ActiveControl = null;
             this.tile_view_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_view_cus.Location = new System.Drawing.Point(674, 125);
+            this.tile_view_cus.Location = new System.Drawing.Point(673, 91);
             this.tile_view_cus.Name = "tile_view_cus";
-            this.tile_view_cus.Size = new System.Drawing.Size(252, 182);
+            this.tile_view_cus.Size = new System.Drawing.Size(252, 397);
             this.tile_view_cus.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_view_cus.TabIndex = 4;
             this.tile_view_cus.Text = "View Customer";
@@ -103,9 +103,9 @@
             // 
             this.tile_view_garm.ActiveControl = null;
             this.tile_view_garm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_view_garm.Location = new System.Drawing.Point(674, 313);
+            this.tile_view_garm.Location = new System.Drawing.Point(325, 440);
             this.tile_view_garm.Name = "tile_view_garm";
-            this.tile_view_garm.Size = new System.Drawing.Size(252, 90);
+            this.tile_view_garm.Size = new System.Drawing.Size(343, 114);
             this.tile_view_garm.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_view_garm.TabIndex = 5;
             this.tile_view_garm.Text = "View Garment";
@@ -117,7 +117,7 @@
             // 
             this.tile_logout.ActiveControl = null;
             this.tile_logout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_logout.Location = new System.Drawing.Point(674, 409);
+            this.tile_logout.Location = new System.Drawing.Point(673, 494);
             this.tile_logout.Name = "tile_logout";
             this.tile_logout.Size = new System.Drawing.Size(252, 60);
             this.tile_logout.Style = MetroFramework.MetroColorStyle.Orange;
@@ -133,7 +133,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1068, 600);
+            this.BackImage = global::Viva.Properties.Resources.helena_hertz_256396_unsplash;
+            this.BackMaxSize = 2000;
+            this.ClientSize = new System.Drawing.Size(1068, 642);
             this.Controls.Add(this.tile_logout);
             this.Controls.Add(this.tile_view_garm);
             this.Controls.Add(this.tile_view_cus);

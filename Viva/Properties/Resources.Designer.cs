@@ -63,6 +63,26 @@ namespace Viva.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap andrej_lisakov_541769_unsplash_1_ {
+            get {
+                object obj = ResourceManager.GetObject("andrej-lisakov-541769-unsplash(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap christian_perner_91905_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("christian-perner-91905-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap garment_worker {
             get {
                 object obj = ResourceManager.GetObject("garment-worker", resourceCulture);
@@ -73,9 +93,39 @@ namespace Viva.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap helena_hertz_256396_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("helena-hertz-256396-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modern_essentials_790188_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("modern-essentials-790188-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap section_3 {
             get {
                 object obj = ResourceManager.GetObject("section-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sylvie_tittel_769572_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("sylvie-tittel-769572-unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

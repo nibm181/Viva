@@ -551,6 +551,11 @@
     <Content Include="obj\Debug\Viva.exe" />
     <Content Include="obj\Debug\Viva.pdb" />
     <None Include="Resources\WSCO-FINAL-PICTUR.png" />
+    <None Include="Resources\andrej-lisakov-541769-unsplash%281%29.jpg" />
+    <None Include="Resources\modern-essentials-790188-unsplash.jpg" />
+    <None Include="Resources\sylvie-tittel-769572-unsplash.jpg" />
+    <None Include="Resources\christian-perner-91905-unsplash.jpg" />
+    <None Include="Resources\helena-hertz-256396-unsplash.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

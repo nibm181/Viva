@@ -231,7 +231,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackImage = global::Viva.Properties.Resources.WSCO_FINAL_PICTUR;
+            this.BackImage = global::Viva.Properties.Resources.andrej_lisakov_541769_unsplash_1_;
+            this.BackMaxSize = 2500;
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.tile_add_mat);
             this.Controls.Add(this.tile_add_gar);

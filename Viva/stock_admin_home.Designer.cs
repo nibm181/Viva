@@ -42,9 +42,9 @@
             this.tile_add_mtrl.ActiveControl = null;
             this.tile_add_mtrl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_add_mtrl.AutoSize = true;
-            this.tile_add_mtrl.Location = new System.Drawing.Point(105, 93);
+            this.tile_add_mtrl.Location = new System.Drawing.Point(65, 90);
             this.tile_add_mtrl.Name = "tile_add_mtrl";
-            this.tile_add_mtrl.Size = new System.Drawing.Size(220, 220);
+            this.tile_add_mtrl.Size = new System.Drawing.Size(266, 233);
             this.tile_add_mtrl.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_add_mtrl.TabIndex = 0;
             this.tile_add_mtrl.Text = "Add Material Stock";
@@ -60,10 +60,10 @@
             this.tile_update_mtrl_length.ActiveControl = null;
             this.tile_update_mtrl_length.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_update_mtrl_length.AutoSize = true;
-            this.tile_update_mtrl_length.Location = new System.Drawing.Point(331, 240);
+            this.tile_update_mtrl_length.Location = new System.Drawing.Point(450, 329);
             this.tile_update_mtrl_length.Name = "tile_update_mtrl_length";
-            this.tile_update_mtrl_length.Size = new System.Drawing.Size(372, 155);
-            this.tile_update_mtrl_length.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_update_mtrl_length.Size = new System.Drawing.Size(417, 105);
+            this.tile_update_mtrl_length.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_update_mtrl_length.TabIndex = 0;
             this.tile_update_mtrl_length.Text = "Update Material";
             this.tile_update_mtrl_length.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -77,9 +77,9 @@
             this.tile_chk_mat.ActiveControl = null;
             this.tile_chk_mat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_chk_mat.AutoSize = true;
-            this.tile_chk_mat.Location = new System.Drawing.Point(331, 93);
+            this.tile_chk_mat.Location = new System.Drawing.Point(337, 90);
             this.tile_chk_mat.Name = "tile_chk_mat";
-            this.tile_chk_mat.Size = new System.Drawing.Size(372, 141);
+            this.tile_chk_mat.Size = new System.Drawing.Size(530, 233);
             this.tile_chk_mat.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_chk_mat.TabIndex = 0;
             this.tile_chk_mat.Text = "View Material";
@@ -94,9 +94,9 @@
             this.tile_add_gar.ActiveControl = null;
             this.tile_add_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_add_gar.AutoSize = true;
-            this.tile_add_gar.Location = new System.Drawing.Point(105, 319);
+            this.tile_add_gar.Location = new System.Drawing.Point(65, 329);
             this.tile_add_gar.Name = "tile_add_gar";
-            this.tile_add_gar.Size = new System.Drawing.Size(220, 220);
+            this.tile_add_gar.Size = new System.Drawing.Size(379, 230);
             this.tile_add_gar.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_add_gar.TabIndex = 0;
             this.tile_add_gar.Text = "Add Garment Stock";
@@ -112,10 +112,10 @@
             this.tile_edit_gar.ActiveControl = null;
             this.tile_edit_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_gar.AutoSize = true;
-            this.tile_edit_gar.Location = new System.Drawing.Point(331, 401);
+            this.tile_edit_gar.Location = new System.Drawing.Point(450, 440);
             this.tile_edit_gar.Name = "tile_edit_gar";
-            this.tile_edit_gar.Size = new System.Drawing.Size(372, 138);
-            this.tile_edit_gar.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tile_edit_gar.Size = new System.Drawing.Size(417, 119);
+            this.tile_edit_gar.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_edit_gar.TabIndex = 1;
             this.tile_edit_gar.Text = "Edit Garment";
             this.tile_edit_gar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,9 +127,9 @@
             // 
             this.tile_view_gar.ActiveControl = null;
             this.tile_view_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_view_gar.Location = new System.Drawing.Point(709, 93);
+            this.tile_view_gar.Location = new System.Drawing.Point(873, 90);
             this.tile_view_gar.Name = "tile_view_gar";
-            this.tile_view_gar.Size = new System.Drawing.Size(205, 368);
+            this.tile_view_gar.Size = new System.Drawing.Size(218, 368);
             this.tile_view_gar.Style = MetroFramework.MetroColorStyle.Silver;
             this.tile_view_gar.TabIndex = 2;
             this.tile_view_gar.Text = "View Garment";
@@ -141,9 +141,9 @@
             // 
             this.tile_logout.ActiveControl = null;
             this.tile_logout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_logout.Location = new System.Drawing.Point(718, 475);
+            this.tile_logout.Location = new System.Drawing.Point(873, 464);
             this.tile_logout.Name = "tile_logout";
-            this.tile_logout.Size = new System.Drawing.Size(196, 64);
+            this.tile_logout.Size = new System.Drawing.Size(218, 95);
             this.tile_logout.Style = MetroFramework.MetroColorStyle.Orange;
             this.tile_logout.TabIndex = 3;
             this.tile_logout.Text = "Logout";
@@ -154,9 +154,12 @@
             // 
             // stock_admin_home
             // 
+            this.ApplyImageInvert = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 600);
+            this.BackImage = global::Viva.Properties.Resources.sylvie_tittel_769572_unsplash;
+            this.BackMaxSize = 2500;
+            this.ClientSize = new System.Drawing.Size(1139, 621);
             this.Controls.Add(this.tile_logout);
             this.Controls.Add(this.tile_view_gar);
             this.Controls.Add(this.tile_edit_gar);
