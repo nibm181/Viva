@@ -390,7 +390,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.64459in</Top>
+        <Top>1.76959in</Top>
         <Left>1.11in</Left>
         <Height>0.78124in</Height>
         <Width>5.04168in</Width>
@@ -441,10 +441,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Eheliyagoda, Ratnapura</Value>
+                <Value>NO. 53, Panawala Rd,</Value>
                 <Style>
                   <FontFamily>Britannic Bold</FontFamily>
-                  <FontSize>15pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -455,7 +455,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tel: 0777862675</Value>
+                <Value>Eheliyagoda</Value>
+                <Style>
+                  <FontFamily>Britannic Bold</FontFamily>
+                  <FontSize>14pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tel: 036 2259176</Value>
                 <Style>
                   <FontFamily>Cooper Black</FontFamily>
                 </Style>
@@ -469,7 +483,7 @@
         <rd:DefaultName>Textbox26</rd:DefaultName>
         <Top>0.54104in</Top>
         <Left>2.21291in</Left>
-        <Height>0.4375in</Height>
+        <Height>0.64583in</Height>
         <Width>2.78125in</Width>
         <ZIndex>2</ZIndex>
         <Style>
@@ -501,7 +515,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>0.98201in</Top>
+        <Top>1.10701in</Top>
         <Left>2.2025in</Left>
         <Height>0.375in</Height>
         <Width>2.79166in</Width>
@@ -533,7 +547,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.31125in</Top>
+        <Top>1.43625in</Top>
         <Left>1.19902in</Left>
         <Height>0.25in</Height>
         <Width>1.6957in</Width>
@@ -565,7 +579,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.32514in</Top>
+        <Top>1.45014in</Top>
         <Left>0.76152in</Left>
         <Height>0.25in</Height>
         <Width>0.4375in</Width>
@@ -581,7 +595,7 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>1.57514in</Top>
+        <Top>1.70014in</Top>
         <Left>0.47917in</Left>
         <Height>0in</Height>
         <Width>6.29167in</Width>

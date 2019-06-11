@@ -719,7 +719,7 @@
             <Top>1.86459in</Top>
             <Left>0.375in</Left>
             <Height>0.75in</Height>
-            <Width>6.13888in</Width>
+            <Width>6.13887in</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -766,7 +766,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Eheliyagoda, Ratnapura</Value>
+                    <Value>No. 53, Panawala Rd,</Value>
                     <Style>
                       <FontFamily>Britannic Bold</FontFamily>
                       <FontSize>15pt</FontSize>
@@ -780,7 +780,21 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Tel: 0777862675</Value>
+                    <Value>Eheliyagoda</Value>
+                    <Style>
+                      <FontFamily>Britannic Bold</FontFamily>
+                      <FontSize>15pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Tel: 036 2259176</Value>
                     <Style>
                       <FontFamily>Cooper Black</FontFamily>
                     </Style>
@@ -794,7 +808,7 @@
             <rd:DefaultName>Textbox26</rd:DefaultName>
             <Top>0.42015in</Top>
             <Left>1.99306in</Left>
-            <Height>0.4375in</Height>
+            <Height>0.67708in</Height>
             <Width>2.78125in</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -826,7 +840,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox27</rd:DefaultName>
-            <Top>0.81536in</Top>
+            <Top>1.05147in</Top>
             <Left>2.15973in</Left>
             <Height>0.375in</Height>
             <Width>2.50694in</Width>
@@ -858,7 +872,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>1.20425in</Top>
+            <Top>1.45425in</Top>
             <Left>0.54167in</Left>
             <Height>0.25in</Height>
             <Width>0.45833in</Width>
@@ -874,7 +888,7 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>1.45425in</Top>
+            <Top>1.70425in</Top>
             <Left>0.25932in</Left>
             <Height>0in</Height>
             <Width>6.35417in</Width>
@@ -902,8 +916,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>1.19036in</Top>
-            <Left>4.27084in</Left>
+            <Top>1.45425in</Top>
+            <Left>4.25694in</Left>
             <Height>0.25in</Height>
             <Width>0.29167in</Width>
             <ZIndex>6</ZIndex>
@@ -936,10 +950,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>from_d</rd:DefaultName>
-            <Top>1.20425in</Top>
+            <Top>1.45425in</Top>
             <Left>1in</Left>
             <Height>0.25in</Height>
-            <Width>1.67013in</Width>
+            <Width>1.86805in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -970,10 +984,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>to_d</rd:DefaultName>
-            <Top>1.19036in</Top>
-            <Left>4.5625in</Left>
+            <Top>1.45425in</Top>
+            <Left>4.5486in</Left>
             <Height>0.25in</Height>
-            <Width>1.60417in</Width>
+            <Width>1.95137in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>

@@ -279,7 +279,7 @@
                           <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -318,7 +318,7 @@
                           <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -357,7 +357,7 @@
                           <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -396,7 +396,7 @@
                           <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -435,7 +435,7 @@
                           <Color>#350035</Color>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>Thistle</BackgroundColor>
+                        <BackgroundColor>White</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -482,7 +482,7 @@
                         <BottomBorder>
                           <Color>#350035</Color>
                         </BottomBorder>
-                        <BackgroundColor>LightSteelBlue</BackgroundColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -528,7 +528,7 @@
                         <BottomBorder>
                           <Color>#350035</Color>
                         </BottomBorder>
-                        <BackgroundColor>LightSteelBlue</BackgroundColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -628,10 +628,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Eheliyagoda, Ratnapura</Value>
+                <Value>No: 53, Panawala Rd, Eheliyagoda</Value>
                 <Style>
                   <FontFamily>Britannic Bold</FontFamily>
-                  <FontSize>15pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -642,7 +642,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tel: 0777862675</Value>
+                <Value>Tel: 036 2259176</Value>
                 <Style>
                   <FontFamily>Cooper Black</FontFamily>
                 </Style>
@@ -654,9 +654,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox26</rd:DefaultName>
-        <Top>0.74875in</Top>
+        <Top>0.68625in</Top>
         <Left>2.17708in</Left>
-        <Height>0.4375in</Height>
+        <Height>0.67708in</Height>
         <Width>2.78125in</Width>
         <ZIndex>2</ZIndex>
         <Style>
@@ -688,7 +688,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
-        <Top>1.21403in</Top>
+        <Top>1.33555in</Top>
         <Left>1.89583in</Left>
         <Height>0.375in</Height>
         <Width>3.36458in</Width>
@@ -721,7 +721,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.6307in</Top>
+        <Top>1.72444in</Top>
         <Left>1.15215in</Left>
         <Height>0.25in</Height>
         <Width>1.6957in</Width>
@@ -753,7 +753,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>1.6307in</Top>
+        <Top>1.72444in</Top>
         <Left>0.71465in</Left>
         <Height>0.25in</Height>
         <Width>0.4375in</Width>
@@ -769,7 +769,7 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>1.86333in</Top>
+        <Top>1.98833in</Top>
         <Height>0in</Height>
         <Width>7.29167in</Width>
         <ZIndex>6</ZIndex>

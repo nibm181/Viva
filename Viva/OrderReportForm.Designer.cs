@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.OrderDataSet = new Viva.OrderDataSet();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -95,9 +95,9 @@
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.DataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Viva.OrderReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(46, 146);
             this.reportViewer1.Name = "reportViewer1";
@@ -133,7 +133,7 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Name = "OrderReportForm";
-            this.Text = "OrderReportForm";
+            this.Text = "Sales Order Report";
             this.Load += new System.EventHandler(this.OrderReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDataSet)).EndInit();
