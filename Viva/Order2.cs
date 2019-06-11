@@ -143,7 +143,7 @@ namespace Viva
 
         private void btn_remove_Click(object sender, EventArgs e)
         {
-            if (grid_orders.Rows.Count < 2)
+            if (grid_orders.Rows.Count < 1)
             {
                 MetroMessageBox.Show(this, "no records to reomve!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
