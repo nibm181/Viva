@@ -115,5 +115,23 @@ namespace Viva
                 this.Close();
             }
         }
+
+        private void tile_add_cus_Click(object sender, EventArgs e)
+        {
+            customerReg ac = new customerReg();
+            ac.Show();
+        }
+
+        private void tile_add_gar_Click(object sender, EventArgs e)
+        {
+            AddGarment ag = new AddGarment();
+            ag.Show();
+        }
+
+        private void tile_add_mat_Click(object sender, EventArgs e)
+        {
+            Materials am=new Materials();
+            am.Show();
+        }
     }
 }
