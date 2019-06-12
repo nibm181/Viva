@@ -23,23 +23,29 @@ namespace Viva
         protected override void OnShown(EventArgs e)
         {
             // Do your work here...
-            Database db = new Database();
-            DateTime today = DateTime.Today;
-            DateTime ddate = today.AddDays(30);
-            DataTable dt = db.GetData("select order_id from [order] where deliver_date >'" + today + "' and deliver_date < '" + ddate + "'");
-            int c = dt.Rows.Count;
-
-            if (dt.Rows.Count > 0)
+            try
             {
-                DialogResult result = MetroMessageBox.Show(this, "You have '" + c + "' orders to Delivery in less than 30 days. Do you want to display it? ", "Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                if (result == DialogResult.OK)
+                Database db = new Database();
+                DateTime today = DateTime.Today;
+                DateTime ddate = today.AddDays(30);
+                DataTable dt = db.GetData("select order_id from [order] where deliver_date >'" + today + "' and deliver_date < '" + ddate + "'");
+                int c = dt.Rows.Count;
+
+                if (dt.Rows.Count > 0)
                 {
+                    DialogResult result = MetroMessageBox.Show(this, "You have '" + c + "' orders to Delivery in less than 30 days. Do you want to display it? ", "Alert", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    if (result == DialogResult.OK)
+                    {
 
-                    deliver_alert d1 = new deliver_alert();
-                    d1.Show();
+                        deliver_alert d1 = new deliver_alert();
+                        d1.Show();
 
 
+                    }
                 }
+            }
+            catch
+            {
             }
 
             base.OnShown(e);
@@ -106,13 +112,19 @@ namespace Viva
 
         private void tile_logout_Click(object sender, EventArgs e)
         {
-            DialogResult result = MetroMessageBox.Show(this, "Are you sure you want to logout? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            try
             {
-                this.Hide();
-                form_login lg = new form_login();
-                lg.ShowDialog();
-                this.Close();
+                DialogResult result = MetroMessageBox.Show(this, "Are you sure you want to logout? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide();
+                    form_login lg = new form_login();
+                    lg.ShowDialog();
+                    this.Close();
+                }
+            }
+            catch
+            {
             }
         }
 
@@ -137,6 +149,24 @@ namespace Viva
         private void metroTile1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void tile_edit_cus_Click(object sender, EventArgs e)
+        {
+            editCustomer ec = new editCustomer();
+            ec.Show();
+        }
+
+        private void tile_edit_gar_Click(object sender, EventArgs e)
+        {
+            editGarment eg = new editGarment();
+            eg.Show();
+        }
+
+        private void tile_up_mat_Click(object sender, EventArgs e)
+        {
+            update_material_length uml = new update_material_length();
+            uml.Show();
         }
     }
 }

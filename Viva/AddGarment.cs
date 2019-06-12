@@ -59,12 +59,12 @@ namespace Viva
                 else if (txt_gqty.Text.Any(char.IsLetter) || Int32.Parse(txt_gqty.Text) <= 0)
                 {
                     MetroMessageBox.Show(this, "Please enter Quantity in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }              
                 else if (string.IsNullOrWhiteSpace(txt_gprice.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_gprice.Text.Any(char.IsLetter) || Int32.Parse(txt_gprice.Text) <= 0)
+                else if (txt_gprice.Text.Any(char.IsLetter) || float.Parse(txt_gprice.Text) <= 0)
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -87,7 +87,11 @@ namespace Viva
                     }
                 }
             }
-            catch
+            catch(FormatException)
+            {
+                MetroMessageBox.Show(this, "Please enter valid Quantity!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch(Exception)
             {
                 MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -99,17 +103,24 @@ namespace Viva
 
         private void cmb_gtype_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmb_gtype.SelectedIndex != -1)
+            try
             {
-                DataTable dt = db.GetData("select top 1 model_id from garment where model_type = '" + cmb_gtype.Text + "' order by model_id desc");
-                string no = dt.Rows[0]["model_id"].ToString();
-                //retriving empid column last cell data.
-                int len = no.Length;
-                string splitno = no.Substring(1, len - 1);
-                int num = Convert.ToInt32(splitno); //converting splited string in integer
-                num++; //increasing splited string by 1
-                no = no.Substring(0, 1) + num.ToString("0000");
-                txt_gno.Text = no.ToString();
+                if (cmb_gtype.SelectedIndex != -1)
+                {
+                    DataTable dt = db.GetData("select top 1 model_id from garment where model_type = '" + cmb_gtype.Text + "' order by model_id desc");
+                    string no = dt.Rows[0]["model_id"].ToString();
+                    //retriving empid column last cell data.
+                    int len = no.Length;
+                    string splitno = no.Substring(1, len - 1);
+                    int num = Convert.ToInt32(splitno); //converting splited string in integer
+                    num++; //increasing splited string by 1
+                    no = no.Substring(0, 1) + num.ToString("0000");
+                    txt_gno.Text = no.ToString();
+                }
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

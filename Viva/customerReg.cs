@@ -26,11 +26,17 @@ namespace Viva
         }
         private void IdIncrement()
         {
-           
-            DataTable dt = db.GetData("select top 1 cus_id from [customer] order by cus_id desc");
-            int no = Int32.Parse(dt.Rows[0][0].ToString());
-            no++;
-            txt_cus_id.Text = no.ToString();
+            try
+            {
+                DataTable dt = db.GetData("select top 1 cus_id from [customer] order by cus_id desc");
+                int no = Int32.Parse(dt.Rows[0][0].ToString());
+                no++;
+                txt_cus_id.Text = no.ToString();
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_add_Click(object sender, EventArgs e)

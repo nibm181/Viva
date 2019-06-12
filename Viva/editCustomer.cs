@@ -51,8 +51,6 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Contact Number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
                 else if (txt_cus_no.Text.Any(char.IsLetter)  )
                 {
                     MetroMessageBox.Show(this, "Contact Number Should Be Numeric", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);

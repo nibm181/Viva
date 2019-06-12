@@ -58,9 +58,13 @@ namespace Viva
 
                         metroGrid1.ClearSelection();
                     }
+                    catch (EvaluateException)
+                    {
+                        MetroMessageBox.Show(this, "Please enter correct search term", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     catch (Exception)
                     {
-                        MetroMessageBox.Show(this, "Please check your internet connection", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this, "Please check Internet Connection", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

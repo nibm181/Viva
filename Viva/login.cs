@@ -31,64 +31,63 @@ namespace Viva
 
         private void btn_signin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_Uname.Text))
+            try
             {
-                MetroMessageBox.Show(this, "Please enter User Name!", "Empty values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_Uname.Focus();
-            }
-            else if (string.IsNullOrWhiteSpace(txt_Pword.Text))
-            {
-                MetroMessageBox.Show(this, "Please enter Password!", "Empty values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_Pword.Focus();
-            }
-            else
-            {
-                Database db = new Database();
-                DataTable dt = db.GetData("select * from [user] where user_name='" + txt_Uname.Text + "' and user_pwd COLLATE Latin1_General_CS_AS = '" + txt_Pword.Text + "'");
-                if (dt.Rows.Count == 1)
+                if (string.IsNullOrWhiteSpace(txt_Uname.Text))
                 {
-                    if (dt.Rows[0][2].ToString() == "Manager")
-                    {
-                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
-
-                        this.Hide();
-                        manager_home mngrf_form = new manager_home();
-                        mngrf_form.ShowDialog();
-                        this.Close();
-
-                    }
-                    else if (dt.Rows[0][2].ToString() == "Stock Admin")
-                    {
-                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
-
-                        this.Hide();
-                        stock_admin_home admin_form = new stock_admin_home();
-                        admin_form.ShowDialog();
-                        this.Close();
-                    }
-                    else if (dt.Rows[0][2].ToString() == "Sales Clerk")
-                    {
-                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
-
-                        this.Hide();
-                        sales_clerk_home clerk_form = new sales_clerk_home();
-                        clerk_form.ShowDialog();
-                        this.Close();
-                    }
-                    else if (dt.Rows[0][2].ToString() == "Cutter")
-                    {
-                        db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
-
-                        this.Hide();
-                        stock_admin_home cut_form = new stock_admin_home();
-                        cut_form.ShowDialog();
-                        this.Close();
-                    }
+                    MetroMessageBox.Show(this, "Please enter User Name!", "Empty values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Uname.Focus();
+                }
+                else if (string.IsNullOrWhiteSpace(txt_Pword.Text))
+                {
+                    MetroMessageBox.Show(this, "Please enter Password!", "Empty values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_Pword.Focus();
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Please check your Username and Password!", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Database db = new Database();
+                    DataTable dt = db.GetData("select * from [user] where user_name='" + txt_Uname.Text + "' and user_pwd COLLATE Latin1_General_CS_AS = '" + txt_Pword.Text + "'");
+                    if (dt.Rows.Count == 1)
+                    {
+                        if (dt.Rows[0][2].ToString() == "Manager")
+                        {
+                            db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
+                            this.Hide();
+                            manager_home mngrf_form = new manager_home();
+                            mngrf_form.ShowDialog();
+                            this.Close();
+
+                        }
+                        else if (dt.Rows[0][2].ToString() == "Stock Admin")
+                        {
+                            db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
+                            this.Hide();
+                            stock_admin_home admin_form = new stock_admin_home();
+                            admin_form.ShowDialog();
+                            this.Close();
+                        }
+                        else if (dt.Rows[0][2].ToString() == "Sales Clerk")
+                        {
+                            db.save_delete_update("insert into log values('" + dt.Rows[0][0] + "', '" + DateTime.Now + "')");
+
+                            this.Hide();
+                            sales_clerk_home clerk_form = new sales_clerk_home();
+                            clerk_form.ShowDialog();
+                            this.Close();
+                        }
+                        
+                    }
+                    else
+                    {
+                        MetroMessageBox.Show(this, "Please check your Username and Password!", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

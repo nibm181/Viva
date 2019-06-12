@@ -101,5 +101,10 @@ namespace Viva
             }
             
         }
+
+        private void Order1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

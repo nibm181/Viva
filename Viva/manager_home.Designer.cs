@@ -40,6 +40,9 @@
             this.tile_add_cus = new MetroFramework.Controls.MetroTile();
             this.tile_add_gar = new MetroFramework.Controls.MetroTile();
             this.tile_add_mat = new MetroFramework.Controls.MetroTile();
+            this.tile_edit_cus = new MetroFramework.Controls.MetroTile();
+            this.tile_edit_gar = new MetroFramework.Controls.MetroTile();
+            this.tile_up_mat = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // tile_recut
@@ -47,7 +50,7 @@
             this.tile_recut.ActiveControl = null;
             this.tile_recut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_recut.AutoSize = true;
-            this.tile_recut.Location = new System.Drawing.Point(50, 106);
+            this.tile_recut.Location = new System.Drawing.Point(76, 106);
             this.tile_recut.Margin = new System.Windows.Forms.Padding(2);
             this.tile_recut.Name = "tile_recut";
             this.tile_recut.Size = new System.Drawing.Size(170, 295);
@@ -64,7 +67,7 @@
             this.tile_reg_user.ActiveControl = null;
             this.tile_reg_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_reg_user.AutoSize = true;
-            this.tile_reg_user.Location = new System.Drawing.Point(765, 106);
+            this.tile_reg_user.Location = new System.Drawing.Point(893, 106);
             this.tile_reg_user.Margin = new System.Windows.Forms.Padding(2);
             this.tile_reg_user.Name = "tile_reg_user";
             this.tile_reg_user.Size = new System.Drawing.Size(200, 106);
@@ -81,7 +84,7 @@
             this.tile_gen_report.ActiveControl = null;
             this.tile_gen_report.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_gen_report.AutoSize = true;
-            this.tile_gen_report.Location = new System.Drawing.Point(224, 106);
+            this.tile_gen_report.Location = new System.Drawing.Point(250, 106);
             this.tile_gen_report.Margin = new System.Windows.Forms.Padding(2);
             this.tile_gen_report.Name = "tile_gen_report";
             this.tile_gen_report.Size = new System.Drawing.Size(200, 200);
@@ -98,7 +101,7 @@
             this.tile_edit_user.ActiveControl = null;
             this.tile_edit_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_edit_user.AutoSize = true;
-            this.tile_edit_user.Location = new System.Drawing.Point(765, 216);
+            this.tile_edit_user.Location = new System.Drawing.Point(893, 216);
             this.tile_edit_user.Margin = new System.Windows.Forms.Padding(2);
             this.tile_edit_user.Name = "tile_edit_user";
             this.tile_edit_user.Size = new System.Drawing.Size(200, 106);
@@ -115,7 +118,7 @@
             // 
             this.tile_user_log.ActiveControl = null;
             this.tile_user_log.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_user_log.Location = new System.Drawing.Point(765, 327);
+            this.tile_user_log.Location = new System.Drawing.Point(893, 327);
             this.tile_user_log.Name = "tile_user_log";
             this.tile_user_log.Size = new System.Drawing.Size(200, 106);
             this.tile_user_log.Style = MetroFramework.MetroColorStyle.Silver;
@@ -130,7 +133,7 @@
             // 
             this.tile_view_cus.ActiveControl = null;
             this.tile_view_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_view_cus.Location = new System.Drawing.Point(224, 311);
+            this.tile_view_cus.Location = new System.Drawing.Point(250, 311);
             this.tile_view_cus.Name = "tile_view_cus";
             this.tile_view_cus.Size = new System.Drawing.Size(200, 90);
             this.tile_view_cus.Style = MetroFramework.MetroColorStyle.Silver;
@@ -144,7 +147,7 @@
             // 
             this.tile_view_garm.ActiveControl = null;
             this.tile_view_garm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_view_garm.Location = new System.Drawing.Point(225, 407);
+            this.tile_view_garm.Location = new System.Drawing.Point(251, 407);
             this.tile_view_garm.Name = "tile_view_garm";
             this.tile_view_garm.Size = new System.Drawing.Size(199, 103);
             this.tile_view_garm.Style = MetroFramework.MetroColorStyle.Red;
@@ -158,7 +161,7 @@
             // 
             this.tile_view_mat.ActiveControl = null;
             this.tile_view_mat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_view_mat.Location = new System.Drawing.Point(50, 406);
+            this.tile_view_mat.Location = new System.Drawing.Point(76, 406);
             this.tile_view_mat.Name = "tile_view_mat";
             this.tile_view_mat.Size = new System.Drawing.Size(169, 104);
             this.tile_view_mat.Style = MetroFramework.MetroColorStyle.Silver;
@@ -172,7 +175,7 @@
             // 
             this.tile_logout.ActiveControl = null;
             this.tile_logout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_logout.Location = new System.Drawing.Point(765, 464);
+            this.tile_logout.Location = new System.Drawing.Point(893, 464);
             this.tile_logout.Name = "tile_logout";
             this.tile_logout.Size = new System.Drawing.Size(200, 46);
             this.tile_logout.Style = MetroFramework.MetroColorStyle.Orange;
@@ -187,7 +190,7 @@
             // 
             this.tile_add_cus.ActiveControl = null;
             this.tile_add_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_add_cus.Location = new System.Drawing.Point(488, 106);
+            this.tile_add_cus.Location = new System.Drawing.Point(514, 106);
             this.tile_add_cus.Name = "tile_add_cus";
             this.tile_add_cus.Size = new System.Drawing.Size(211, 152);
             this.tile_add_cus.Style = MetroFramework.MetroColorStyle.Red;
@@ -202,7 +205,7 @@
             // 
             this.tile_add_gar.ActiveControl = null;
             this.tile_add_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_add_gar.Location = new System.Drawing.Point(488, 264);
+            this.tile_add_gar.Location = new System.Drawing.Point(514, 264);
             this.tile_add_gar.Name = "tile_add_gar";
             this.tile_add_gar.Size = new System.Drawing.Size(211, 115);
             this.tile_add_gar.Style = MetroFramework.MetroColorStyle.Silver;
@@ -216,7 +219,7 @@
             // 
             this.tile_add_mat.ActiveControl = null;
             this.tile_add_mat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tile_add_mat.Location = new System.Drawing.Point(488, 385);
+            this.tile_add_mat.Location = new System.Drawing.Point(514, 385);
             this.tile_add_mat.Name = "tile_add_mat";
             this.tile_add_mat.Size = new System.Drawing.Size(211, 125);
             this.tile_add_mat.Style = MetroFramework.MetroColorStyle.Red;
@@ -227,13 +230,58 @@
             this.tile_add_mat.UseSelectable = true;
             this.tile_add_mat.Click += new System.EventHandler(this.tile_add_mat_Click);
             // 
+            // tile_edit_cus
+            // 
+            this.tile_edit_cus.ActiveControl = null;
+            this.tile_edit_cus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_edit_cus.Location = new System.Drawing.Point(731, 106);
+            this.tile_edit_cus.Name = "tile_edit_cus";
+            this.tile_edit_cus.Size = new System.Drawing.Size(118, 90);
+            this.tile_edit_cus.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tile_edit_cus.TabIndex = 12;
+            this.tile_edit_cus.Text = "Edit Customer";
+            this.tile_edit_cus.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_edit_cus.UseSelectable = true;
+            this.tile_edit_cus.Click += new System.EventHandler(this.tile_edit_cus_Click);
+            // 
+            // tile_edit_gar
+            // 
+            this.tile_edit_gar.ActiveControl = null;
+            this.tile_edit_gar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_edit_gar.Location = new System.Drawing.Point(731, 202);
+            this.tile_edit_gar.Name = "tile_edit_gar";
+            this.tile_edit_gar.Size = new System.Drawing.Size(118, 120);
+            this.tile_edit_gar.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_edit_gar.TabIndex = 13;
+            this.tile_edit_gar.Text = "Edit Garment";
+            this.tile_edit_gar.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_edit_gar.UseSelectable = true;
+            this.tile_edit_gar.Click += new System.EventHandler(this.tile_edit_gar_Click);
+            // 
+            // tile_up_mat
+            // 
+            this.tile_up_mat.ActiveControl = null;
+            this.tile_up_mat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_up_mat.Location = new System.Drawing.Point(731, 328);
+            this.tile_up_mat.Name = "tile_up_mat";
+            this.tile_up_mat.Size = new System.Drawing.Size(118, 182);
+            this.tile_up_mat.Style = MetroFramework.MetroColorStyle.Silver;
+            this.tile_up_mat.TabIndex = 14;
+            this.tile_up_mat.Text = "Update Material Length";
+            this.tile_up_mat.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_up_mat.UseSelectable = true;
+            this.tile_up_mat.Click += new System.EventHandler(this.tile_up_mat_Click);
+            // 
             // manager_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackImage = global::Viva.Properties.Resources.andrej_lisakov_541769_unsplash_1_;
             this.BackMaxSize = 2500;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1162, 600);
+            this.Controls.Add(this.tile_up_mat);
+            this.Controls.Add(this.tile_edit_gar);
+            this.Controls.Add(this.tile_edit_cus);
             this.Controls.Add(this.tile_add_mat);
             this.Controls.Add(this.tile_add_gar);
             this.Controls.Add(this.tile_add_cus);
@@ -272,5 +320,8 @@
         private MetroFramework.Controls.MetroTile tile_add_cus;
         private MetroFramework.Controls.MetroTile tile_add_gar;
         private MetroFramework.Controls.MetroTile tile_add_mat;
+        private MetroFramework.Controls.MetroTile tile_edit_cus;
+        private MetroFramework.Controls.MetroTile tile_edit_gar;
+        private MetroFramework.Controls.MetroTile tile_up_mat;
     }
 }

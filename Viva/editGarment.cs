@@ -82,9 +82,10 @@ namespace Viva
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            mdl_qty = int.Parse(txt_qty.Text);
+            
             try
             {
+                mdl_qty = int.Parse(txt_qty.Text);
                 if (cmb_type.SelectedIndex == -1)
                 {
                     MetroMessageBox.Show(this, "Please select Garment Type!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -109,7 +110,7 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_price.Text.Any(char.IsLetter) || Int32.Parse(txt_price.Text) <= 0)
+                else if (txt_price.Text.Any(char.IsLetter) || float.Parse(txt_price.Text) <= 0)
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -148,6 +149,10 @@ namespace Viva
                         }
                     }
                 }
+            }
+            catch(FormatException)
+            {
+                MetroMessageBox.Show(this, "Please enter Quantity in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch
             {

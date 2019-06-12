@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,10 +58,14 @@ namespace Viva
                         dv.RowFilter = "cus_id like '%" + search + "%' or cus_name like '%" + search + "%' or cus_add2 like '%" + search + "%' or contact_no like '" + search + "'";
                         metroGrid1.DataSource = dv;
                         metroGrid1.ClearSelection();
+                    }                   
+                    catch (EvaluateException)
+                    {
+                        MetroMessageBox.Show(this, "Please enter correct search term", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception)
                     {
-                        MetroMessageBox.Show(this, "Please check your internet connection", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this, "Please check Internet Connection", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

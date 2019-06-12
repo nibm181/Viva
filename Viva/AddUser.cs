@@ -27,11 +27,18 @@ namespace Viva
 
         private void IdIncrement()
         {
-            txt_uname.Focus();
-            DataTable dt = db.GetData("select top 1 user_id from [user] order by user_id desc");
-            int no = Int32.Parse(dt.Rows[0][0].ToString());
-            no++;
-            txt_user_id.Text = no.ToString();
+            try
+            {
+                txt_uname.Focus();
+                DataTable dt = db.GetData("select top 1 user_id from [user] order by user_id desc");
+                int no = Int32.Parse(dt.Rows[0][0].ToString());
+                no++;
+                txt_user_id.Text = no.ToString();
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Error on load ID!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ClearText()
@@ -71,6 +78,11 @@ namespace Viva
                     MetroMessageBox.Show(this, "Please Enter Contact Number in Numeric!\nContact Number should contain 10 Numbers!!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_tele.Focus();
                 }
+                else if (Int32.Parse(txt_tele.Text) < 0)
+                {
+                    MetroMessageBox.Show(this, "Please enter Contact Number in valid format!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_tele.Focus();
+                }
                 else if (string.IsNullOrWhiteSpace(txt_uname.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter User Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -99,7 +111,7 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Manager Password!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(dt1.Rows.Count > 0)
+                else if (dt1.Rows.Count > 0)
                 {
                     MetroMessageBox.Show(this, "Entered User Name has already Taken!", "Taken Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

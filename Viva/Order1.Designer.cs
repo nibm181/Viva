@@ -378,6 +378,7 @@
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Select Customer";
+            this.Load += new System.EventHandler(this.Order1_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);

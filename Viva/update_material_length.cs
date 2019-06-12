@@ -30,34 +30,39 @@ namespace Viva
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            
             if (string.IsNullOrWhiteSpace(txt_umat_search.Text))
             {
                 MetroMessageBox.Show(this, "Please Enter Material Name or ID or Type!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
             else
             {
-                string search = txt_umat_search.Text;
-                Database db = new Database();
-                DataTable d = new DataTable();
-                d = db.GetData("select mat_id, mat_name, mat_type, mat_length from materials where mat_type like '%" + search + "%' or mat_name like '%" + search + "%' or mat_id like '%" + search + "%'");
-                grd_update_mat.DataSource = d;
-                grd_update_mat.Columns[0].Name = "Material ID";
-                grd_update_mat.Columns[0].HeaderText = "Material ID";
-                grd_update_mat.Columns[1].HeaderText = "Name";
-                grd_update_mat.Columns[2].HeaderText = "Type";
-                grd_update_mat.Columns[3].Name = "Length";
-                grd_update_mat.Columns[3].HeaderText = "Length";
-                
-                
-                
-            }
-            int rows = grd_update_mat.Rows.Count;
-            if (rows <1)
-            {
-                MetroMessageBox.Show(this, "No such material available", "No Data Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+                try
+                {
+                    string search = txt_umat_search.Text;
+                    Database db = new Database();
+                    DataTable d = new DataTable();
+                    d = db.GetData("select mat_id, mat_name, mat_type, mat_length from materials where mat_type like '%" + search + "%' or mat_name like '%" + search + "%' or mat_id like '%" + search + "%'");
+                    grd_update_mat.DataSource = d;
+                    grd_update_mat.Columns[0].Name = "Material ID";
+                    grd_update_mat.Columns[0].HeaderText = "Material ID";
+                    grd_update_mat.Columns[1].HeaderText = "Name";
+                    grd_update_mat.Columns[2].HeaderText = "Type";
+                    grd_update_mat.Columns[3].Name = "Length";
+                    grd_update_mat.Columns[3].HeaderText = "Length";
+                }
+                catch
+                {
+                    MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //int rows = grd_update_mat.Rows.Count;
+                if (grd_update_mat.Rows.Count < 1)
+                {
+                    MetroMessageBox.Show(this, "No such material available", "No Data Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+            }                                   
         }
 
         private void grd_update_mat_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -69,11 +74,7 @@ namespace Viva
 
         private void btn_umat_update_Click(object sender, EventArgs e)
         {
-            if (Double.Parse(txt_umat_ul.Text) <= 0)
-            {
-                MetroMessageBox.Show(this, "Material used length can't be negative or 0!", "Invalid Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (string.IsNullOrWhiteSpace(txt_umat_id.Text))
+            if (string.IsNullOrWhiteSpace(txt_umat_id.Text))
             {
                 MetroMessageBox.Show(this, "Please select material from the table!", "Material not selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -81,35 +82,65 @@ namespace Viva
             {
                 MetroMessageBox.Show(this, "Please Enter Used Material Length!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (string.IsNullOrWhiteSpace(txt_umat_note.Text))
-            {
-                MetroMessageBox.Show(this, "Please Enter Note!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else if (txt_umat_ul.Text.Any(c => char.IsLetter(c)))
             {
                 MetroMessageBox.Show(this, "Please Enter Valid used length value!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (Double.Parse(txt_umat_ul.Text) <= 0)
+            {
+                MetroMessageBox.Show(this, "Material used length can't be negative or 0!", "Invalid Value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (float.Parse(txt_umat_ul.Text) > float.Parse(txt_umat_al.Text))
+            {
+                MetroMessageBox.Show(this, "Used length can not be more than available length!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                      
+            else if (string.IsNullOrWhiteSpace(txt_umat_note.Text))
+            {
+                MetroMessageBox.Show(this, "Please Enter Note!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }           
             else
             {
-                double alen = Convert.ToDouble(txt_umat_al.Text);
-                double ulen = Convert.ToDouble(txt_umat_ul.Text);
-                double ans = alen - ulen;
-                DateTime now = DateTime.Now;
+                try
+                {
+                    double alen = Convert.ToDouble(txt_umat_al.Text);
+                    double ulen = Convert.ToDouble(txt_umat_ul.Text);
+                    double ans = alen - ulen;
+                    DateTime now = DateTime.Now;
 
 
-                Database db = new Database();
-                db.save_delete_update("update materials set mat_length = '" + ans + "' where mat_id ='" + txt_umat_id.Text + "' ");
-                db.save_delete_update("insert into material_used values('" + txt_umat_id.Text + "', '" + now + "', '" + txt_umat_note.Text + "', '" + ulen + "') ");
-
-                MetroMessageBox.Show(this, "Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_umat_ul.Clear();
-                txt_umat_search.Clear();
-                txt_umat_note.Clear();
-                txt_umat_id.Clear();
-                txt_umat_al.Clear();
+                    Database db = new Database();
+                    db.save_delete_update("update materials set mat_length = '" + ans + "' where mat_id ='" + txt_umat_id.Text + "' ");
+                    int re=db.save_delete_update("insert into material_used values('" + txt_umat_id.Text + "', '" + now + "', '" + txt_umat_note.Text + "', '" + ulen + "') ");
+                    if (re == 1)
+                    {
+                        MetroMessageBox.Show(this, "Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_umat_ul.Clear();
+                        txt_umat_search.Clear();
+                        txt_umat_note.Clear();
+                        txt_umat_id.Clear();
+                        txt_umat_al.Clear();
+                    }
+                    else
+                    {
+                        MetroMessageBox.Show(this, "Please check your internet connection!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch
+                {
+                    MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             
 
+        }
+
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
+            txt_umat_ul.Clear();
+            txt_umat_search.Clear();
+            txt_umat_note.Clear();
+            txt_umat_id.Clear();
+            txt_umat_al.Clear();
         }
     }
 }
