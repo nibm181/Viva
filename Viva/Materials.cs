@@ -161,18 +161,34 @@ namespace Viva
 
         private void btn_mat_rem_Click(object sender, EventArgs e)
         {
-            Int32 selectedRowCount =grd_mat.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            for (int i = 0; i < selectedRowCount; i++)
+            if(grd_mat.RowCount <= 0)
             {
-                grd_mat.Rows.RemoveAt(grd_mat.SelectedRows[0].Index);
+                MetroMessageBox.Show(this, "No data row to Remove", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                Int32 selectedRowCount = grd_mat.Rows.GetRowCount(DataGridViewElementStates.Selected);
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    grd_mat.Rows.RemoveAt(grd_mat.SelectedRows[0].Index);
+                }
+            }
+
         }
 
         private void btn_mat_clear_Click(object sender, EventArgs e)
         {
-            grd_mat.Rows.Clear();
-            txt_mat_billno.Enabled = true;
-            txt_mat_id.Text = first_id;
+            if (grd_mat.RowCount <= 0)
+            {
+                MetroMessageBox.Show(this, "No data row to Clear", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                grd_mat.Rows.Clear();
+                txt_mat_billno.Enabled = true;
+                txt_mat_id.Text = first_id;
+            }
+            
 
         }
 
@@ -204,6 +220,8 @@ namespace Viva
                 num++; //increasing splited string by 1
                 no = no.Substring(0, 1) + num.ToString("0000");
                 txt_mat_id.Text = no.ToString();
+
+                txt_mat_billno.Enabled = true;
             }
             
         }
