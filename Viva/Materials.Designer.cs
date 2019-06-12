@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_mat_id = new MetroFramework.Controls.MetroTextBox();
             this.Gar_id = new MetroFramework.Controls.MetroLabel();
             this.txt_mat_length = new MetroFramework.Controls.MetroTextBox();
@@ -65,10 +65,10 @@
             // 
             // 
             this.txt_mat_id.CustomButton.Image = null;
-            this.txt_mat_id.CustomButton.Location = new System.Drawing.Point(132, 2);
-            this.txt_mat_id.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_id.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_mat_id.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_id.CustomButton.Name = "";
-            this.txt_mat_id.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_mat_id.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_mat_id.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_id.CustomButton.TabIndex = 1;
             this.txt_mat_id.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -78,8 +78,8 @@
             this.txt_mat_id.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_mat_id.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txt_mat_id.Lines = new string[0];
-            this.txt_mat_id.Location = new System.Drawing.Point(169, 154);
-            this.txt_mat_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_id.Location = new System.Drawing.Point(169, 161);
+            this.txt_mat_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_id.MaxLength = 32767;
             this.txt_mat_id.Multiline = true;
             this.txt_mat_id.Name = "txt_mat_id";
@@ -116,10 +116,10 @@
             // 
             // 
             this.txt_mat_length.CustomButton.Image = null;
-            this.txt_mat_length.CustomButton.Location = new System.Drawing.Point(132, 2);
-            this.txt_mat_length.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_length.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_mat_length.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_length.CustomButton.Name = "";
-            this.txt_mat_length.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_mat_length.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_mat_length.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_length.CustomButton.TabIndex = 1;
             this.txt_mat_length.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -129,7 +129,7 @@
             this.txt_mat_length.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txt_mat_length.Lines = new string[0];
             this.txt_mat_length.Location = new System.Drawing.Point(169, 318);
-            this.txt_mat_length.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_length.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_length.MaxLength = 32767;
             this.txt_mat_length.Multiline = true;
             this.txt_mat_length.Name = "txt_mat_length";
@@ -152,10 +152,10 @@
             // 
             // 
             this.txt_mat_name.CustomButton.Image = null;
-            this.txt_mat_name.CustomButton.Location = new System.Drawing.Point(132, 2);
-            this.txt_mat_name.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_name.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_mat_name.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_name.CustomButton.Name = "";
-            this.txt_mat_name.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_mat_name.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_mat_name.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_name.CustomButton.TabIndex = 1;
             this.txt_mat_name.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -164,8 +164,8 @@
             this.txt_mat_name.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_mat_name.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
             this.txt_mat_name.Lines = new string[0];
-            this.txt_mat_name.Location = new System.Drawing.Point(169, 206);
-            this.txt_mat_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_name.Location = new System.Drawing.Point(169, 211);
+            this.txt_mat_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_name.MaxLength = 32767;
             this.txt_mat_name.Multiline = true;
             this.txt_mat_name.Name = "txt_mat_name";
@@ -186,7 +186,7 @@
             this.gar_type.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gar_type.AutoSize = true;
             this.gar_type.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.gar_type.Location = new System.Drawing.Point(32, 266);
+            this.gar_type.Location = new System.Drawing.Point(32, 265);
             this.gar_type.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gar_type.Name = "gar_type";
             this.gar_type.Size = new System.Drawing.Size(46, 25);
@@ -210,19 +210,19 @@
             // cmb_mat_type
             // 
             this.cmb_mat_type.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmb_mat_type.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.cmb_mat_type.FormattingEnabled = true;
-            this.cmb_mat_type.ItemHeight = 29;
+            this.cmb_mat_type.ItemHeight = 23;
             this.cmb_mat_type.Items.AddRange(new object[] {
             "Nylon",
             "Silk",
             "Cotton"});
-            this.cmb_mat_type.Location = new System.Drawing.Point(169, 258);
-            this.cmb_mat_type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_mat_type.Location = new System.Drawing.Point(169, 266);
+            this.cmb_mat_type.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_mat_type.Name = "cmb_mat_type";
-            this.cmb_mat_type.Size = new System.Drawing.Size(203, 35);
+            this.cmb_mat_type.Size = new System.Drawing.Size(202, 29);
             this.cmb_mat_type.TabIndex = 8;
             this.cmb_mat_type.UseSelectable = true;
+            this.cmb_mat_type.SelectedIndexChanged += new System.EventHandler(this.cmb_mat_type_SelectedIndexChanged);
             // 
             // btn_mat_add
             // 
@@ -231,7 +231,7 @@
             this.btn_mat_add.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.btn_mat_add.Highlight = true;
             this.btn_mat_add.Location = new System.Drawing.Point(70, 443);
-            this.btn_mat_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_mat_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_mat_add.Name = "btn_mat_add";
             this.btn_mat_add.Size = new System.Drawing.Size(95, 50);
             this.btn_mat_add.Style = MetroFramework.MetroColorStyle.Green;
@@ -247,7 +247,7 @@
             this.btn_mat_reset.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.btn_mat_reset.Highlight = true;
             this.btn_mat_reset.Location = new System.Drawing.Point(246, 443);
-            this.btn_mat_reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_mat_reset.Margin = new System.Windows.Forms.Padding(2);
             this.btn_mat_reset.Name = "btn_mat_reset";
             this.btn_mat_reset.Size = new System.Drawing.Size(95, 50);
             this.btn_mat_reset.TabIndex = 9;
@@ -260,7 +260,7 @@
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(32, 327);
+            this.metroLabel1.Location = new System.Drawing.Point(32, 321);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(64, 25);
@@ -277,14 +277,14 @@
             this.grd_mat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_mat.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_mat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_mat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_mat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.grd_mat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grd_mat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_bill,
@@ -293,29 +293,29 @@
             this.col_type,
             this.col_len,
             this.col_price});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grd_mat.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grd_mat.DefaultCellStyle = dataGridViewCellStyle11;
             this.grd_mat.EnableHeadersVisualStyles = false;
             this.grd_mat.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_mat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_mat.Location = new System.Drawing.Point(415, 106);
-            this.grd_mat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grd_mat.Margin = new System.Windows.Forms.Padding(2);
             this.grd_mat.Name = "grd_mat";
             this.grd_mat.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_mat.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_mat.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.grd_mat.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grd_mat.RowTemplate.Height = 24;
             this.grd_mat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -362,7 +362,7 @@
             this.btn_mat_rem.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.btn_mat_rem.Highlight = true;
             this.btn_mat_rem.Location = new System.Drawing.Point(716, 443);
-            this.btn_mat_rem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_mat_rem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_mat_rem.Name = "btn_mat_rem";
             this.btn_mat_rem.Size = new System.Drawing.Size(96, 50);
             this.btn_mat_rem.Style = MetroFramework.MetroColorStyle.Red;
@@ -378,7 +378,7 @@
             this.btn_mat_clear.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.btn_mat_clear.Highlight = true;
             this.btn_mat_clear.Location = new System.Drawing.Point(872, 443);
-            this.btn_mat_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_mat_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_mat_clear.Name = "btn_mat_clear";
             this.btn_mat_clear.Size = new System.Drawing.Size(96, 50);
             this.btn_mat_clear.Style = MetroFramework.MetroColorStyle.Blue;
@@ -392,7 +392,7 @@
             this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(34, 379);
+            this.metroLabel2.Location = new System.Drawing.Point(34, 373);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(115, 25);
@@ -407,10 +407,10 @@
             // 
             // 
             this.txt_mat_price.CustomButton.Image = null;
-            this.txt_mat_price.CustomButton.Location = new System.Drawing.Point(129, 1);
-            this.txt_mat_price.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_price.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_mat_price.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_price.CustomButton.Name = "";
-            this.txt_mat_price.CustomButton.Size = new System.Drawing.Size(22, 24);
+            this.txt_mat_price.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_mat_price.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_price.CustomButton.TabIndex = 1;
             this.txt_mat_price.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -418,8 +418,8 @@
             this.txt_mat_price.CustomButton.Visible = false;
             this.txt_mat_price.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_mat_price.Lines = new string[0];
-            this.txt_mat_price.Location = new System.Drawing.Point(169, 368);
-            this.txt_mat_price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_price.Location = new System.Drawing.Point(169, 370);
+            this.txt_mat_price.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_price.MaxLength = 32767;
             this.txt_mat_price.Multiline = true;
             this.txt_mat_price.Name = "txt_mat_price";
@@ -429,7 +429,7 @@
             this.txt_mat_price.SelectionLength = 0;
             this.txt_mat_price.SelectionStart = 0;
             this.txt_mat_price.ShortcutsEnabled = true;
-            this.txt_mat_price.Size = new System.Drawing.Size(202, 31);
+            this.txt_mat_price.Size = new System.Drawing.Size(202, 28);
             this.txt_mat_price.TabIndex = 13;
             this.txt_mat_price.UseSelectable = true;
             this.txt_mat_price.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -442,7 +442,7 @@
             this.btn_mat_con.FontWeight = MetroFramework.MetroButtonWeight.Regular;
             this.btn_mat_con.Highlight = true;
             this.btn_mat_con.Location = new System.Drawing.Point(716, 522);
-            this.btn_mat_con.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_mat_con.Margin = new System.Windows.Forms.Padding(2);
             this.btn_mat_con.Name = "btn_mat_con";
             this.btn_mat_con.Size = new System.Drawing.Size(252, 50);
             this.btn_mat_con.Style = MetroFramework.MetroColorStyle.Green;
@@ -471,10 +471,10 @@
             // 
             // 
             this.txt_mat_billno.CustomButton.Image = null;
-            this.txt_mat_billno.CustomButton.Location = new System.Drawing.Point(129, 1);
-            this.txt_mat_billno.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_billno.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_mat_billno.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_billno.CustomButton.Name = "";
-            this.txt_mat_billno.CustomButton.Size = new System.Drawing.Size(22, 24);
+            this.txt_mat_billno.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_mat_billno.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_mat_billno.CustomButton.TabIndex = 1;
             this.txt_mat_billno.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -482,8 +482,8 @@
             this.txt_mat_billno.CustomButton.Visible = false;
             this.txt_mat_billno.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_mat_billno.Lines = new string[0];
-            this.txt_mat_billno.Location = new System.Drawing.Point(169, 106);
-            this.txt_mat_billno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_mat_billno.Location = new System.Drawing.Point(169, 113);
+            this.txt_mat_billno.Margin = new System.Windows.Forms.Padding(2);
             this.txt_mat_billno.MaxLength = 32767;
             this.txt_mat_billno.Multiline = true;
             this.txt_mat_billno.Name = "txt_mat_billno";
@@ -493,7 +493,7 @@
             this.txt_mat_billno.SelectionLength = 0;
             this.txt_mat_billno.SelectionStart = 0;
             this.txt_mat_billno.ShortcutsEnabled = true;
-            this.txt_mat_billno.Size = new System.Drawing.Size(202, 31);
+            this.txt_mat_billno.Size = new System.Drawing.Size(202, 28);
             this.txt_mat_billno.TabIndex = 13;
             this.txt_mat_billno.UseSelectable = true;
             this.txt_mat_billno.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -523,7 +523,7 @@
             this.Controls.Add(this.txt_mat_length);
             this.Controls.Add(this.Gar_id);
             this.Controls.Add(this.txt_mat_id);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Materials";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Text = "Materials";
