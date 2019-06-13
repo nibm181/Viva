@@ -407,7 +407,7 @@
             this.Controls.Add(this.txt_searchCus);
             this.Controls.Add(this.metroLabel6);
             this.Name = "editCustomer";
-            this.Text = "editCustomer";
+            this.Text = "Edit Customer";
             this.Load += new System.EventHandler(this.editCustomer_Load);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
