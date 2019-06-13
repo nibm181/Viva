@@ -28,9 +28,18 @@ namespace Viva
         {
             try
             {
-                DataTable dt = db.GetData("select top 1 cus_id from [customer] order by cus_id desc");
+                /*DataTable dt = db.GetData("select top 1 cus_id from [customer] order by cus_id desc");
                 int no = Int32.Parse(dt.Rows[0][0].ToString());
                 no++;
+                txt_cus_id.Text = no.ToString();*/
+                DataTable dt = db.GetData("select top 1 cus_id from customer order by cus_id desc");
+                string no = dt.Rows[0]["cus_id"].ToString();
+                //retriving empid column last cell data.
+                int len = no.Length;
+                string splitno = no.Substring(1, len - 1);
+                int num = Convert.ToInt32(splitno); //converting splited string in integer
+                num++; //increasing splited string by 1
+                no = no.Substring(0, 1) + num.ToString("0000");
                 txt_cus_id.Text = no.ToString();
             }
             catch
