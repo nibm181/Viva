@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace Viva
 {
@@ -98,9 +99,17 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (txt_name.Text.Any(c => char.IsPunctuation(c)))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else if (string.IsNullOrWhiteSpace(txt_qty.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Quantity!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txt_qty.Text.Any(c => char.IsPunctuation(c)))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Quantity!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txt_qty.Text.Any(char.IsLetter) || Int32.Parse(txt_qty.Text) <= 0)
                 {
@@ -109,6 +118,10 @@ namespace Viva
                 else if (string.IsNullOrWhiteSpace(txt_price.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.IsMatch(txt_price.Text, @"^((?:[1-9]\d*)|(?:(?=[\d.]+)(?:[1-9]\d*|0)\.\d+))$"))
+                {
+                    MetroMessageBox.Show(this, "Please enter Garment Price in valid Format!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txt_price.Text.Any(char.IsLetter) || float.Parse(txt_price.Text) <= 0)
                 {

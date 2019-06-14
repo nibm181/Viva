@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
+using System.Text.RegularExpressions;
 
 namespace Viva
 {
@@ -38,6 +40,7 @@ namespace Viva
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 if (cmb_gtype.SelectedIndex == -1)
@@ -52,19 +55,39 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (txt_gname.Text.Any(c => char.IsPunctuation(c)))
+                {
+                    MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else if (string.IsNullOrWhiteSpace(txt_gqty.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Quantity!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_gqty.Text.Any(char.IsLetter) || Int32.Parse(txt_gqty.Text) <= 0)
+                else if (txt_gqty.Text.Any(c => char.IsPunctuation(c)))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Quantity!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txt_gqty.Text.Any(char.IsLetter) || Int32.Parse(txt_gqty.Text) <= 0 || !txt_gqty.Text.Any(c => char.IsDigit(c)))
                 {
                     MetroMessageBox.Show(this, "Please enter Quantity in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }              
+                }
                 else if (string.IsNullOrWhiteSpace(txt_gprice.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_gprice.Text.Any(char.IsLetter) || float.Parse(txt_gprice.Text) <= 0)
+                else if (txt_gprice.Text.Any(char.IsLetter))
+                {
+                    MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!txt_gprice.Text.Any(c => char.IsDigit(c)))
+                {
+                    MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.IsMatch(txt_gprice.Text, @"^((?:[1-9]\d*)|(?:(?=[\d.]+)(?:[1-9]\d*|0)\.\d+))$"))
+                {
+                    MetroMessageBox.Show(this, "Please enter Garment Price in valid Format!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (float.Parse(txt_gprice.Text) <= 0)
                 {
                     MetroMessageBox.Show(this, "Please enter Garment Price in positive numbers!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -87,11 +110,15 @@ namespace Viva
                     }
                 }
             }
-            catch(FormatException)
+            catch(FormatException ex)
             {
-                MetroMessageBox.Show(this, "Please enter valid Quantity!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Format!'"+ex.GetBaseException()+"'", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(Exception)
+            catch (SqlException)
+            {
+                MetroMessageBox.Show(this, "Please enter correct Format", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception)
             {
                 MetroMessageBox.Show(this, "Error!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -55,13 +55,13 @@ namespace Viva
                     {
                         string search = txt_search.Text;
                         DataView dv = new DataView(d);
-                        dv.RowFilter = "cus_id like '%" + search + "%' or cus_name like '%" + search + "%' or cus_add2 like '%" + search + "%' or contact_no like '" + search + "'";
+                        dv.RowFilter = "cus_id like '%" + search + "%' or cus_name like '%" + search + "%' or cus_add2 like '%" + search + "%'";
                         metroGrid1.DataSource = dv;
                         metroGrid1.ClearSelection();
                     }                   
                     catch (EvaluateException)
                     {
-                        MetroMessageBox.Show(this, "Please enter correct search term", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this, "Please enter correct search term!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception)
                     {
@@ -90,7 +90,7 @@ namespace Viva
                 }
                 metroGrid1.ClearSelection();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MetroMessageBox.Show(this, "Please check your internet connection", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
+using System.Text.RegularExpressions;
 
 namespace Viva
 {
@@ -59,24 +60,41 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-               
+                else if(Regex.IsMatch(txt_cus_name.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
                 else if (string.IsNullOrWhiteSpace(txt_add1.Text))
                 {
                     MetroMessageBox.Show(this, "Please Enter First Address !", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Regex.IsMatch(txt_add1.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Address!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (string.IsNullOrWhiteSpace(txt_add2.Text))
+                {
+                    MetroMessageBox.Show(this, "Please enter Second Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Regex.IsMatch(txt_add2.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Address 2!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txt_cno.Text.Any(char.IsWhiteSpace) || txt_cno.Text.Length != 10 || !txt_cno.Text.Any(char.IsNumber) || txt_cno.Text.Any(char.IsLetter))
                 {
                     MetroMessageBox.Show(this, "Please Enter Contact Number in Numeric!\nContact Number should contain 10 Numbers!!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_cno.Focus();
                 }
+                else if (!Regex.IsMatch(txt_cno.Text, @"\d+$"))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Contact Number!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else if(Double.Parse(txt_cno.Text)<0)
                 {
                     MetroMessageBox.Show(this, "Invalid contact number", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrWhiteSpace(txt_add2.Text))
-                {
-                    MetroMessageBox.Show(this, "Please enter Second Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
                
                 else
                 {
