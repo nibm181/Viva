@@ -43,6 +43,7 @@
             this.tile_edit_cus = new MetroFramework.Controls.MetroTile();
             this.tile_edit_gar = new MetroFramework.Controls.MetroTile();
             this.tile_up_mat = new MetroFramework.Controls.MetroTile();
+            this.tile_place_order = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // tile_recut
@@ -50,10 +51,10 @@
             this.tile_recut.ActiveControl = null;
             this.tile_recut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tile_recut.AutoSize = true;
-            this.tile_recut.Location = new System.Drawing.Point(32, 106);
+            this.tile_recut.Location = new System.Drawing.Point(32, 216);
             this.tile_recut.Margin = new System.Windows.Forms.Padding(2);
             this.tile_recut.Name = "tile_recut";
-            this.tile_recut.Size = new System.Drawing.Size(170, 295);
+            this.tile_recut.Size = new System.Drawing.Size(170, 185);
             this.tile_recut.Style = MetroFramework.MetroColorStyle.Red;
             this.tile_recut.TabIndex = 0;
             this.tile_recut.Text = "Re-cut";
@@ -274,6 +275,20 @@
             this.tile_up_mat.UseSelectable = true;
             this.tile_up_mat.Click += new System.EventHandler(this.tile_up_mat_Click);
             // 
+            // tile_place_order
+            // 
+            this.tile_place_order.ActiveControl = null;
+            this.tile_place_order.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tile_place_order.Location = new System.Drawing.Point(32, 106);
+            this.tile_place_order.Name = "tile_place_order";
+            this.tile_place_order.Size = new System.Drawing.Size(170, 106);
+            this.tile_place_order.Style = MetroFramework.MetroColorStyle.Red;
+            this.tile_place_order.TabIndex = 15;
+            this.tile_place_order.Text = "Place Order";
+            this.tile_place_order.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tile_place_order.UseSelectable = true;
+            this.tile_place_order.Click += new System.EventHandler(this.tile_place_order_Click);
+            // 
             // manager_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +296,7 @@
             this.BackImage = global::Viva.Properties.Resources.andrej_lisakov_541769_unsplash_1_;
             this.BackMaxSize = 2500;
             this.ClientSize = new System.Drawing.Size(1162, 600);
+            this.Controls.Add(this.tile_place_order);
             this.Controls.Add(this.tile_up_mat);
             this.Controls.Add(this.tile_edit_gar);
             this.Controls.Add(this.tile_edit_cus);
@@ -325,5 +341,6 @@
         private MetroFramework.Controls.MetroTile tile_edit_cus;
         private MetroFramework.Controls.MetroTile tile_edit_gar;
         private MetroFramework.Controls.MetroTile tile_up_mat;
+        private MetroFramework.Controls.MetroTile tile_place_order;
     }
 }

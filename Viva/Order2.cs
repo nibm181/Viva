@@ -54,12 +54,12 @@ namespace Viva
             OrderId_auto();
         }
 
-
+        DataTable dt;
         private void datagridload()
         {
             try
             {
-                DataTable dt = db.GetData("select * from garment");
+                dt = db.GetData("select * from garment");
                 grid_search_model.DataSource = dt;
             }
             catch
@@ -81,7 +81,23 @@ namespace Viva
             }
             else
             {
-                search_add_grid();
+                try
+                {
+                    string search = txt_search_id.Text;
+                    DataView dv = new DataView(dt);
+                    dv.RowFilter = "model_id like '%" + txt_search_id.Text + "%' or model_name like '%" + txt_search_id.Text + "%' ";
+                    grid_search_model.DataSource = dv;
+
+                    grid_search_model.ClearSelection();
+                }
+                catch (EvaluateException)
+                {
+                    MetroMessageBox.Show(this, "Please enter correct search term", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception)
+                {
+                    MetroMessageBox.Show(this, "Please check Internet Connection", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             
         }
@@ -123,6 +139,14 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Qty can not contain Letters!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (!txt_qty.Text.Any(c => char.IsDigit(c)))
+                {
+                    MetroMessageBox.Show(this, "Qty can not contain Letters or Symbols!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txt_qty.Text.Any(c => char.IsPunctuation(c)))
+                {
+                    MetroMessageBox.Show(this, "Qty can contain Full Numbers only!", "Invalid Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else if (grid_search_model.SelectedRows.Count < 0)
                 {
                     MetroMessageBox.Show(this, "Please select Material model!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -156,7 +180,7 @@ namespace Viva
                         txt_qty.Clear();
                     }
                     net_tot = 0;
-                    for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                    for (int i = 0; i  < grid_orders.Rows.Count; i++)
                     {
                         net_tot = net_tot + int.Parse(grid_orders.Rows[i].Cells[3].Value.ToString());
                     }
@@ -207,7 +231,7 @@ namespace Viva
         {
             try
             {
-                if (grid_orders.Rows.Count == 1)
+                if (grid_orders.Rows.Count == 0)
                 {
                     MetroMessageBox.Show(this, "no selected orders!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -221,7 +245,7 @@ namespace Viva
                     if (ret == 1)
                     {
                         string order_id = txt_order_id.Text;
-                        for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                        for (int i = 0; i  < grid_orders.Rows.Count; i++)
                         {
                             string mod_id = grid_orders.Rows[i].Cells[0].Value + string.Empty;
                             string qty = grid_orders.Rows[i].Cells[2].Value + string.Empty;

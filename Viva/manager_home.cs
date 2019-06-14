@@ -168,5 +168,11 @@ namespace Viva
             update_material_length uml = new update_material_length();
             uml.Show();
         }
+
+        private void tile_place_order_Click(object sender, EventArgs e)
+        {
+            Order1 or = new Order1();
+            or.Show();
+        }
     }
 }
