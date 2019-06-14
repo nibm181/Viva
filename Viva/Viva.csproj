@@ -260,6 +260,17 @@
     <Compile Include="update_material_length.Designer.cs">
       <DependentUpon>update_material_length.cs</DependentUpon>
     </Compile>
+    <Compile Include="Used materials.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Used materials.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="used_material_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="used_material_report_form.Designer.cs">
+      <DependentUpon>used_material_report_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserLogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -385,6 +396,9 @@
     <EmbeddedResource Include="update_material_length.resx">
       <DependentUpon>update_material_length.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="used_material_report_form.resx">
+      <DependentUpon>used_material_report_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserLogForm.resx">
       <DependentUpon>UserLogForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,6 +472,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Used materials.xsc">
+      <DependentUpon>Used materials.xsd</DependentUpon>
+    </None>
+    <None Include="Used materials.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Used materials.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Used materials.xss">
+      <DependentUpon>Used materials.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
