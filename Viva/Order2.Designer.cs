@@ -70,7 +70,7 @@
             this.btn_clear.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_clear.Highlight = true;
             this.btn_clear.Location = new System.Drawing.Point(595, 624);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_clear.Margin = new System.Windows.Forms.Padding(2);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(95, 50);
             this.btn_clear.Style = MetroFramework.MetroColorStyle.Blue;
@@ -85,7 +85,7 @@
             this.btn_back.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_back.Highlight = true;
             this.btn_back.Location = new System.Drawing.Point(47, 624);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_back.Margin = new System.Windows.Forms.Padding(2);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(95, 50);
             this.btn_back.Style = MetroFramework.MetroColorStyle.Pink;
@@ -100,7 +100,7 @@
             this.btn_place_order.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btn_place_order.Highlight = true;
             this.btn_place_order.Location = new System.Drawing.Point(474, 624);
-            this.btn_place_order.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_place_order.Margin = new System.Windows.Forms.Padding(2);
             this.btn_place_order.Name = "btn_place_order";
             this.btn_place_order.Size = new System.Drawing.Size(95, 50);
             this.btn_place_order.Style = MetroFramework.MetroColorStyle.Green;
@@ -113,7 +113,7 @@
             // 
             this.btn_remove.Highlight = true;
             this.btn_remove.Location = new System.Drawing.Point(592, 523);
-            this.btn_remove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_remove.Margin = new System.Windows.Forms.Padding(2);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(98, 29);
             this.btn_remove.Style = MetroFramework.MetroColorStyle.Red;
@@ -126,7 +126,7 @@
             // 
             this.btn_add.Highlight = true;
             this.btn_add.Location = new System.Drawing.Point(441, 363);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(98, 29);
             this.btn_add.Style = MetroFramework.MetroColorStyle.Green;
@@ -171,12 +171,12 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(234, 77);
+            this.metroLabel9.Location = new System.Drawing.Point(259, 77);
             this.metroLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(106, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(82, 19);
             this.metroLabel9.TabIndex = 43;
-            this.metroLabel9.Text = "Customer Name";
+            this.metroLabel9.Text = "Customer ID";
             this.metroLabel9.Click += new System.EventHandler(this.metroLabel9_Click);
             // 
             // metroLabel1
@@ -195,10 +195,10 @@
             // 
             // 
             this.txt_qty.CustomButton.Image = null;
-            this.txt_qty.CustomButton.Location = new System.Drawing.Point(132, 2);
-            this.txt_qty.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_qty.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_qty.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_qty.CustomButton.Name = "";
-            this.txt_qty.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_qty.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_qty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_qty.CustomButton.TabIndex = 1;
             this.txt_qty.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -207,7 +207,7 @@
             this.txt_qty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_qty.Lines = new string[0];
             this.txt_qty.Location = new System.Drawing.Point(188, 363);
-            this.txt_qty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_qty.Margin = new System.Windows.Forms.Padding(2);
             this.txt_qty.MaxLength = 32767;
             this.txt_qty.Name = "txt_qty";
             this.txt_qty.PasswordChar = '\0';
@@ -228,10 +228,10 @@
             // 
             // 
             this.txt_search_id.CustomButton.Image = null;
-            this.txt_search_id.CustomButton.Location = new System.Drawing.Point(132, 2);
-            this.txt_search_id.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_search_id.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.txt_search_id.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.txt_search_id.CustomButton.Name = "";
-            this.txt_search_id.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_search_id.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_search_id.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_search_id.CustomButton.TabIndex = 1;
             this.txt_search_id.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -240,7 +240,7 @@
             this.txt_search_id.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txt_search_id.Lines = new string[0];
             this.txt_search_id.Location = new System.Drawing.Point(188, 169);
-            this.txt_search_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_search_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_search_id.MaxLength = 32767;
             this.txt_search_id.Name = "txt_search_id";
             this.txt_search_id.PasswordChar = '\0';
@@ -259,10 +259,10 @@
             // 
             this.date_delivery.FontWeight = MetroFramework.MetroDateTimeWeight.Light;
             this.date_delivery.Location = new System.Drawing.Point(188, 133);
-            this.date_delivery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.date_delivery.Margin = new System.Windows.Forms.Padding(2);
             this.date_delivery.MinimumSize = new System.Drawing.Size(0, 29);
             this.date_delivery.Name = "date_delivery";
-            this.date_delivery.Size = new System.Drawing.Size(202, 30);
+            this.date_delivery.Size = new System.Drawing.Size(202, 29);
             this.date_delivery.TabIndex = 57;
             // 
             // grid_search_model
@@ -294,7 +294,7 @@
             this.grid_search_model.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grid_search_model.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grid_search_model.Location = new System.Drawing.Point(47, 205);
-            this.grid_search_model.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grid_search_model.Margin = new System.Windows.Forms.Padding(2);
             this.grid_search_model.Name = "grid_search_model";
             this.grid_search_model.ReadOnly = true;
             this.grid_search_model.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -349,7 +349,7 @@
             this.grid_orders.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grid_orders.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grid_orders.Location = new System.Drawing.Point(47, 429);
-            this.grid_orders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grid_orders.Margin = new System.Windows.Forms.Padding(2);
             this.grid_orders.Name = "grid_orders";
             this.grid_orders.ReadOnly = true;
             this.grid_orders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -404,7 +404,7 @@
             // 
             this.btn_search.Highlight = true;
             this.btn_search.Location = new System.Drawing.Point(441, 168);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(98, 29);
             this.btn_search.Style = MetroFramework.MetroColorStyle.Lime;
@@ -459,9 +459,9 @@
             // 
             // 
             this.txt_net_tot.CustomButton.Image = null;
-            this.txt_net_tot.CustomButton.Location = new System.Drawing.Point(50, 2);
+            this.txt_net_tot.CustomButton.Location = new System.Drawing.Point(66, 2);
             this.txt_net_tot.CustomButton.Name = "";
-            this.txt_net_tot.CustomButton.Size = new System.Drawing.Size(17, 19);
+            this.txt_net_tot.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.txt_net_tot.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txt_net_tot.CustomButton.TabIndex = 1;
             this.txt_net_tot.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
