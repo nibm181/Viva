@@ -10,23 +10,19 @@ using System.Windows.Forms;
 
 namespace Viva
 {
-    public partial class used_material_report_form : MetroFramework.Forms.MetroForm
+    public partial class used_mat_report_form : MetroFramework.Forms.MetroForm
     {
-        public used_material_report_form()
+        public used_mat_report_form()
         {
             InitializeComponent();
         }
 
-        private void used_material_report_form_Load(object sender, EventArgs e)
+        private void used_mat_report_form_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'Used_materials.material_used' table. You can move, or remove it, as needed.
             this.material_usedTableAdapter.Fill(this.Used_materials.material_used);
 
-        }
-
-        private void um_rv_Load(object sender, EventArgs e)
-        {
-            
+            this.reportViewer1.RefreshReport();
         }
     }
 }

@@ -265,11 +265,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Used materials.xsd</DependentUpon>
     </Compile>
-    <Compile Include="used_material_report_form.cs">
+    <Compile Include="used_mat_report_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="used_material_report_form.Designer.cs">
-      <DependentUpon>used_material_report_form.cs</DependentUpon>
+    <Compile Include="used_mat_report_form.Designer.cs">
+      <DependentUpon>used_mat_report_form.cs</DependentUpon>
     </Compile>
     <Compile Include="UserLogForm.cs">
       <SubType>Form</SubType>
@@ -396,8 +396,9 @@
     <EmbeddedResource Include="update_material_length.resx">
       <DependentUpon>update_material_length.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="used_material_report_form.resx">
-      <DependentUpon>used_material_report_form.cs</DependentUpon>
+    <EmbeddedResource Include="used_mat_report.rdlc" />
+    <EmbeddedResource Include="used_mat_report_form.resx">
+      <DependentUpon>used_mat_report_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserLogForm.resx">
       <DependentUpon>UserLogForm.cs</DependentUpon>

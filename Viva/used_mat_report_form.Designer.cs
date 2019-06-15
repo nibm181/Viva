@@ -1,6 +1,6 @@
 ﻿namespace Viva
 {
-    partial class used_material_report_form
+    partial class used_mat_report_form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.um_rv = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tbl_garmentTableAdapter1 = new Viva.GarmentStockTableAdapters.tbl_garmentTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Used_materials = new Viva.Used_materials();
             this.material_usedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.material_usedTableAdapter = new Viva.Used_materialsTableAdapters.material_usedTableAdapter();
@@ -39,23 +38,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.material_usedBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // um_rv
+            // reportViewer1
             // 
-            reportDataSource1.Name = "usedmaterialdataset";
+            reportDataSource1.Name = "used_mat_dataset";
             reportDataSource1.Value = this.material_usedBindingSource;
-            this.um_rv.LocalReport.DataSources.Add(reportDataSource1);
-            this.um_rv.LocalReport.ReportEmbeddedResource = "Viva.Report1.rdlc";
-            this.um_rv.Location = new System.Drawing.Point(168, 64);
-            this.um_rv.Margin = new System.Windows.Forms.Padding(4);
-            this.um_rv.Name = "um_rv";
-            this.um_rv.ServerReport.BearerToken = null;
-            this.um_rv.Size = new System.Drawing.Size(795, 666);
-            this.um_rv.TabIndex = 4;
-            this.um_rv.Load += new System.EventHandler(this.um_rv_Load);
-            // 
-            // tbl_garmentTableAdapter1
-            // 
-            this.tbl_garmentTableAdapter1.ClearBeforeFill = true;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Viva.used_mat_report.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(86, 91);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(996, 766);
+            this.reportViewer1.TabIndex = 0;
             // 
             // Used_materials
             // 
@@ -71,15 +64,15 @@
             // 
             this.material_usedTableAdapter.ClearBeforeFill = true;
             // 
-            // used_material_report_form
+            // used_mat_report_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1381, 764);
-            this.Controls.Add(this.um_rv);
-            this.Name = "used_material_report_form";
-            this.Text = "Used Material Report";
-            this.Load += new System.EventHandler(this.used_material_report_form_Load);
+            this.ClientSize = new System.Drawing.Size(1225, 918);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "used_mat_report_form";
+            this.Text = "Used Material Report Form";
+            this.Load += new System.EventHandler(this.used_mat_report_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Used_materials)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.material_usedBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -88,8 +81,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer um_rv;
-        private GarmentStockTableAdapters.tbl_garmentTableAdapter tbl_garmentTableAdapter1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource material_usedBindingSource;
         private Used_materials Used_materials;
         private Used_materialsTableAdapters.material_usedTableAdapter material_usedTableAdapter;

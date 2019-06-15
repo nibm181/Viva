@@ -16,7 +16,7 @@ namespace Viva
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new customerReg());
+            Application.Run(new used_mat_report_form());
         }
     }
 }
