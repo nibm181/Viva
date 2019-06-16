@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -86,6 +87,10 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Password!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (Regex.IsMatch(txt_pwd.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Password can not contain apostrophe!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else if (txt_pwd.Text.Length < 8)
                 {
                     MetroMessageBox.Show(this, "Password should contain more than 8 Letters", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -105,6 +110,14 @@ namespace Viva
                 else if (string.IsNullOrWhiteSpace(txt_mngr_pwd.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Manager Password!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Regex.IsMatch(txt_mngr_uname.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Please check Manager Username and Password!", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Regex.IsMatch(txt_mngr_pwd.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Please check Manager Username and Password!", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -129,9 +142,9 @@ namespace Viva
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MetroMessageBox.Show(this, "'" + ex.GetBaseException() + "'", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

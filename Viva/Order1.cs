@@ -63,13 +63,13 @@ namespace Viva
                     }
                     else
                     {
-                        MetroMessageBox.Show(this, "There is no Garment accompanied with the given Model ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroMessageBox.Show(this, "There is no Customer accompanied with the given Model ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
             catch
             {
-                MetroMessageBox.Show(this, "There is no Garment accompanied with the given Model ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroMessageBox.Show(this, "There is no Customer accompanied with the given Model ID", "Invalid Model ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
