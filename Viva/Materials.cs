@@ -194,34 +194,42 @@ namespace Viva
 
         private void btn_mat_con_Click(object sender, EventArgs e)
         {
-            int ret=0;
-            Database db = new Database();
-            for (int i = 0; i < grd_mat.Rows.Count; i++)
+            if(grd_mat.Rows.Count > 0)
             {
-              ret=db.save_delete_update("insert into materials values('" + grd_mat.Rows[i].Cells["Col_bill"].Value + "', '" + grd_mat.Rows[i].Cells["col_id"].Value + "', '"+ grd_mat.Rows[i].Cells["col_name"].Value +"', '"+ grd_mat.Rows[i].Cells["Col_type"].Value +"', '"+ grd_mat.Rows[i].Cells["Col_len"].Value + "', '"+ grd_mat.Rows[i].Cells["Col_price"].Value + "')");
+                int ret = 0;
+                Database db = new Database();
+                for (int i = 0; i < grd_mat.Rows.Count; i++)
+                {
+                    ret = db.save_delete_update("insert into materials values('" + grd_mat.Rows[i].Cells["Col_bill"].Value + "', '" + grd_mat.Rows[i].Cells["col_id"].Value + "', '" + grd_mat.Rows[i].Cells["col_name"].Value + "', '" + grd_mat.Rows[i].Cells["Col_type"].Value + "', '" + grd_mat.Rows[i].Cells["Col_len"].Value + "', '" + grd_mat.Rows[i].Cells["Col_price"].Value + "')");
+                }
+                if (ret == 1)
+                {
+                    MetroMessageBox.Show(this, "Added Successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.txt_mat_length.Clear();
+                    this.txt_mat_name.Clear();
+                    this.cmb_mat_type.SelectedItem = null;
+                    this.cmb_mat_type.SelectedText = "--select--";
+                    txt_mat_billno.Clear();
+                    txt_mat_price.Clear();
+                    grd_mat.Rows.Clear();
+
+                    DataTable dt = db.GetData("select top 1 mat_id from materials order by mat_id desc");
+                    string no = dt.Rows[0]["mat_id"].ToString();
+                    //retriving empid column last cell data.
+                    int len = no.Length;
+                    string splitno = no.Substring(1, len - 1);
+                    int num = Convert.ToInt32(splitno); //converting splited string in integer
+                    num++; //increasing splited string by 1
+                    no = no.Substring(0, 1) + num.ToString("0000");
+                    txt_mat_id.Text = no.ToString();
+
+                    txt_mat_billno.Enabled = true;
+                }
+            
             }
-            if (ret == 1)
+            else
             {
-                MetroMessageBox.Show(this, "Added Successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.txt_mat_length.Clear();
-                this.txt_mat_name.Clear();
-                this.cmb_mat_type.SelectedItem = null;
-                this.cmb_mat_type.SelectedText = "--select--";
-                txt_mat_billno.Clear();
-                txt_mat_price.Clear();
-                grd_mat.Rows.Clear();
-
-                DataTable dt = db.GetData("select top 1 mat_id from materials order by mat_id desc");
-                string no = dt.Rows[0]["mat_id"].ToString();
-                //retriving empid column last cell data.
-                int len = no.Length;
-                string splitno = no.Substring(1, len - 1);
-                int num = Convert.ToInt32(splitno); //converting splited string in integer
-                num++; //increasing splited string by 1
-                no = no.Substring(0, 1) + num.ToString("0000");
-                txt_mat_id.Text = no.ToString();
-
-                txt_mat_billno.Enabled = true;
+                MetroMessageBox.Show(this, "No data in grid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

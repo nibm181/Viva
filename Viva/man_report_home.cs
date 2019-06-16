@@ -39,5 +39,11 @@ namespace Viva
             OrderReportForm orf = new OrderReportForm();
             orf.Show();
         }
+
+        private void metroTile3_Click(object sender, EventArgs e)
+        {
+            used_mat_report_form umrf = new used_mat_report_form();
+            umrf.Show();
+        }
     }
 }
