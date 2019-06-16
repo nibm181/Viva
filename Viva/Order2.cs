@@ -155,7 +155,7 @@ namespace Viva
                 {
                     string mod_id = grid_search_model.SelectedRows[0].Cells[0].Value + string.Empty;
                     int y = 0;
-                    for (int i = 0; (i + 1) < grid_orders.Rows.Count; i++)
+                    for (int i = 0; i  < grid_orders.Rows.Count; i++)
                     {
                         string mod_id_order = grid_orders.Rows[i].Cells[0].Value + string.Empty;
                         if (mod_id == mod_id_order)
