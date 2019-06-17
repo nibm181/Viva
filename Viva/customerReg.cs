@@ -60,11 +60,15 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(Regex.IsMatch(txt_cus_name.Text, @"'"))
+                else if (txt_cus_name.Text.Any(char.IsNumber)  )
                 {
-                    MetroMessageBox.Show(this, "Please enter a valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+                else if (!txt_cus_name.Text.Any(char.IsLetter))
+                {
+                    MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 else if (string.IsNullOrWhiteSpace(txt_add1.Text))
                 {
                     MetroMessageBox.Show(this, "Please Enter First Address !", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);

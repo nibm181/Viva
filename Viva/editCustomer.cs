@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
+using System.Text.RegularExpressions;
 
 namespace Viva
 {
@@ -22,11 +23,11 @@ namespace Viva
         private void editCustomer_Load(object sender, EventArgs e)
         {
 
-            txt_cusName.ReadOnly = true;
+            txt_cus_name.ReadOnly = true;
             txt_cus_Id.ReadOnly = true;
             txt_add1.ReadOnly = true;
             txt_add2.ReadOnly = true;
-            txt_cus_no.ReadOnly = true;
+            txt_cno.ReadOnly = true;
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
@@ -35,31 +36,49 @@ namespace Viva
             {
 
 
-                if (string.IsNullOrWhiteSpace(txt_cusName.Text))
+                if (string.IsNullOrWhiteSpace(txt_cus_name.Text))
                 {
-                    MetroMessageBox.Show(this, "Please enter Customer Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Name!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (txt_cus_name.Text.Any(char.IsNumber))
+                {
+                    MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!txt_cus_name.Text.Any(char.IsLetter))
+                {
+                    MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 else if (string.IsNullOrWhiteSpace(txt_add1.Text))
                 {
-                    MetroMessageBox.Show(this, "Please enter first Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please Enter First Address !", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Regex.IsMatch(txt_add1.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Address!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (string.IsNullOrWhiteSpace(txt_add2.Text))
                 {
                     MetroMessageBox.Show(this, "Please enter Second Address!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (string.IsNullOrWhiteSpace(txt_cus_no.Text))
+                else if (Regex.IsMatch(txt_add2.Text, @"'"))
                 {
-                    MetroMessageBox.Show(this, "Please enter Contact Number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter a valid Address 2!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_cus_no.Text.Any(char.IsLetter)  )
+                else if (txt_cno.Text.Any(char.IsWhiteSpace) || txt_cno.Text.Length != 10 || !txt_cno.Text.Any(char.IsNumber) || txt_cno.Text.Any(char.IsLetter))
                 {
-                    MetroMessageBox.Show(this, "Contact Number Should Be Numeric", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please Enter Contact Number in Numeric!\nContact Number should contain 10 Numbers!!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_cno.Focus();
                 }
-                else if(txt_cus_no.Text.Length != 10)
+                else if (!Regex.IsMatch(txt_cno.Text, @"\d+$"))
                 {
-                    MetroMessageBox.Show(this, "Contact Number Should Contain 10 numbers", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter a valid Contact Number!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+                else if (Double.Parse(txt_cno.Text) < 0)
+                {
+                    MetroMessageBox.Show(this, "Invalid contact number", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
 
                 else
                 {
@@ -67,22 +86,22 @@ namespace Viva
                     if (dr == DialogResult.Yes)
                     {
                         Database db = new Database();
-                        int row = db.save_delete_update("update customer set cus_name = '" + txt_cusName.Text + "', cus_add1 = '" + txt_add1.Text + "', cus_add2= '" + txt_add2.Text + "', contact_no = '" + txt_cus_no.Text + "' where cus_id = '" + txt_cus_Id.Text + "'");
+                        int row = db.save_delete_update("update customer set cus_name = '" + txt_cus_name.Text + "', cus_add1 = '" + txt_add1.Text + "', cus_add2= '" + txt_add2.Text + "', contact_no = '" + txt_cno.Text + "' where cus_id = '" + txt_cus_Id.Text + "'");
                         if (row == 1)
                         {
                             MetroFramework.MetroMessageBox.Show(this, "Successfully updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             txt_searchCus.Clear();
                             txt_cus_Id.Clear();
-                            txt_cusName.Clear();
+                            txt_cus_name.Clear();
                             txt_add1.Clear();
                             txt_add2.Clear();
-                            txt_cus_no.Clear();
-                            txt_cusName.ReadOnly = true;
+                            txt_cno.Clear();
+                            txt_cus_name.ReadOnly = true;
                             txt_cus_Id.ReadOnly = true;
                             txt_add1.ReadOnly = true;
                             txt_add2.ReadOnly = true;
-                            txt_cus_no.ReadOnly = true;
+                            txt_cno.ReadOnly = true;
                         }
                         else
                         {
@@ -115,21 +134,21 @@ namespace Viva
                     {
 
 
-                        txt_cusName.ReadOnly = false;
+                        txt_cus_name.ReadOnly = false;
                         txt_cus_Id.ReadOnly = true;
                         txt_add1.ReadOnly = false;
                         txt_add2.ReadOnly = false;
-                        txt_cus_no.ReadOnly = false;
+                        txt_cno.ReadOnly = false;
 
                         foreach (DataRow dr in dt.Rows)
                         {
                             txt_cus_Id.Text = dr["cus_id"].ToString();
 
 
-                            txt_cusName.Text = dr["cus_name"].ToString();
+                            txt_cus_name.Text = dr["cus_name"].ToString();
                             txt_add1.Text = dr["cus_add1"].ToString();
                             txt_add2.Text = dr["cus_add2"].ToString();
-                            txt_cus_no.Text = dr["contact_no"].ToString();
+                            txt_cno.Text = dr["contact_no"].ToString();
                         }
                     }
                     else
@@ -164,20 +183,20 @@ namespace Viva
                             txt_searchCus.Clear();
                             txt_cus_Id.Clear();
 
-                            txt_cusName.Clear();
+                            txt_cus_name.Clear();
                             txt_add1.Clear();
                             txt_add2.Clear();
-                            txt_cus_no.Clear();
+                            txt_cno.Clear();
 
                             MetroFramework.MetroMessageBox.Show(this, " Successfully deleted!", "Delete message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             txt_cus_Id.ReadOnly = true;
 
 
-                            txt_cusName.ReadOnly = true;
+                            txt_cus_name.ReadOnly = true;
                             txt_add1.ReadOnly = true;
                             txt_add2.ReadOnly = true;
-                            txt_cus_no.ReadOnly = true;
+                            txt_cno.ReadOnly = true;
                         }
                     }
                 }
@@ -198,17 +217,17 @@ namespace Viva
             {
                 txt_searchCus.Clear();
                 txt_cus_Id.Clear();
-                txt_cusName.Clear();
+                txt_cus_name.Clear();
                 txt_add1.Clear();
                 txt_add2.Clear();
-                txt_cus_no.Clear();
+                txt_cno.Clear();
 
                 txt_cus_Id.ReadOnly = true;
 
-                txt_cusName.ReadOnly = true;
+                txt_cus_name.ReadOnly = true;
                 txt_add1.ReadOnly = true;
                 txt_add2.ReadOnly = true;
-                txt_cus_no.ReadOnly = true;
+                txt_cno.ReadOnly = true;
             }
         }
 
