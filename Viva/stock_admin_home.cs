@@ -64,10 +64,26 @@ namespace Viva
             DialogResult result = MetroMessageBox.Show(this, "Are you sure you want to logout? ", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                form_login lg = new form_login();
-                lg.ShowDialog();
-                this.Close();
+                try
+                {
+                    for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                    {
+                        //if (Application.OpenForms[i].Name != "form_login")
+                        Application.OpenForms[i].Hide();
+                    }
+                    form_login lg = new form_login();
+                    lg.ShowDialog();
+                    for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                    {
+                        //if (Application.OpenForms[i].Name != "form_login")
+                        Application.OpenForms[i].Close();
+
+                    }
+                }
+                catch
+                {
+
+                }
             }
         }
     }
