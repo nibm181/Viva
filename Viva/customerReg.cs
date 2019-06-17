@@ -64,9 +64,17 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (!txt_cus_name.Text.Any(char.IsLetter))
+                else if (txt_cus_name.Text.Any(char.IsSymbol) || txt_cus_name.Text.Any(char.IsDigit) || Regex.Matches(txt_cus_name.Text, @"\.").Count >= 2)
                 {
-                    MetroMessageBox.Show(this, "Please enter valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter a valid Name!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (Regex.IsMatch(txt_cus_name.Text, @"'"))
+                {
+                    MetroMessageBox.Show(this, "Name can not contain apostrophe!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.IsMatch(txt_cus_name.Text, @"^[a-zA-Z ]*$"))
+                {
+                    MetroMessageBox.Show(this, "Please enter a valid Name1!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else if (string.IsNullOrWhiteSpace(txt_add1.Text))
@@ -85,7 +93,11 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter a valid Address 2!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (txt_cno.Text.Any(char.IsWhiteSpace) || txt_cno.Text.Length != 10 || !txt_cno.Text.Any(char.IsNumber) || txt_cno.Text.Any(char.IsLetter))
+                else if (string.IsNullOrWhiteSpace(txt_cno.Text))
+                {
+                    MetroMessageBox.Show(this, "Please enter Conatct Number!", "Empty Values", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txt_cno.Text.Any(char.IsWhiteSpace) || txt_cno.Text.Length != 10 || !txt_cno.Text.Any(char.IsNumber) || txt_cno.Text.Any(char.IsLetter) || txt_cno.Text.Any(char.IsPunctuation))
                 {
                     MetroMessageBox.Show(this, "Please Enter Contact Number in Numeric!\nContact Number should contain 10 Numbers!!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_cno.Focus();
@@ -94,10 +106,12 @@ namespace Viva
                 {
                     MetroMessageBox.Show(this, "Please enter a valid Contact Number!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(Double.Parse(txt_cno.Text)<0)
+                else if (Int32.Parse(txt_cno.Text) < 0)
                 {
-                    MetroMessageBox.Show(this, "Invalid contact number", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MetroMessageBox.Show(this, "Please enter Contact Number in valid format!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_cno.Focus();
                 }
+              
                 
                
                 else
